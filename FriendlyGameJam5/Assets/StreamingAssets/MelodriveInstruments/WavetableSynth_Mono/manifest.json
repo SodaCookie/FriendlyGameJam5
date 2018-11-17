@@ -1,0 +1,3474 @@
+{
+    "presets": {
+        "params": [
+            "waveSel1",
+            "waveSel2",
+            "waveSel3",
+            "wavePos1",
+            "wavePos2",
+            "wavePos3",
+            "levelOsc1",
+            "levelOsc2",
+            "levelOsc3",
+            "levelPinkNoise",
+            "detuneOsc2",
+            "detuneOsc3",
+            "transOsc2",
+            "transOsc3",
+            "loPassCutoff",
+            "loPassQ",
+            "hiPassCutoff",
+            "filterEnvAmm",
+            "ampAttack",
+            "ampDecay",
+            "ampSustain",
+            "ampRelease",
+            "filterAttack",
+            "filterDecay",
+            "filterSustain",
+            "filterRelease",
+            "freqLFO1",
+            "waveLFO1",
+            "waveLFO2",
+            "freqLFO2",
+            "filterAmmLFO1",
+            "wave1ModAmm",
+            "wave2ModAmm",
+            "wave3ModAmm",
+            "pitchModOsc",
+            "driftOsc",
+            "clipDist",
+            "pitchTrack",
+            "ampMod",
+            "masterVol"
+        ],
+        "ambientBass1": {
+            "params":[
+                3.00,
+                17.00,
+                3.00,
+                0.03,
+                0.95,
+                0.02,
+                0.32,
+                0.66,
+                0.10,
+                0.08,
+                -1.12,
+                1.30,
+                -12.00,
+                -12.00,
+                390.41,
+                2.74,
+                11.00,
+                522.00,
+                82.79,
+                753.82,
+                0.80,
+                1169.70,
+                148.69,
+                1603.18,
+                0.05,
+                1189.90,
+                0.50,
+                2.00,
+                0.00,
+                0.13,
+                425.20,
+                0.36,
+                0.30,
+                0.39,
+                0.00,
+                1.00,
+                83.33,
+                0.13,
+                0.67,
+                0.56
+              ],
+            "tags": {
+                "style": [
+                    "ambient"
+                ],
+                "type": [
+                    "bass"
+                ]
+            },
+            "mappings": {
+                "loPassCutoff": {
+                  "feature": "timbre",
+                  "min": 20.00,
+                  "max": 529.81
+                },
+                "loPassQ": {
+                  "feature": "harmony",
+                  "min": 2.87,
+                  "max": 1.01
+                },
+                "wavePos1": {
+                  "feature": "harmony",
+                  "min": 0.03,
+                  "max": 0.12
+                },
+                "wavePos2": {
+                  "feature": "harmony",
+                  "min": 0.96,
+                  "max": 0.86
+                },
+                "wavePos3": {
+                  "feature": "harmony",
+                  "min": 0.01,
+                  "max": 0.09
+                },
+                "filterAttack": {
+                  "feature": "attack",
+                  "min": 465.28,
+                  "max": 49.17
+                },
+                "filterDecay": {
+                  "feature": "attack",
+                  "min": 453.58,
+                  "max": 1964.54
+                },
+                "ampAttack": {
+                  "feature": "attack",
+                  "min": 259.06,
+                  "max": 27.39
+                },
+                "ampDecay": {
+                  "feature": "attack",
+                  "min": 634.85,
+                  "max": 791.22
+                },
+                "wave1ModAmm": {
+                  "feature": "timbre",
+                  "min": 0.00,
+                  "max": 0.49
+                },
+                "wave2ModAmm": {
+                  "feature": "timbre",
+                  "min": 0.70,
+                  "max": 0.16
+                },
+                "wave3ModAmm": {
+                  "feature": "timbre",
+                  "min": 0.07,
+                  "max": 0.50
+                },
+                "levelOsc1": {
+                  "feature": "harmony",
+                  "min": 0.29,
+                  "max": 0.74
+                },
+                "levelOsc2": {
+                  "feature": "harmony",
+                  "min": 0.70,
+                  "max": 0.02
+                },
+                "levelOsc3": {
+                  "feature": "timbre",
+                  "min": 0.37,
+                  "max": 0.00
+                },
+                "detuneOsc2": {
+                  "feature": "harmony",
+                  "min": -1.20,
+                  "max": 0.00
+                },
+                "detuneOsc3": {
+                  "feature": "harmony",
+                  "min": 1.39,
+                  "max": 0.00
+                },
+                "levelPinkNoise": {
+                  "feature": "harmony",
+                  "min": 0.08,
+                  "max": 0.00
+                },
+                "ampMod": {
+                  "feature": "timbre",
+                  "min": 0.18,
+                  "max": 0.84
+                }
+              }
+        },
+        "ambientBass2": {
+            "params": [
+                16.0,
+                2.0,
+                4.0,
+                0.0864824,
+                0.807039,
+                0.0,
+                0.00876506,
+                0.683701,
+                0.68323,
+                0.0935947,
+                -1.10336,
+                1.23692,
+                0.0,
+                -12.0,
+                125.837,
+                1.69644,
+                11.0,
+                482.0,
+                793.767,
+                945.892,
+                0.59596,
+                1169.7,
+                2081.68,
+                881.518,
+                0.0,
+                503.03,
+                0.5,
+                1.0,
+                0.0,
+                0.25,
+                330.709,
+                0.160556,
+                0.593867,
+                0.146671,
+                0.0,
+                1.0,
+                0.116595,
+                0.13,
+                0.559255,
+                0.700787
+            ],
+            "tags": {
+                "style": [
+                    "ambient"
+                ],
+                "type": [
+                    "bass"
+                ]
+            },
+            "mappings": {
+                "loPassCutoff": {
+                    "feature": "timbre",
+                    "min": 34.0,
+                    "max": 532.84
+                },
+                "loPassQ": {
+                    "feature": "harmony",
+                    "min": 1.70465,
+                    "max": 1.62617
+                },
+                "wavePos1": {
+                    "feature": "harmony",
+                    "min": 0.0,
+                    "max": 0.826772
+                },
+                "wavePos2": {
+                    "feature": "harmony",
+                    "min": 0.87458,
+                    "max": 0.228889
+                },
+                "filterDecay": {
+                    "feature": "attack",
+                    "min": 649.563,
+                    "max": 1909.5
+                },
+                "ampAttack": {
+                    "feature": "attack",
+                    "min": 843.57,
+                    "max": 573.048
+                },
+                "ampDecay": {
+                    "feature": "attack",
+                    "min": 774.001,
+                    "max": 1707.68
+                },
+                "wave1ModAmm": {
+                    "feature": "timbre",
+                    "min": 0.0718291,
+                    "max": 0.553779
+                },
+                "wave2ModAmm": {
+                    "feature": "timbre",
+                    "min": 0.626596,
+                    "max": 0.448819
+                },
+                "levelOsc1": {
+                    "feature": "harmony",
+                    "min": 0.0,
+                    "max": 0.083794
+                },
+                "levelOsc2": {
+                    "feature": "harmony",
+                    "min": 0.683701,
+                    "max": 0.0228351
+                },
+                "levelOsc3": {
+                    "feature": "timbre",
+                    "min": 0.753701,
+                    "max": 0.08
+                },
+                "detuneOsc2": {
+                    "feature": "harmony",
+                    "min": -1.24,
+                    "max": 0.0662993
+                },
+                "detuneOsc3": {
+                    "feature": "harmony",
+                    "min": 1.38142,
+                    "max": 0.0
+                },
+                "levelPinkNoise": {
+                    "feature": "harmony",
+                    "min": 0.101024,
+                    "max": 0.03
+                },
+                "clipDist": {
+                    "feature": "harmony",
+                    "min": 0.0309226,
+                    "max": 0.849954
+                },
+                "ampMod": {
+                    "feature": "timbre",
+                    "min": 0.52,
+                    "max": 0.733228
+                }
+            }
+        },
+        "ambientBass3": {
+            "params": [
+                18.00,
+                18.00,
+                14.00,
+                0.01,
+                0.77,
+                0.01,
+                0.02,
+                0.59,
+                0.16,
+                0.23,
+                -0.96,
+                1.14,
+                0.00,
+                -12.00,
+                1826.22,
+                1.76,
+                15.00,
+                666.67,
+                897.88,
+                958.73,
+                0.74,
+                1169.70,
+                625.04,
+                1354.19,
+                0.00,
+                503.03,
+                0.50,
+                1.00,
+                0.00,
+                2.00,
+                500.83,
+                0.50,
+                0.37,
+                0.43,
+                0.00,
+                2.71,
+                64.58,
+                0.85,
+                0.65,
+                0.50
+              ],
+            "tags": {
+                "style": [
+                    "ambient"
+                ],
+                "type": [
+                    "bass"
+                ]
+            },
+            "mappings":{
+                "loPassCutoff": {
+                  "feature": "timbre",
+                  "min": 20.00,
+                  "max": 2500.00
+                },
+                "loPassQ": {
+                  "feature": "harmony",
+                  "min": 1.77,
+                  "max": 1.69
+                },
+                "wavePos1": {
+                  "feature": "harmony",
+                  "min": 0.00,
+                  "max": 0.17
+                },
+                "wavePos2": {
+                  "feature": "harmony",
+                  "min": 0.81,
+                  "max": 0.32
+                },
+                "wavePos3": {
+                  "feature": "harmony",
+                  "min": 0.00,
+                  "max": 0.06
+                },
+                "wave1ModAmm": {
+                  "feature": "timbre",
+                  "min": 0.17,
+                  "max": 0.62
+                },
+                "wave2ModAmm": {
+                  "feature": "timbre",
+                  "min": 0.45,
+                  "max": 0.34
+                },
+                "levelOsc1": {
+                  "feature": "harmony",
+                  "min": 0.01,
+                  "max": 0.10
+                },
+                "levelOsc2": {
+                  "feature": "harmony",
+                  "min": 0.64,
+                  "max": 0.00
+                },
+                "levelOsc3": {
+                  "feature": "timbre",
+                  "min": 0.52,
+                  "max": 0.03
+                },
+                "detuneOsc2": {
+                  "feature": "harmony",
+                  "min": -1.08,
+                  "max": 0.31
+                },
+                "detuneOsc3": {
+                  "feature": "harmony",
+                  "min": 1.24,
+                  "max": 0.00
+                },
+                "levelPinkNoise": {
+                  "feature": "harmony",
+                  "min": 0.25,
+                  "max": 0.00
+                },
+                "ampMod": {
+                  "feature": "timbre",
+                  "min": 0.57,
+                  "max": 0.77
+                }
+              }
+        },
+        "Swarm of Bass": {
+            "params":[
+                9.00,
+                3.00,
+                16.00,
+                0.07,
+                0.74,
+                0.06,
+                0.30,
+                0.86,
+                0.25,
+                0.09,
+                -1.12,
+                1.28,
+                -12.00,
+                -12.00,
+                465.08,
+                1.70,
+                11.00,
+                482.00,
+                1048.62,
+                1683.87,
+                0.41,
+                1169.70,
+                321.24,
+                1854.47,
+                0.00,
+                503.03,
+                0.50,
+                1.00,
+                0.25,
+                0.25,
+                330.71,
+                0.54,
+                0.45,
+                0.50,
+                0.00,
+                1.00,
+                0.00,
+                0.13,
+                0.88,
+                0.56
+              ],
+            "tags": {
+                "style": [
+                    "ambient"
+                ],
+                "type": [
+                    "bass"
+                ]
+            },
+            "mappings": {
+                "loPassCutoff": {
+                  "feature": "timbre",
+                  "min": 34.00,
+                  "max": 609.93
+                },
+                "loPassQ": {
+                  "feature": "harmony",
+                  "min": 1.70,
+                  "max": 1.69
+                },
+                "wavePos1": {
+                  "feature": "harmony",
+                  "min": 0.00,
+                  "max": 1.00
+                },
+                "wavePos2": {
+                  "feature": "harmony",
+                  "min": 0.79,
+                  "max": 0.11
+                },
+                "filterDecay": {
+                  "feature": "attack",
+                  "min": 1675.64,
+                  "max": 1909.50
+                },
+                "ampAttack": {
+                  "feature": "attack",
+                  "min": 2594.01,
+                  "max": 573.05
+                },
+                "wave1ModAmm": {
+                  "feature": "timbre",
+                  "min": 0.45,
+                  "max": 0.57
+                },
+                "levelOsc2": {
+                  "feature": "harmony",
+                  "min": 0.92,
+                  "max": 0.02
+                },
+                "levelOsc3": {
+                  "feature": "timbre",
+                  "min": 0.75,
+                  "max": 0.08
+                },
+                "detuneOsc2": {
+                  "feature": "harmony",
+                  "min": -1.24,
+                  "max": 0.34
+                },
+                "detuneOsc3": {
+                  "feature": "harmony",
+                  "min": 1.38,
+                  "max": 0.00
+                },
+                "levelPinkNoise": {
+                  "feature": "harmony",
+                  "min": 0.10,
+                  "max": 0.00
+                }
+              }
+        },
+        "Noise Bell": {
+            "params":[
+                4.00,
+                7.17,
+                4.00,
+                0.00,
+                0.07,
+                0.00,
+                0.36,
+                0.67,
+                0.93,
+                0.03,
+                -1.10,
+                1.39,
+                12.00,
+                -12.00,
+                1402.20,
+                4.89,
+                103.34,
+                666.67,
+                6.00,
+                1985.42,
+                0.00,
+                750.04,
+                18.33,
+                343.71,
+                0.00,
+                395.88,
+                0.50,
+                0.00,
+                0.00,
+                0.50,
+                377.95,
+                0.06,
+                0.26,
+                0.05,
+                2.00,
+                2.08,
+                55.74,
+                1.00,
+                0.23,
+                0.36
+              ],
+            "tags": {
+                "style": [
+                    "ambient"
+                ],
+                "type": [
+                    "lead"
+                    
+                ]
+            },
+            "mappings": {
+                "loPassCutoff": {
+                  "feature": "timbre",
+                  "min": 400.00,
+                  "max": 1800.00
+                },
+                "loPassQ": {
+                  "feature": "harmony",
+                  "min": 5.00,
+                  "max": 3.50
+                },
+                "filterAttack": {
+                  "feature": "attack",
+                  "min": 66.63,
+                  "max": 0.34
+                },
+                "filterDecay": {
+                  "feature": "attack",
+                  "min": 239.21,
+                  "max": 382.64
+                },
+                "wave1ModAmm": {
+                  "feature": "timbre",
+                  "min": 0.02,
+                  "max": 0.08
+                },
+                "wave2ModAmm": {
+                  "feature": "timbre",
+                  "min": 0.37,
+                  "max": 0.21
+                },
+                "wave3ModAmm": {
+                  "feature": "timbre",
+                  "min": 0.01,
+                  "max": 0.06
+                },
+                "levelOsc1": {
+                  "feature": "harmony",
+                  "min": 0.31,
+                  "max": 1.00
+                },
+                "levelOsc2": {
+                  "feature": "harmony",
+                  "min": 0.70,
+                  "max": 0.30
+                },
+                "levelOsc3": {
+                  "feature": "harmony",
+                  "min": 1.00,
+                  "max": 0.00
+                },
+                "detuneOsc2": {
+                  "feature": "harmony",
+                  "min": -1.8,
+                  "max": 0.20
+                },
+                "detuneOsc3": {
+                  "feature": "harmony",
+                  "min": 1.8,
+                  "max": -0.04
+                },
+                "levelPinkNoise": {
+                  "feature": "harmony",
+                  "min": 0.03,
+                  "max": 0.00
+                },
+                "clipDist": {
+                  "feature": "harmony",
+                  "min": 60.00,
+                  "max": 0.00
+                },
+                "ampMod": {
+                  "feature": "timbre",
+                  "min": 0.12,
+                  "max": 0.27
+                },
+                "wavePos2": {
+                  "feature": "harmony",
+                  "min": 0.00,
+                  "max": 1.00
+                }
+              }
+        },
+        "ambientLead2": {
+            "params": [
+              17.33,
+              3.00,
+              12.00,
+              0.56,
+              0.24,
+              0.12,
+              0.18,
+              0.43,
+              0.03,
+              0.05,
+              -0.82,
+              1.02,
+              12.00,
+              -12.00,
+              397.75,
+              1.42,
+              103.00,
+              438.33,
+              2.24,
+              1728.31,
+              0.00,
+              1694.95,
+              24.82,
+              267.36,
+              1.00,
+              200.00,
+              0.25,
+              0.00,
+              0.00,
+              0.50,
+              614.17,
+              0.16,
+              0.23,
+              0.12,
+              0.00,
+              1.00,
+              50.41,
+              1.00,
+              0.13,
+              0.69
+            ],
+            "tags": {
+                "style": [
+                    "ambient"
+                ],
+                "type": [
+                    "lead"
+                    
+                ]
+            },
+            "mappings": {
+              "loPassCutoff": {
+                "feature": "timbre",
+                "min": 20.00,
+                "max": 1364.61
+              },
+              "loPassQ": {
+                "feature": "harmony",
+                "min": 1.45,
+                "max": 0.8
+              },
+              "wavePos1": {
+                "feature": "harmony",
+                "min": 0.53,
+                "max": 0.89
+              },
+              "wavePos2": {
+                "feature": "harmony",
+                "min": 0.26,
+                "max": 0.05
+              },
+              "wavePos3": {
+                "feature": "harmony",
+                "min": 0.06,
+                "max": 0.76
+              },
+              "filterAttack": {
+                "feature": "attack",
+                "min": 35.00,
+                "max": 0.05
+              },
+              "filterDecay": {
+                "feature": "attack",
+                "min": 220.00,
+                "max": 382.64
+              },
+             
+              "wave1ModAmm": {
+                "feature": "timbre",
+                "min": 0.01,
+                "max": 0.55
+              },
+              "wave2ModAmm": {
+                "feature": "timbre",
+                "min": 0.24,
+                "max": 0.21
+              },
+              "wave3ModAmm": {
+                "feature": "timbre",
+                "min": 0.00,
+                "max": 0.41
+              },
+              "levelOsc1": {
+                "feature": "harmony",
+                "min": 0.12,
+                "max": 0.75
+              },
+              "levelOsc2": {
+                "feature": "harmony",
+                "min": 0.48,
+                "max": 0.01
+              },
+              "levelOsc3": {
+                "feature": "timbre",
+                "min": 0.04,
+                "max": 0.00
+              },
+              "detuneOsc2": {
+                "feature": "harmony",
+                "min": -0.93,
+                "max": 0.20
+              },
+              "detuneOsc3": {
+                "feature": "harmony",
+                "min": 1.13,
+                "max": -0.04
+              }
+            }
+        },
+        "Round Synth Mallet": {
+            "params":[
+              19.00,
+              11.00,
+              4.00,
+              0.85,
+              0.08,
+              0.72,
+              0.90,
+              0.18,
+              0.13,
+              0.01,
+              -0.07,
+              0.07,
+              0.00,
+              0.00,
+              1997.08,
+              0.59,
+              14.00,
+              409.00,
+              3.38,
+              354.25,
+              0.17,
+              708.37,
+              37.31,
+              320.59,
+              0.38,
+              200.00,
+              1.00,
+              0.00,
+              1.00,
+              4.00,
+              500.73,
+              0.42,
+              0.23,
+              0.38,
+              0.00,
+              1.00,
+              0.03,
+              0.00,
+              0.52,
+              0.85
+            ],
+            "tags": {
+                "style": [
+                    "ambient"
+                ],
+                "type": [
+                    "lead"
+                ]
+            },
+            "mappings": {
+              "loPassCutoff": {
+                "feature": "timbre",
+                "min": 100.00,
+                "max": 1500.00
+              },
+              "loPassQ": {
+                "feature": "harmony",
+                "min": 2.62,
+                "max": 0.48
+              },
+              "wavePos1": {
+                "feature": "harmony",
+                "min": 0.17,
+                "max": 0.89
+              },
+              "wavePos2": {
+                "feature": "harmony",
+                "min": 0.31,
+                "max": 0.07
+              },
+              "wavePos3": {
+                "feature": "harmony",
+                "min": 0.03,
+                "max": 0.76
+              },
+              "filterAttack": {
+                "feature": "attack",
+                "min": 96.61,
+                "max": 16.74
+              },
+              "filterDecay": {
+                "feature": "attack",
+                "min": 97.66,
+                "max": 397.90
+              },
+              "ampAttack": {
+                "feature": "attack",
+                "min": 8.52,
+                "max": 1.60
+              },
+              "wave1ModAmm": {
+                "feature": "timbre",
+                "min": 0.00,
+                "max": 0.54
+              },
+              "wave2ModAmm": {
+                "feature": "timbre",
+                "min": 0.26,
+                "max": 0.22
+              },
+              "wave3ModAmm": {
+                "feature": "timbre",
+                "min": 0.00,
+                "max": 0.49
+              },
+              "levelOsc1": {
+                "feature": "harmony",
+                "min": 0.10,
+                "max": 0.94
+              },
+              "levelOsc2": {
+                "feature": "harmony",
+                "min": 0.86,
+                "max": 0.14
+              },
+              "levelOsc3": {
+                "feature": "timbre",
+                "min": 0.57,
+                "max": 0.00
+              },
+              "detuneOsc2": {
+                "feature": "harmony",
+                "min": -1.40,
+                "max": 0.00
+              },
+              "detuneOsc3": {
+                "feature": "harmony",
+                "min": 1.40,
+                "max": 0.00
+              },
+              "levelPinkNoise": {
+                "feature": "harmony",
+                "min": 0.18,
+                "max": 0.00
+              },
+              "ampMod": {
+                "feature": "timbre",
+                "min": 0.23,
+                "max": 0.60
+              }
+            }
+        },
+        "Glass & String": {
+            "params": [
+                19.00,
+                8.00,
+                17.00,
+                0.23,
+                0.29,
+                0.09,
+                0.34,
+                0.62,
+                0.08,
+                0.16,
+                -1.28,
+                1.29,
+                0.00,
+                0.00,
+                2701.70,
+                2.45,
+                14.00,
+                2416.67,
+                0.10,
+                2041.70,
+                0.00,
+                1311.11,
+                37.83,
+                318.63,
+                0.00,
+                200.00,
+                1.00,
+                0.00,
+                1.00,
+                4.00,
+                166.67,
+                0.17,
+                0.23,
+                0.36,
+                0.00,
+                1.00,
+                7.28,
+                0.00,
+                0.50,
+                0.35
+              ],
+            "tags": {
+                "style": [
+                    "ambient"
+                ],
+                "type": [
+                    "lead"
+                ]
+            },
+            "mappings": {
+                "loPassCutoff": {
+                  "feature": "timbre",
+                  "min": 400.00,
+                  "max": 3500.00
+                },
+                "loPassQ": {
+                  "feature": "harmony",
+                  "min": 2.62,
+                  "max": 0.48
+                },
+                "wavePos1": {
+                  "feature": "harmony",
+                  "min": 0.17,
+                  "max": 0.89
+                },
+                "wavePos2": {
+                  "feature": "harmony",
+                  "min": 0.31,
+                  "max": 0.07
+                },
+                "wavePos3": {
+                  "feature": "harmony",
+                  "min": 0.03,
+                  "max": 0.76
+                },
+                "filterAttack": {
+                  "feature": "attack",
+                  "min": 96.61,
+                  "max": 16.74
+                },
+                "filterDecay": {
+                  "feature": "attack",
+                  "min": 97.66,
+                  "max": 397.90
+                },
+                "wave2ModAmm": {
+                  "feature": "timbre",
+                  "min": 0.26,
+                  "max": 0.22
+                },
+                "wave3ModAmm": {
+                  "feature": "timbre",
+                  "min": 0.00,
+                  "max": 0.49
+                },
+                "levelOsc1": {
+                  "feature": "harmony",
+                  "min": 0.29,
+                  "max": 0.86
+                },
+                "levelOsc2": {
+                  "feature": "harmony",
+                  "min": 0.68,
+                  "max": 0.00
+                },
+                "levelOsc3": {
+                  "feature": "timbre",
+                  "min": 0.30,
+                  "max": 0.00
+                },
+                "detuneOsc2": {
+                  "feature": "harmony",
+                  "min": -1.40,
+                  "max": 0.00
+                },
+                "detuneOsc3": {
+                  "feature": "harmony",
+                  "min": 1.40,
+                  "max": 0.00
+                },
+                "levelPinkNoise": {
+                  "feature": "harmony",
+                  "min": 0.18,
+                  "max": 0.00
+                },
+                "ampMod": {
+                  "feature": "timbre",
+                  "min": 0.23,
+                  "max": 0.60
+                },
+                "ampAttack": {
+                  "feature": "harmony",
+                  "min": 100.00,
+                  "max": 0.10
+                }
+              }
+        },
+        "Soft Drops": {
+            "params":[
+                18.00,
+                5.17,
+                4.00,
+                0.92,
+                0.09,
+                0.70,
+                0.82,
+                0.03,
+                0.50,
+                0.11,
+                -0.11,
+                0.11,
+                7.00,
+                0.00,
+                113.07,
+                0.83,
+                343.13,
+                1166.67,
+                0.10,
+                1791.71,
+                0.01,
+                62.55,
+                0.05,
+                145.88,
+                0.12,
+                104.21,
+                1.00,
+                0.00,
+                1.00,
+                4.00,
+                83.33,
+                0.39,
+                0.23,
+                0.35,
+                0.00,
+                1.00,
+                7.28,
+                0.00,
+                0.31,
+                0.75
+              ],
+            "tags": {
+                "style": [
+                    "ambient"
+                ],
+                "type": [
+                    "arpeggio"
+                ]
+            },
+            "mappings": {
+                "loPassCutoff": {
+                  "feature": "timbre",
+                  "min": 20.00,
+                  "max": 60.00
+                },
+                "loPassQ": {
+                  "feature": "harmony",
+                  "min": 2.62,
+                  "max": 1.00
+                },
+                "wavePos1": {
+                  "feature": "harmony",
+                  "min": 0.00,
+                  "max": 1.00
+                },
+                "wavePos2": {
+                  "feature": "harmony",
+                  "min": 0.31,
+                  "max": 0.07
+                },
+                "wavePos3": {
+                  "feature": "harmony",
+                  "min": 0.03,
+                  "max": 0.76
+                },
+                "filterAttack": {
+                  "feature": "attack",
+                  "min": 96.61,
+                  "max": 16.74
+                },
+                "filterDecay": {
+                  "feature": "attack",
+                  "min": 10.00,
+                  "max": 150.00
+                },
+                "ampDecay": {
+                  "feature": "attack",
+                  "min": 600.00,
+                  "max": 850.00
+                },
+                "wave1ModAmm": {
+                  "feature": "timbre",
+                  "min": 0.00,
+                  "max": 0.54
+                },
+                "wave2ModAmm": {
+                  "feature": "timbre",
+                  "min": 0.26,
+                  "max": 0.22
+                },
+                "wave3ModAmm": {
+                  "feature": "timbre",
+                  "min": 0.00,
+                  "max": 0.49
+                },
+                "levelOsc1": {
+                  "feature": "harmony",
+                  "min": 0.29,
+                  "max": 0.86
+                },
+                "levelOsc2": {
+                  "feature": "harmony",
+                  "min": 0.68,
+                  "max": 0.04
+                },
+                "levelOsc3": {
+                  "feature": "timbre",
+                  "min": 0.57,
+                  "max": 0.00
+                },
+                "detuneOsc2": {
+                  "feature": "harmony",
+                  "min": -1.40,
+                  "max": 0.00
+                },
+                "detuneOsc3": {
+                  "feature": "harmony",
+                  "min": 1.40,
+                  "max": 0.00
+                },
+                "levelPinkNoise": {
+                  "feature": "harmony",
+                  "min": 0.40,
+                  "max": 0.10
+                },
+                "ampMod": {
+                  "feature": "timbre",
+                  "min": 0.23,
+                  "max": 0.60
+                },
+                "filterEnvAmm": {
+                  "feature": "timbre",
+                  "min": 600.00,
+                  "max": 1100.00
+                }
+              }
+        },
+
+        "ambientArpeggio1": {
+            "params":[
+                15.17,
+                4.33,
+                4.00,
+                0.87,
+                0.10,
+                0.67,
+                0.79,
+                0.06,
+                0.52,
+                0.11,
+                -0.18,
+                0.18,
+                7.00,
+                0.00,
+                118.53,
+                0.87,
+                343.13,
+                703.18,
+                0.10,
+                802.10,
+                0.01,
+                62.55,
+                0.05,
+                342.59,
+                0.38,
+                200.00,
+                1.00,
+                0.00,
+                1.00,
+                4.00,
+                166.67,
+                0.41,
+                0.23,
+                0.37,
+                0.00,
+                1.00,
+                7.28,
+                0.00,
+                0.51,
+                0.60
+              ],
+            "tags": {
+                "style": [
+                    "ambient"
+                ],
+                "type": [
+                    "arpeggio"
+                ]
+            },
+            "mappings": {
+                "loPassCutoff": {
+                  "feature": "timbre",
+                  "min": 20.00,
+                  "max": 150.00
+                },
+                "loPassQ": {
+                  "feature": "harmony",
+                  "min": 1.50,
+                  "max": 0.78
+                },
+                "wavePos1": {
+                  "feature": "harmony",
+                  "min": 0.00,
+                  "max": 1.00
+                },
+                "wavePos2": {
+                  "feature": "harmony",
+                  "min": 0.31,
+                  "max": 0.07
+                },
+                "wavePos3": {
+                  "feature": "harmony",
+                  "min": 0.03,
+                  "max": 0.76
+                },
+                "filterDecay": {
+                  "feature": "attack",
+                  "min": 100.34,
+                  "max": 400.00
+                },
+                "ampDecay": {
+                  "feature": "attack",
+                  "min": 600.00,
+                  "max": 850.00
+                },
+                "wave1ModAmm": {
+                  "feature": "timbre",
+                  "min": 0.00,
+                  "max": 0.54
+                },
+                "wave2ModAmm": {
+                  "feature": "timbre",
+                  "min": 0.26,
+                  "max": 0.22
+                },
+                "wave3ModAmm": {
+                  "feature": "timbre",
+                  "min": 0.00,
+                  "max": 0.49
+                },
+                "levelOsc1": {
+                  "feature": "harmony",
+                  "min": 0.29,
+                  "max": 0.86
+                },
+                "levelOsc2": {
+                  "feature": "harmony",
+                  "min": 0.44,
+                  "max": 0.00
+                },
+                "levelOsc3": {
+                  "feature": "timbre",
+                  "min": 0.22,
+                  "max": 0.61
+                },
+                "detuneOsc2": {
+                  "feature": "harmony",
+                  "min": -1.40,
+                  "max": 0.00
+                },
+                "detuneOsc3": {
+                  "feature": "harmony",
+                  "min": 1.40,
+                  "max": 0.00
+                },
+                "levelPinkNoise": {
+                  "feature": "harmony",
+                  "min": 0.20,
+                  "max": 0.10
+                },
+                "ampMod": {
+                  "feature": "timbre",
+                  "min": 0.23,
+                  "max": 0.60
+                },
+                "filterEnvAmm": {
+                  "feature": "timbre",
+                  "min": 400.00,
+                  "max": 800.00
+                }
+              }
+        },
+        
+        "ambientArpeggio2": {
+            "params":[
+                14.33,
+                17.17,
+                13.17,
+                0.10,
+                0.09,
+                0.69,
+                0.80,
+                0.55,
+                0.09,
+                0.00,
+                -0.14,
+                0.25,
+                0.00,
+                0.00,
+                292.17,
+                1.08,
+                10.00,
+                984.34,
+                6.24,
+                792.13,
+                0.01,
+                104.21,
+                20.88,
+                520.87,
+                0.00,
+                104.21,
+                2.00,
+                3.00,
+                0.60,
+                4.00,
+                166.67,
+                0.63,
+                0.23,
+                0.38,
+                0.00,
+                1.00,
+                7.28,
+                0.00,
+                0.51,
+                0.60
+              ],
+            "tags": {
+                "style": [
+                    "ambient"
+                ],
+                "type": [
+                    "arpeggio"
+                ]
+            },
+            "mappings":{
+                "loPassCutoff": {
+                  "feature": "timbre",
+                  "min": 100.00,
+                  "max": 350.00
+                },
+                "loPassQ": {
+                  "feature": "harmony",
+                  "min": 1.80,
+                  "max": 1.00
+                },
+                "wavePos1": {
+                  "feature": "harmony",
+                  "min": 1.00,
+                  "max": 0.00
+                },
+                "wavePos2": {
+                  "feature": "harmony",
+                  "min": 0.31,
+                  "max": 0.07
+                },
+                "wavePos3": {
+                  "feature": "harmony",
+                  "min": 0.03,
+                  "max": 0.76
+                },
+                "ampDecay": {
+                  "feature": "attack",
+                  "min": 600.00,
+                  "max": 850.00
+                },
+                "wave2ModAmm": {
+                  "feature": "timbre",
+                  "min": 0.26,
+                  "max": 0.22
+                },
+                "wave3ModAmm": {
+                  "feature": "timbre",
+                  "min": 0.00,
+                  "max": 0.49
+                },
+                "levelOsc1": {
+                  "feature": "harmony",
+                  "min": 0.29,
+                  "max": 0.86
+                },
+                "levelOsc2": {
+                  "feature": "harmony",
+                  "min": 1.00,
+                  "max": 0.50
+                },
+                "detuneOsc2": {
+                  "feature": "harmony",
+                  "min": -1.40,
+                  "max": 0.00
+                },
+                "detuneOsc3": {
+                  "feature": "harmony",
+                  "min": 2.44,
+                  "max": 0.00
+                },
+                "levelPinkNoise": {
+                  "feature": "harmony",
+                  "min": 0.30,
+                  "max": 0.00
+                },
+        
+                "filterEnvAmm": {
+                  "feature": "timbre",
+                  "min": 600.00,
+                  "max": 1100.00
+                },
+                "levelOsc3": {
+                  "feature": "harmony",
+                  "min": 0.83,
+                  "max": 0.00
+                },
+                "ampAttack": {
+                  "feature": "harmony",
+                  "min": 60.00,
+                  "max": 0.10
+                }
+              }
+        },
+        "AmbientLeadchip": {
+            "params": [
+                1.00,
+                4.00,
+                1.00,
+                0.05,
+                0.92,
+                0.00,
+                0.66,
+                0.67,
+                0.40,
+                0.09,
+                0.85,
+                -0.85,
+                12.00,
+                0.00,
+                12062.30,
+                0.89,
+                10.00,
+                0.00,
+                8.34,
+                1145.90,
+                0.11,
+                1.60,
+                4.21,
+                1899.24,
+                0.00,
+                81.29,
+                1.00,
+                0.00,
+                0.00,
+                3.06,
+                19.37,
+                0.09,
+                0.00,
+                0.00,
+                5.00,
+                1.00,
+                46.53,
+                1.00,
+                0.08,
+                0.60
+              ],
+            "tags": {
+                "style": [
+                    "ambient",
+                    "house",
+                    "rock",
+                    "piano"
+                    
+                ],
+                "type": [
+                    "leadchip",
+                    "lickschip",
+                    "melodyChip"
+                ]
+            },
+            "mappings": {
+                "loPassCutoff": {
+                  "feature": "timbre",
+                  "min": 3603.54,
+                  "max": 15000.20
+                },
+                "loPassQ": {
+                  "feature": "harmony",
+                  "min": 1.33,
+                  "max": 0.84
+                },
+                "wavePos1": {
+                  "feature": "harmony",
+                  "min": 0.00,
+                  "max": 0.06
+                },
+                "filterAttack": {
+                  "feature": "attack",
+                  "min": 12.12,
+                  "max": 1.60
+                },
+                "filterDecay": {
+                  "feature": "attack",
+                  "min": 2500.82,
+                  "max": 1700.82
+                },
+                "ampAttack": {
+                  "feature": "attack",
+                  "min": 28.70,
+                  "max": 1.62
+                },
+                "ampDecay": {
+                  "feature": "attack",
+                  "min": 400.00,
+                  "max": 800.00
+                },
+                "wave1ModAmm": {
+                  "feature": "timbre",
+                  "min": 0.00,
+                  "max": 0.13
+                },
+                "levelOsc2": {
+                  "feature": "harmony",
+                  "min": 0.50,
+                  "max": 0.69
+                },
+                "detuneOsc2": {
+                  "feature": "harmony",
+                  "min": 8.00,
+                  "max": 0.00
+                },
+                "detuneOsc3": {
+                  "feature": "harmony",
+                  "min": -8.00,
+                  "max": 0.00
+                },
+                "levelPinkNoise": {
+                  "feature": "harmony",
+                  "min": 0.00,
+                  "max": 0.10
+                },
+                "clipDist": {
+                  "feature": "harmony",
+                  "min": 39.00,
+                  "max": 47.43
+                },
+                "pitchModOsc": {
+                  "feature": "harmony",
+                  "min": 15.00,
+                  "max": 5.00
+                }
+              }
+        },
+        "houseArpeggio1": {
+            "params": [
+                9.00,
+                1.00,
+                15.00,
+                0.37,
+                0.39,
+                0.10,
+                0.48,
+                0.40,
+                0.45,
+                0.02,
+                0.02,
+                0.11,
+                12.00,
+                0.00,
+                283.61,
+                1.02,
+                232.08,
+                313.15,
+                1.65,
+                312.59,
+                0.01,
+                464.65,
+                1.60,
+                562.54,
+                0.00,
+                1.60,
+                0.50,
+                1.00,
+                1.00,
+                1.00,
+                897.64,
+                0.61,
+                0.72,
+                0.48,
+                0.00,
+                0.00,
+                2.30,
+                0.00,
+                0.54,
+                0.65
+              ],
+            "tags": {
+                "style": [
+                    "house"
+                ],
+                "type": [
+                    "arpeggio"
+                ]
+            },
+            "mappings": {
+                "loPassCutoff": {
+                    "feature": "timbre",
+                    "min": 50.15,
+                    "max": 400.42
+                },
+                "loPassQ": {
+                    "feature": "harmony",
+                    "min": 2.46,
+                    "max": 0.84
+                },
+                "wavePos1": {
+                    "feature": "harmony",
+                    "min": 0.0169605,
+                    "max": 0.41
+                },
+                "wavePos2": {
+                    "feature": "harmony",
+                    "min": 0.757665,
+                    "max": 0.348294
+                },
+                "wavePos3": {
+                    "feature": "harmony",
+                    "min": 0.0110126,
+                    "max": 0.109667
+                },
+                "filterDecay": {
+                    "feature": "attack",
+                    "min": 0.0,
+                    "max": 900.0
+                },
+                "ampDecay": {
+                    "feature": "attack",
+                    "min": 523.636,
+                    "max": 350.636
+                },
+                "levelOsc1": {
+                    "feature": "harmony",
+                    "min": 0.0294935,
+                    "max": 0.54
+                },
+                "levelOsc2": {
+                    "feature": "harmony",
+                    "min": 0.477665,
+                    "max": 0.393519
+                },
+                "levelOsc3": {
+                    "feature": "timbre",
+                    "min": 0.469526,
+                    "max": 0.448416
+                },
+                "detuneOsc2": {
+                    "feature": "harmony",
+                    "min": -1.42687,
+                    "max": 0.203008
+                },
+                "detuneOsc3": {
+                    "feature": "harmony",
+                    "min": 1.31874,
+                    "max": -0.0386316
+                },
+                "levelPinkNoise": {
+                    "feature": "harmony",
+                    "min": 0.143933,
+                    "max": 0.00818898
+                },
+                "clipDist": {
+                    "feature": "harmony",
+                    "min": 0.256087,
+                    "max": 2.5502
+                }
+            }
+        },
+        "houseArpeggio2": {
+            "params": [
+                5.33,
+                14.33,
+                18.50,
+                0.34,
+                0.42,
+                0.09,
+                0.45,
+                0.37,
+                0.45,
+                0.03,
+                -0.09,
+                0.20,
+                12.00,
+                0.00,
+                440.11,
+                1.13,
+                11.00,
+                232.00,
+                0.10,
+                166.76,
+                0.01,
+                83.38,
+                1.60,
+                769.94,
+                0.00,
+                1.60,
+                8.19,
+                1.00,
+                1.00,
+                1.00,
+                250.00,
+                0.61,
+                0.72,
+                0.48,
+                0.00,
+                0.00,
+                2.15,
+                1.00,
+                0.00,
+                0.78
+              ],
+            "tags": {
+                "style": [
+                    "house"
+                ],
+                "type": [
+                    "arpeggio"
+                ]
+            },
+            "mappings": {
+                "loPassCutoff": {
+                  "feature": "timbre",
+                  "min": 26.89,
+                  "max": 500.57
+                },
+                "loPassQ": {
+                  "feature": "harmony",
+                  "min": 2.46,
+                  "max": 0.84
+                },
+                "wavePos1": {
+                  "feature": "harmony",
+                  "min": 0.02,
+                  "max": 0.41
+                },
+                "wavePos2": {
+                  "feature": "harmony",
+                  "min": 0.76,
+                  "max": 0.35
+                },
+                "wavePos3": {
+                  "feature": "harmony",
+                  "min": 0.01,
+                  "max": 0.11
+                },
+                "filterDecay": {
+                  "feature": "attack",
+                  "min": 0.05,
+                  "max": 900.00
+                },
+                "ampDecay": {
+                  "feature": "attack",
+                  "min": 600.64,
+                  "max": 100.64
+                },
+                "levelOsc1": {
+                  "feature": "harmony",
+                  "min": 0.03,
+                  "max": 0.54
+                },
+                "levelOsc2": {
+                  "feature": "harmony",
+                  "min": 0.38,
+                  "max": 0.37
+                },
+                "levelOsc3": {
+                  "feature": "timbre",
+                  "min": 0.47,
+                  "max": 0.45
+                },
+                "detuneOsc2": {
+                  "feature": "harmony",
+                  "min": -1.43,
+                  "max": 0.20
+                },
+                "detuneOsc3": {
+                  "feature": "harmony",
+                  "min": 1.32,
+                  "max": -0.04
+                },
+                "levelPinkNoise": {
+                  "feature": "harmony",
+                  "min": 0.14,
+                  "max": 0.01
+                },
+                "clipDist": {
+                  "feature": "harmony",
+                  "min": 0.26,
+                  "max": 2.55
+                }
+              }
+        },
+        "Basic Funk": {
+            "params": [
+                1.0,
+                7.0,
+                1.0,
+                0.600001,
+                0.0299981,
+                0.662425,
+                0.865963,
+                0.7,
+                0.0664748,
+                0.0,
+                0.123166,
+                -0.04,
+                12.0,
+                0.0,
+                236.709,
+                0.92047,
+                11.0,
+                600.0,
+                2.32768,
+                642.106,
+                0.0,
+                179.798,
+                1.8,
+                320.506,
+                0.0,
+                60.6061,
+                4.0,
+                1.0,
+                0.0,
+                0.0,
+                188.976,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                71.73,
+                1.0,
+                0.0,
+                0.565512
+            ],
+            "tags": {
+                "style": [
+                    "house"
+                ],
+                "type": [
+                    "bass"
+                ]
+            },
+            "mappings": {
+                "loPassCutoff": {
+                    "feature": "timbre",
+                    "min": 79.0,
+                    "max": 533.532
+                },
+                "loPassQ": {
+                    "feature": "harmony",
+                    "min": 2.0,
+                    "max": 0.52047
+                },
+                "wavePos1": {
+                    "feature": "harmony",
+                    "min": 0.321471,
+                    "max": 0.600001
+                },
+                "wavePos2": {
+                    "feature": "harmony",
+                    "min": 0.15874,
+                    "max": 0.0299981
+                },
+                "wavePos3": {
+                    "feature": "harmony",
+                    "min": 0.0,
+                    "max": 0.662425
+                },
+                "filterDecay": {
+                    "feature": "attack",
+                    "min": 211.766,
+                    "max": 339.636
+                },
+                "ampAttack": {
+                    "feature": "attack",
+                    "min": 2.6382,
+                    "max": 2.09712
+                },
+                "ampDecay": {
+                    "feature": "attack",
+                    "min": 258.25,
+                    "max": 642.106
+                },
+                "levelOsc1": {
+                    "feature": "harmony",
+                    "min": 0.5,
+                    "max": 0.865963
+                },
+                "levelOsc2": {
+                    "feature": "harmony",
+                    "min": 0.7,
+                    "max": 0.5
+                },
+                "levelOsc3": {
+                    "feature": "timbre",
+                    "min": 0.828792,
+                    "max": 0.0664748
+                },
+                "detuneOsc2": {
+                    "feature": "harmony",
+                    "min": -1.72687,
+                    "max": 0.123166
+                },
+                "detuneOsc3": {
+                    "feature": "harmony",
+                    "min": 0.903788,
+                    "max": -0.04
+                },
+                "levelPinkNoise": {
+                    "feature": "harmony",
+                    "min": 0.00385916,
+                    "max": 0.0
+                }
+            }
+        },
+        "houseBass2": {
+            "params": [
+                3.00,
+                20.00,
+                16.00,
+                0.57,
+                0.06,
+                0.72,
+                0.37,
+                0.04,
+                0.89,
+                0.00,
+                -0.07,
+                0.06,
+                19.00,
+                0.00,
+                391.95,
+                2.00,
+                11.00,
+                1166.67,
+                1.78,
+                333.42,
+                0.15,
+                20.00,
+                0.05,
+                375.04,
+                0.00,
+                2.22,
+                4.00,
+                1.00,
+                1.06,
+                2.00,
+                250.00,
+                0.00,
+                0.00,
+                0.00,
+                0.00,
+                2.00,
+                68.50,
+                1.00,
+                0.56,
+                0.9
+              ],
+            "tags": {
+                "style": [
+                    "house"
+                ],
+                "type": [
+                    "bass"
+                ]
+            },
+            "mappings":{
+                "loPassCutoff": {
+                  "feature": "timbre",
+                  "min": 75.29,
+                  "max": 482.74
+                },
+                "loPassQ": {
+                  "feature": "harmony",
+                  "min": 2.00,
+                  "max": 1.30
+                },
+                "wavePos1": {
+                  "feature": "harmony",
+                  "min": 0.31,
+                  "max": 0.60
+                },
+                "wavePos2": {
+                  "feature": "harmony",
+                  "min": 0.34,
+                  "max": 0.03
+                },
+                "wavePos3": {
+                  "feature": "harmony",
+                  "min": 0.00,
+                  "max": 0.80
+                },
+                "filterDecay": {
+                  "feature": "attack",
+                  "min": 211.77,
+                  "max": 375.71
+                },
+                "ampDecay": {
+                  "feature": "attack",
+                  "min": 258.25,
+                  "max": 638.55
+                },
+                "levelOsc2": {
+                  "feature": "harmony",
+                  "min": 0.34,
+                  "max": 0.00
+                },
+                "detuneOsc2": {
+                  "feature": "harmony",
+                  "min": -1.73,
+                  "max": 0.12
+                },
+                "detuneOsc3": {
+                  "feature": "harmony",
+                  "min": 0.90,
+                  "max": -0.04
+                },
+                "levelPinkNoise": {
+                  "feature": "harmony",
+                  "min": 0.00,
+                  "max": 0.00
+                },
+                "ampMod": {
+                  "feature": "timbre",
+                  "min": 0.5,
+                  "max": 1
+                }
+              }
+        },
+        "Phatty Sub": {
+            "params":[
+                1.00,
+                3.17,
+                4.00,
+                0.35,
+                0.93,
+                0.37,
+                0.10,
+                0.71,
+                0.80,
+                0.10,
+                -0.45,
+                0.56,
+                0.00,
+                0.00,
+                311.91,
+                1.34,
+                100.00,
+                1333.33,
+                1.60,
+                371.62,
+                0.05,
+                18.18,
+                41.72,
+                250.00,
+                0.00,
+                62.55,
+                2.00,
+                1.04,
+                1.00,
+                1.00,
+                250.00,
+                0.12,
+                0.00,
+                0.00,
+                0.00,
+                2.00,
+                52.50,
+                1.00,
+                0.12,
+                0.70
+              ],
+            "tags": {
+                "style": [
+                    "house"
+                ],
+                "type": [
+                    "bass"
+                ]
+            },
+            "mappings": {
+                "loPassCutoff": {
+                  "feature": "timbre",
+                  "min": 75.29,
+                  "max": 400.74
+                },
+                "loPassQ": {
+                  "feature": "harmony",
+                  "min": 1.40,
+                  "max": 0.50
+                },
+                "wavePos1": {
+                  "feature": "harmony",
+                  "min": 0.32,
+                  "max": 0.72
+                },
+                "wavePos2": {
+                  "feature": "harmony",
+                  "min": 1.00,
+                  "max": 0.01
+                },
+                "wavePos3": {
+                  "feature": "harmony",
+                  "min": 0.40,
+                  "max": 0.00
+                },
+                "filterDecay": {
+                  "feature": "attack",
+                  "min": 150.00,
+                  "max": 250.00
+                },
+                "ampDecay": {
+                  "feature": "attack",
+                  "min": 300.97,
+                  "max": 400.55
+                },
+                "wave1ModAmm": {
+                  "feature": "timbre",
+                  "min": 0.12,
+                  "max": 0.12
+                },
+                "levelOsc1": {
+                  "feature": "harmony",
+                  "min": 0.06,
+                  "max": 0.70
+                },
+                "levelOsc2": {
+                  "feature": "harmony",
+                  "min": 0.70,
+                  "max": 0.80
+                },
+                "detuneOsc2": {
+                  "feature": "harmony",
+                  "min": -0.50,
+                  "max": 0.20
+                },
+                "detuneOsc3": {
+                  "feature": "harmony",
+                  "min": 0.60,
+                  "max": -0.04
+                },
+                "levelPinkNoise": {
+                  "feature": "harmony",
+                  "min": 0.10,
+                  "max": 0.00
+                },
+                "clipDist": {
+                  "feature": "harmony",
+                  "min": 51.24,
+                  "max": 69.88
+                },
+                "ampMod": {
+                  "feature": "timbre",
+                  "min": 0.07,
+                  "max": 0.14
+                }
+              }
+        },
+        "Deep House Bass":{
+            "params":[
+                3.33,
+                4.00,
+                4.00,
+                0.94,
+                1.00,
+                0.00,
+                0.67,
+                0.74,
+                0.79,
+                0.08,
+                0.85,
+                0.63,
+                0.01,
+                -12.33,
+                213.45,
+                1.78,
+                10.00,
+                1666.67,
+                2.06,
+                599.48,
+                0.00,
+                18.18,
+                128.02,
+                335.10,
+                0.00,
+                101.01,
+                1.00,
+                2.00,
+                1.00,
+                1.00,
+                0.00,
+                0.12,
+                0.00,
+                0.00,
+                0.00,
+                2.00,
+                0.00,
+                1.00,
+                0.13,
+                0.53
+              ],
+              
+            "tags": {
+                "style": [
+                    "house"
+                ],
+                "type": [
+                    "bass"
+                ]
+            },
+            "mappings": {
+                "loPassCutoff": {
+                  "feature": "timbre",
+                  "min": 20.00,
+                  "max": 250.00
+                },
+                "loPassQ": {
+                  "feature": "harmony",
+                  "min": 2.10,
+                  "max": 0.00
+                },
+                "filterDecay": {
+                  "feature": "attack",
+                  "min": 196.64,
+                  "max": 358.88
+                },
+                "ampAttack": {
+                  "feature": "attack",
+                  "min": 2.42,
+                  "max": 2.00
+                },
+                "ampDecay": {
+                  "feature": "attack",
+                  "min": 371.97,
+                  "max": 638.55
+                },
+                "wave1ModAmm": {
+                  "feature": "timbre",
+                  "min": 0.12,
+                  "max": 0.12
+                },
+                "levelOsc1": {
+                  "feature": "harmony",
+                  "min": 0.65,
+                  "max": 0.83
+                },
+                "levelOsc2": {
+                  "feature": "harmony",
+                  "min": 0.78,
+                  "max": 0.56
+                },
+                "detuneOsc2": {
+                  "feature": "harmony",
+                  "min": 1.00,
+                  "max": 0.01
+                },
+                "detuneOsc3": {
+                  "feature": "harmony",
+                  "min": 0.74,
+                  "max": 0.00
+                },
+                "levelPinkNoise": {
+                  "feature": "harmony",
+                  "min": 0.10,
+                  "max": 0.00
+                },
+                "clipDist": {
+                  "feature": "harmony",
+                  "min": 0.00,
+                  "max": 0.00
+                },
+                "ampMod": {
+                  "feature": "timbre",
+                  "min": 0.07,
+                  "max": 0.14
+                },
+                "filterAttack": {
+                  "feature": "valence",
+                  "min": 150.00,
+                  "max": 30.00
+                }
+              }
+        },
+        "HouseBasschip": {
+            "params": [
+                1.0,
+                4.0,
+                1.0,
+                0.0597638,
+                0.88,
+                0.0,
+                0.915591,
+                0.474095,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                -12.0,
+                0.0,
+                15000.0,
+                2.45,
+                10.0,
+                0.0,
+                28.6995,
+                488.0,
+                0.0,
+                1.6,
+                12.1212,
+                481.818,
+                1.0,
+                81.2879,
+                1.0,
+                0.0,
+                1.0,
+                1.0,
+                0.0,
+                0.09,
+                0.0,
+                0.0,
+                0.472441,
+                1.0,
+                74.0,
+                1.0,
+                0.0,
+                0.59685
+            ],
+            "tags": {
+                "style": [
+                    "house",
+                    "rock"
+                ],
+                "type": [
+                    "basschip"
+                ]
+            },
+            "mappings": {
+                "loPassQ": {
+                    "feature": "harmony",
+                    "min": 2.45,
+                    "max": 0.84
+                },
+                "wavePos1": {
+                    "feature": "harmony",
+                    "min": 0.0597638,
+                    "max": 0.199764
+                },
+                "wavePos2": {
+                    "feature": "harmony",
+                    "min": 0.88,
+                    "max": 0.87
+                },
+                "filterAttack": {
+                    "feature": "attack",
+                    "min": 12.1212,
+                    "max": 1.6
+                },
+                "ampAttack": {
+                    "feature": "attack",
+                    "min": 28.6995,
+                    "max": 4.22
+                },
+                "ampDecay": {
+                    "feature": "attack",
+                    "min": 300.0,
+                    "max": 600.0
+                },
+                "wave1ModAmm": {
+                    "feature": "timbre",
+                    "min": 0.0,
+                    "max": 0.09
+                },
+                "levelOsc1": {
+                    "feature": "harmony",
+                    "min": 0.745591,
+                    "max": 0.96063
+                },
+                "levelOsc3": {
+                    "feature": "timbre",
+                    "min": 0.0,
+                    "max": 0.05
+                },
+                "levelPinkNoise": {
+                    "feature": "harmony",
+                    "min": 0.0,
+                    "max": 0.15
+                }
+            }
+        },
+        "Fat Lead": {
+            "params": [
+                1.00,
+                1.00,
+                1.00,
+                0.69,
+                0.63,
+                0.15,
+                0.75,
+                0.63,
+                0.13,
+                0.09,
+                5.22,
+                0.64,
+                0.00,
+                0.00,
+                965.87,
+                2.40,
+                11.00,
+                800.90,
+                6.27,
+                769.78,
+                0.00,
+                40.00,
+                70.07,
+                251.84,
+                0.00,
+                2.22,
+                0.50,
+                0.00,
+                0.00,
+                0.50,
+                0.00,
+                0.15,
+                0.13,
+                0.00,
+                0.00,
+                0.00,
+                49.21,
+                1.00,
+                0.22,
+                0.53
+              ],
+            "tags": {
+                "style": [
+                    "house"
+                ],
+                "type": [
+                    "lead"
+                ]
+            },
+            "mappings": {
+                "loPassCutoff": {
+                    "feature": "timbre",
+                    "min": 300.88,
+                    "max": 1200.0
+                },
+                "loPassQ": {
+                    "feature": "harmony",
+                    "min": 2.5,
+                    "max": 1.3
+                },
+                "wavePos1": {
+                    "feature": "harmony",
+                    "min": 0.669748,
+                    "max": 0.96001
+                },
+                "wavePos2": {
+                    "feature": "harmony",
+                    "min": 0.652047,
+                    "max": 0.348294
+                },
+                "wavePos3": {
+                    "feature": "harmony",
+                    "min": 0.109667,
+                    "max": 0.660966
+                },
+                "filterAttack": {
+                    "feature": "attack",
+                    "min": 100.495,
+                    "max": 60.6391
+                },
+                "filterDecay": {
+                    "feature": "attack",
+                    "min": 94.5455,
+                    "max": 300.566
+                },
+                "ampAttack": {
+                    "feature": "attack",
+                    "min": 20.0528,
+                    "max": 2.00378
+                },
+                "ampDecay": {
+                    "feature": "attack",
+                    "min": 512.0,
+                    "max": 849.636
+                },
+                "wave1ModAmm": {
+                    "feature": "timbre",
+                    "min": 0.11811,
+                    "max": 0.163015
+                },
+                "wave2ModAmm": {
+                    "feature": "timbre",
+                    "min": 0.488189,
+                    "max": 0.0
+                },
+                "levelOsc1": {
+                    "feature": "harmony",
+                    "min": 0.745591,
+                    "max": 0.844301
+                },
+                "levelOsc2": {
+                    "feature": "harmony",
+                    "min": 0.687165,
+                    "max": 0.0
+                },
+                "levelOsc3": {
+                    "feature": "timbre",
+                    "min": 0.148819,
+                    "max": 0.128416
+                },
+                "detuneOsc2": {
+                    "feature": "harmony",
+                    "min": 5.57687,
+                    "max": 1.20301
+                },
+                "detuneOsc3": {
+                    "feature": "harmony",
+                    "min": 0.73874,
+                    "max": -0.438632
+                },
+                "levelPinkNoise": {
+                    "feature": "harmony",
+                    "min": 0.1,
+                    "max": 0.00818898
+                },
+                "clipDist": {
+                    "feature": "harmony",
+                    "min": 49.0,
+                    "max": 51.5502
+                },
+                "ampMod": {
+                    "feature": "timbre",
+                    "min": 0.03,
+                    "max": 0.29
+                }
+            }
+        },
+        "houseLead2": {
+            "params": [
+                9.00,
+                20.00,
+                13.00,
+                0.93,
+                0.01,
+                0.59,
+                0.82,
+                0.13,
+                0.04,
+                0.01,
+                0.12,
+                0.08,
+                0.00,
+                0.00,
+                588.90,
+                1.66,
+                11.00,
+                1100.38,
+                5.89,
+                478.41,
+                0.00,
+                40.00,
+                0.05,
+                355.19,
+                0.00,
+                1.00,
+                3.00,
+                0.00,
+                2.00,
+                2.00,
+                0.00,
+                0.02,
+                0.14,
+                0.00,
+                0.00,
+                7.00,
+                51.68,
+                1.00,
+                0.21,
+                0.69
+              ],
+            "tags": {
+                "style": [
+                    "house"
+                ],
+                "type": [
+                    "lead"
+                ]
+            },
+            "mappings": {
+                "loPassCutoff": {
+                  "feature": "timbre",
+                  "min": 100.31,
+                  "max": 800.06
+                },
+                "loPassQ": {
+                  "feature": "harmony",
+                  "min": 4.35,
+                  "max": 1.33
+                },
+                "wavePos1": {
+                  "feature": "harmony",
+                  "min": 0.72,
+                  "max": 0.96
+                },
+                "wavePos3": {
+                  "feature": "harmony",
+                  "min": 0.00,
+                  "max": 0.66
+                },
+                "filterDecay": {
+                  "feature": "attack",
+                  "min": 63.53,
+                  "max": 438.57
+                },
+                "ampAttack": {
+                  "feature": "attack",
+                  "min": 19.45,
+                  "max": 2.01
+                },
+                "ampDecay": {
+                  "feature": "attack",
+                  "min": 400.64,
+                  "max": 500.64
+                },
+                "wave1ModAmm": {
+                  "feature": "timbre",
+                  "min": 0.02,
+                  "max": 0.02
+                },
+                "wave2ModAmm": {
+                  "feature": "timbre",
+                  "min": 0.47,
+                  "max": 0.00
+                },
+                "levelOsc1": {
+                  "feature": "harmony",
+                  "min": 0.75,
+                  "max": 0.83
+                },
+                "levelOsc2": {
+                  "feature": "harmony",
+                  "min": 0.69,
+                  "max": 0.07
+                },
+                "levelOsc3": {
+                  "feature": "timbre",
+                  "min": 0.15,
+                  "max": 0.00
+                },
+                "detuneOsc2": {
+                  "feature": "harmony",
+                  "min": -0.65,
+                  "max": 0.21
+                },
+                "detuneOsc3": {
+                  "feature": "harmony",
+                  "min": 1.06,
+                  "max": -0.04
+                },
+                "levelPinkNoise": {
+                  "feature": "harmony",
+                  "min": 0.02,
+                  "max": 0.01
+                },
+                "clipDist": {
+                  "feature": "harmony",
+                  "min": 49.00,
+                  "max": 52.00
+                },
+                "ampMod": {
+                  "feature": "timbre",
+                  "min": 0.04,
+                  "max": 0.29
+                }
+              }
+        },
+        "houseLead3": {
+            "params": [
+                1.00,
+                9.00,
+                9.00,
+                0.74,
+                0.80,
+                0.13,
+                0.40,
+                0.73,
+                0.07,
+                0.02,
+                -0.66,
+                0.86,
+                0.00,
+                7.00,
+                926.35,
+                1.41,
+                13.00,
+                2666.67,
+                0.10,
+                513.43,
+                0.00,
+                40.00,
+                31.49,
+                395.68,
+                0.63,
+                80.81,
+                2.00,
+                0.00,
+                2.00,
+                2.00,
+                500.00,
+                0.01,
+                0.12,
+                0.17,
+                0.00,
+                7.00,
+                3.54,
+                1.00,
+                0.26,
+                0.77
+              ],
+            "tags": {
+                "style": [
+                    "house"
+                ],
+                "type": [
+                    "lead"
+                ]
+            },
+            "mappings": {
+                "loPassCutoff": {
+                  "feature": "timbre",
+                  "min": 20.31,
+                  "max": 1266.48
+                },
+                "loPassQ": {
+                  "feature": "harmony",
+                  "min": 1.50,
+                  "max": 0.20
+                },
+                "wavePos1": {
+                  "feature": "harmony",
+                  "min": 0.72,
+                  "max": 0.96
+                },
+                "wavePos2": {
+                  "feature": "harmony",
+                  "min": 0.81,
+                  "max": 0.65
+                },
+                "wavePos3": {
+                  "feature": "harmony",
+                  "min": 0.07,
+                  "max": 1.00
+                },
+                "filterAttack": {
+                  "feature": "attack",
+                  "min": 84.17,
+                  "max": 9.92
+                },
+                "filterDecay": {
+                  "feature": "attack",
+                  "min": 296.98,
+                  "max": 436.09
+                },
+                "ampAttack": {
+                  "feature": "attack",
+                  "min": 0.10,
+                  "max": 0.10
+                },
+                "ampDecay": {
+                  "feature": "attack",
+                  "min": 300.45,
+                  "max": 600.64
+                },
+                "wave1ModAmm": {
+                  "feature": "timbre",
+                  "min": 0.00,
+                  "max": 0.02
+                },
+                "wave2ModAmm": {
+                  "feature": "timbre",
+                  "min": 0.43,
+                  "max": 0.00
+                },
+                "levelOsc1": {
+                  "feature": "harmony",
+                  "min": 0.37,
+                  "max": 0.83
+                },
+                "levelOsc2": {
+                  "feature": "harmony",
+                  "min": 0.78,
+                  "max": 0.00
+                },
+                "levelOsc3": {
+                  "feature": "harmony",
+                  "min": 0.00,
+                  "max": 1.00
+                },
+                "detuneOsc2": {
+                  "feature": "harmony",
+                  "min": -0.72,
+                  "max": 0.21
+                },
+                "detuneOsc3": {
+                  "feature": "harmony",
+                  "min": 0.92,
+                  "max": 0.00
+                },
+                "levelPinkNoise": {
+                  "feature": "harmony",
+                  "min": 0.02,
+                  "max": 0.01
+                },
+                "clipDist": {
+                  "feature": "harmony",
+                  "min": 0.05,
+                  "max": 51.55
+                },
+                "ampMod": {
+                  "feature": "timbre",
+                  "min": 0.12,
+                  "max": 0.31
+                }
+              }
+        },
+        "houseLeadchip": {
+            "params": [
+                1.0,
+                4.0,
+                1.0,
+                0.0597638,
+                0.92,
+                0.0,
+                0.66063,
+                0.694094,
+                0.4,
+                0.0,
+                0.0,
+                0.0,
+                12.0,
+                0.0,
+                3603.54,
+                0.84,
+                10.0,
+                0.0,
+                1.66995,
+                400.0,
+                0.0,
+                1.6,
+                35.5399,
+                481.818,
+                0.0,
+                81.2879,
+                1.0,
+                0.0,
+                2.0,
+                0.0,
+                19.3701,
+                0.0,
+                0.0,
+                0.0,
+                2.51,
+                1.0,
+                47.43,
+                1.0,
+                0.0829134,
+                0.59685
+            ],
+            "tags": {
+                "style": [
+                    "house",
+                    "rock",
+                    "ambient",
+                    "piano"
+                ],
+                "type": [
+                    "leadchip",
+                    "lickschip",
+                    "arpeggiochip"
+                    
+                ]
+            },
+            "mappings": {
+                "loPassCutoff": {
+                    "feature": "timbre",
+                    "min": 3603.54,
+                    "max": 15000.2
+                },
+                "loPassQ": {
+                    "feature": "harmony",
+                    "min": 1.33,
+                    "max": 0.84
+                },
+                "wavePos1": {
+                    "feature": "harmony",
+                    "min": 0.0,
+                    "max": 0.0597638
+                },
+                "filterAttack": {
+                    "feature": "attack",
+                    "min": 12.1212,
+                    "max": 1.6
+                },
+                "ampAttack": {
+                    "feature": "attack",
+                    "min": 28.6995,
+                    "max": 1.622
+                },
+                "ampDecay": {
+                    "feature": "attack",
+                    "min": 400.0,
+                    "max": 800.0
+                },
+                "wave1ModAmm": {
+                    "feature": "timbre",
+                    "min": 0.0,
+                    "max": 0.125984
+                },
+                "levelOsc2": {
+                    "feature": "harmony",
+                    "min": 0.504094,
+                    "max": 0.694094
+                },
+                "detuneOsc2": {
+                    "feature": "harmony",
+                    "min": 8.0,
+                    "max": 0.0
+                },
+                "detuneOsc3": {
+                    "feature": "harmony",
+                    "min": -8.0,
+                    "max": 0.0
+                },
+                "levelPinkNoise": {
+                    "feature": "harmony",
+                    "min": 0.0,
+                    "max": 0.1
+                },
+                "clipDist": {
+                    "feature": "harmony",
+                    "min": 39.0,
+                    "max": 47.43
+                }
+            }
+        },
+        "rockLicks1": {
+            "params": [
+                1.0,
+                1.0,
+                10.0,
+                0.835802,
+                0.921139,
+                0.454594,
+                0.621632,
+                0.590518,
+                0.439787,
+                0.0509623,
+                -1.0249,
+                0.690569,
+                -0.0,
+                0.0,
+                649.343,
+                1.59691,
+                12.0,
+                400.0,
+                17.8921,
+                387.374,
+                0.777778,
+                40.0,
+                2.52857,
+                189.796,
+                0.0,
+                83.0303,
+                1.0,
+                0.0,
+                0.0,
+                0.5,
+                94.4882,
+                0.286306,
+                0.0585116,
+                0.0510579,
+                0.0,
+                0.0,
+                56.3294,
+                1.0,
+                0.171274,
+                0.496063
+            ],
+            "tags": {
+                "style": [
+                    "rock"
+                ],
+                "type": [
+                    "lead",
+                    "licks"
+                ]
+            },
+            "mappings": {
+                "loPassCutoff": {
+                    "feature": "timbre",
+                    "min": 438.08,
+                    "max": 1087.0
+                },
+                "loPassQ": {
+                    "feature": "harmony",
+                    "min": 1.77425,
+                    "max": 0.81688
+                },
+                "wavePos1": {
+                    "feature": "harmony",
+                    "min": 0.806683,
+                    "max": 1.0
+                },
+                "wavePos2": {
+                    "feature": "harmony",
+                    "min": 1.0,
+                    "max": 0.476454
+                },
+                "wavePos3": {
+                    "feature": "harmony",
+                    "min": 0.438819,
+                    "max": 0.543543
+                },
+                "filterAttack": {
+                    "feature": "attack",
+                    "min": 2.6391,
+                    "max": 1.69565
+                },
+                "filterDecay": {
+                    "feature": "attack",
+                    "min": 106.545,
+                    "max": 817.155
+                },
+                "ampAttack": {
+                    "feature": "attack",
+                    "min": 20.0528,
+                    "max": 1.61
+                },
+                "ampDecay": {
+                    "feature": "attack",
+                    "min": 338.182,
+                    "max": 758.067
+                },
+                "wave1ModAmm": {
+                    "feature": "timbre",
+                    "min": 0.248001,
+                    "max": 0.574962
+                },
+                "wave2ModAmm": {
+                    "feature": "timbre",
+                    "min": 0.0662761,
+                    "max": 0.0
+                },
+                "wave3ModAmm": {
+                    "feature": "timbre",
+                    "min": 0.0,
+                    "max": 0.435816
+                },
+                "levelOsc1": {
+                    "feature": "harmony",
+                    "min": 0.59,
+                    "max": 0.8
+                },
+                "levelOsc2": {
+                    "feature": "harmony",
+                    "min": 0.65,
+                    "max": 0.255103
+                },
+                "levelOsc3": {
+                    "feature": "timbre",
+                    "min": 0.51,
+                    "max": 0.0438669
+                },
+                "detuneOsc2": {
+                    "feature": "harmony",
+                    "min": -1.29,
+                    "max": 0.47
+                },
+                "detuneOsc3": {
+                    "feature": "harmony",
+                    "min": 0.86831,
+                    "max": -0.31169
+                },
+                "levelPinkNoise": {
+                    "feature": "harmony",
+                    "min": 0.06,
+                    "max": 0.0
+                },
+                "clipDist": {
+                    "feature": "harmony",
+                    "min": 51.7202,
+                    "max": 82.3202
+                },
+                "ampMod": {
+                    "feature": "timbre",
+                    "min": 0.15,
+                    "max": 0.33159
+                }
+            }
+        },
+        "rockLicks2": {
+            "params": [
+                9.0,
+                1.0,
+                1.0,
+                0.945607,
+                0.533409,
+                0.938951,
+                0.705784,
+                0.280432,
+                0.0835801,
+                0.0119665,
+                0.517155,
+                -1.6,
+                -12.0,
+                0.0,
+                996.36,
+                0.461539,
+                11.0,
+                616.0,
+                3.83904,
+                680.645,
+                0.777778,
+                40.0,
+                10.2864,
+                338.193,
+                0.0,
+                83.0303,
+                0.5,
+                0.0,
+                1.0,
+                1.0,
+                235.276,
+                0.28214,
+                0.18365,
+                0.382934,
+                0.0,
+                0.0,
+                90.7202,
+                1.0,
+                0.0,
+                0.527559
+            ],
+            "tags": {
+                "style": [
+                    "rock"
+                ],
+                "type": [
+                    "lead",
+                    "licks"
+                ]
+            },
+            "mappings": {
+                "loPassCutoff": {
+                    "feature": "timbre",
+                    "min": 340.0,
+                    "max": 1087.0
+                },
+                "loPassQ": {
+                    "feature": "harmony",
+                    "min": 1.77425,
+                    "max": 0.301302
+                },
+                "wavePos1": {
+                    "feature": "harmony",
+                    "min": 0.5,
+                    "max": 1.0
+                },
+                "wavePos3": {
+                    "feature": "harmony",
+                    "min": 0.543543,
+                    "max": 1.0
+                },
+                "filterAttack": {
+                    "feature": "attack",
+                    "min": 72.495,
+                    "max": 2.6391
+                },
+                "filterDecay": {
+                    "feature": "attack",
+                    "min": 106.545,
+                    "max": 370.182
+                },
+                "ampAttack": {
+                    "feature": "attack",
+                    "min": 20.0528,
+                    "max": 1.6
+                },
+                "ampDecay": {
+                    "feature": "attack",
+                    "min": 120.0,
+                    "max": 338.182
+                },
+                "wave1ModAmm": {
+                    "feature": "timbre",
+                    "min": 0.251969,
+                    "max": 0.286306
+                },
+                "wave2ModAmm": {
+                    "feature": "timbre",
+                    "min": 0.204724,
+                    "max": 0.18074
+                },
+                "levelOsc1": {
+                    "feature": "harmony",
+                    "min": 0.261632,
+                    "max": 0.76
+                },
+                "levelOsc2": {
+                    "feature": "harmony",
+                    "min": 0.513607,
+                    "max": 0.251969
+                },
+                "levelOsc3": {
+                    "feature": "timbre",
+                    "min": 0.43923,
+                    "max": 0.0401674
+                },
+                "detuneOsc2": {
+                    "feature": "harmony",
+                    "min": -1.8,
+                    "max": 0.8
+                },
+                "levelPinkNoise": {
+                    "feature": "harmony",
+                    "min": 0.11,
+                    "max": 0.0
+                }
+            }
+        },
+        "Rock Synth Bass": {
+            "params":[
+              1.00,
+              1.00,
+              9.33,
+              1.00,
+              0.26,
+              1.00,
+              0.37,
+              0.05,
+              0.89,
+              0.00,
+              -0.17,
+              0.11,
+              19.00,
+              0.00,
+              387.42,
+              1.41,
+              11.00,
+              1666.67,
+              1.78,
+              554.95,
+              0.26,
+              0.05,
+              0.05,
+              339.67,
+              0.00,
+              2.22,
+              4.00,
+              1.00,
+              1.06,
+              2.00,
+              0.00,
+              0.00,
+              0.00,
+              0.00,
+              0.00,
+              2.00,
+              58.33,
+              1.00,
+              0.00,
+              0.90
+            ],
+            "tags": {
+                "style": [
+                    "rock"
+                ],
+                "type": [
+                    "synthBass"
+                ]
+            },
+            "mappings":{
+              "loPassCutoff": {
+                "feature": "timbre",
+                "min": 75.29,
+                "max": 482.74
+              },
+              "loPassQ": {
+                "feature": "harmony",
+                "min": 2.00,
+                "max": 1.30
+              },
+              "wavePos1": {
+                "feature": "harmony",
+                "min": 0.31,
+                "max": 1.00
+              },
+              "wavePos2": {
+                "feature": "harmony",
+                "min": 0.34,
+                "max": 0.03
+              },
+              "wavePos3": {
+                "feature": "harmony",
+                "min": 0.56,
+                "max": 1.00
+              },
+              "filterDecay": {
+                "feature": "attack",
+                "min": 211.77,
+                "max": 375.71
+              },
+              "ampDecay": {
+                "feature": "attack",
+                "min": 258.25,
+                "max": 638.55
+              },
+              "levelOsc2": {
+                "feature": "harmony",
+                "min": 0.34,
+                "max": 0.00
+              },
+              "detuneOsc2": {
+                "feature": "harmony",
+                "min": -1.73,
+                "max": 0.12
+              },
+              "detuneOsc3": {
+                "feature": "harmony",
+                "min": 0.90,
+                "max": -0.04
+              }
+            }
+        }
+    },
+    "type": "heavy",
+    "name": "WavetableSynth_Mono"
+}
