@@ -18,6 +18,7 @@ public class FireStation : MonoBehaviour {
     {
         OnFire = true;
         EnableWhenOnFire.SetActive(true);
+        RecursiveSetLayer(transform, LayerMask.NameToLayer("Fire"));
         ControllingButton.SetToWarningMode();
         Fire.Play();
     }
@@ -27,6 +28,15 @@ public class FireStation : MonoBehaviour {
         OnFire = false;
         EnableWhenOnFire.SetActive(false);
         ControllingButton.SetToNormalMode();
+        RecursiveSetLayer(transform, LayerMask.NameToLayer("Default"));
         Fire.Stop();
+    }
+
+    private void RecursiveSetLayer(Transform trans, int layer)
+    {
+        trans.gameObject.layer = layer;
+        foreach (Transform child in trans) {
+            RecursiveSetLayer(child, layer);
+        }
     }
 }

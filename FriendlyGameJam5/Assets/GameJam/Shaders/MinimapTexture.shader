@@ -70,7 +70,7 @@
 			float4 Fragment(Varyings v) : SV_Target0 {
 				float4 background = _Color * tex2D(_MainTexture, v.uv.xy).a + _BackColor * (1 - tex2D(_MainTexture, v.uv.xy).a);
 				background = _FireColor * tex2D(_FireTexture, v.uv.xy).a + background * (1 - tex2D(_FireTexture, v.uv.xy).a);
-				return background * random(v.uv + _Time.x);
+				return background * (random(v.uv + _Time.x) * 0.5 + 0.5);
 			}
 		
 			ENDCG
