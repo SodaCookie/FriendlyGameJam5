@@ -21,7 +21,7 @@ GameObject:
   - component: {fileID: 4947670283053468}
   - component: {fileID: 198048991194027112}
   - component: {fileID: 199509668530598460}
-  m_Layer: 8
+  m_Layer: 11
   m_Name: SparksFalling
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -55,7 +55,7 @@ GameObject:
   - component: {fileID: 4432653285601094}
   - component: {fileID: 198323101037049156}
   - component: {fileID: 199233921587866838}
-  m_Layer: 8
+  m_Layer: 11
   m_Name: SparksRising
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -96,7 +96,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!1 &1232801125196438
 GameObject:
   m_ObjectHideFlags: 0
@@ -123,7 +123,7 @@ GameObject:
   - component: {fileID: 4398580694892492}
   - component: {fileID: 198996457231612112}
   - component: {fileID: 199093773921579788}
-  m_Layer: 8
+  m_Layer: 11
   m_Name: Fire
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -140,7 +140,7 @@ GameObject:
   - component: {fileID: 4118462043118762}
   - component: {fileID: 198004946003015312}
   - component: {fileID: 199975305856335364}
-  m_Layer: 8
+  m_Layer: 11
   m_Name: SmokeDark
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -157,7 +157,7 @@ GameObject:
   - component: {fileID: 4126631277489256}
   - component: {fileID: 198504102714287386}
   - component: {fileID: 199074840467343004}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Flames
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -240,7 +240,7 @@ GameObject:
   - component: {fileID: 4877678550905294}
   - component: {fileID: 198285347165489244}
   - component: {fileID: 199093127475647694}
-  m_Layer: 8
+  m_Layer: 11
   m_Name: SmokeLit
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -280,7 +280,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!1 &1600586482682006
 GameObject:
   m_ObjectHideFlags: 0
@@ -381,7 +381,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!1 &1824748846795464
 GameObject:
   m_ObjectHideFlags: 1
@@ -695,7 +695,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1232801125196438}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -8.07, y: 0, z: -22.501}
+  m_LocalPosition: {x: -8.37, y: -0.009999514, z: -2.7438042}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4061173359100632}
