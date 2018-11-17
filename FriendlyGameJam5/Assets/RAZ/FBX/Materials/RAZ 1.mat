@@ -6,8 +6,8 @@ Material:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
-  m_Name: RAZ
-  m_Shader: {fileID: 4800000, guid: 982b700c17917ae48880e75bedf9e0a8, type: 3}
+  m_Name: RAZ 1
+  m_Shader: {fileID: 4, guid: 0000000000000000f000000000000000, type: 0}
   m_ShaderKeywords: _LIGHTMAPPING_REALTIME
   m_LightmapFlags: 5
   m_EnableInstancingVariants: 0
@@ -75,4 +75,3 @@ Material:
     - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
     - _EmissionColorUI: {r: 1, g: 1, b: 1, a: 1}
     - _SpecColor: {r: 0.5, g: 0.5, b: 0.5, a: 1}
-    - _Tint: {r: 0, g: 1, b: 0, a: 1}

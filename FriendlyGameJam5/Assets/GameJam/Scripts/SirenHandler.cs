@@ -5,6 +5,7 @@ using UnityEngine;
 public class SirenHandler : MonoBehaviour
 {
     public float Speed = 1;
+    public int EmissionMaterialIndex = 1;
     public Color StrobColor = Color.red;
     public Light LightReference;
 
@@ -21,8 +22,8 @@ public class SirenHandler : MonoBehaviour
         renderer = GetComponent<MeshRenderer>();
         var mats = renderer.materials;
         renderer.materials = mats;
-        material = renderer.materials[1];
-        defaultColor = renderer.materials[1].GetColor("_EmissionColor");
+        material = renderer.materials[EmissionMaterialIndex];
+        defaultColor = renderer.materials[EmissionMaterialIndex].GetColor("_EmissionColor");
 
         if (LightReference)
         {

@@ -31,7 +31,6 @@ public class NavAgentTo3rdPersonAnimatorControllerAdapter : MonoBehaviour {
         // Handle rotation
         Vector3 currentFacing = transform.forward;
         float currentAngularVelocity = Vector3.SignedAngle(currentFacing, lastFacing, Vector3.down) / Time.deltaTime; //degrees per second
-        Debug.Log(currentAngularVelocity);
         animator.SetFloat("Turn", currentAngularVelocity / MaxAnimationTurnSpeed);
         lastFacing = currentFacing;
     }
