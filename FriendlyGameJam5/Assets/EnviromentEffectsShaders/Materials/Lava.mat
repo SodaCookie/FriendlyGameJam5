@@ -35,7 +35,7 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _MainTex:
-        m_Texture: {fileID: 2800000, guid: add24e97b09ed4bcbb1ad12bbc14fba5, type: 3}
+        m_Texture: {fileID: 2800000, guid: c0966fb4efbcbba4a8bd4b4b04f36a2c, type: 3}
         m_Scale: {x: 5, y: 5}
         m_Offset: {x: 0, y: 0}
     - _SnowMap:
@@ -61,16 +61,16 @@ Material:
     m_Floats:
     - _LavaAmount: 1
     - _LavaLight: 1
-    - _Shininess: 0.030000003
+    - _Shininess: 0.03
     - _SnowAmount: 0.16071428
     - _SnowDepth: 0
     - _WaterAmount: 1
     m_Colors:
-    - _Color: {r: 1, g: 1, b: 1, a: 1}
-    - _LavaColor: {r: 0.4896555, g: 0, b: 1, a: 1}
+    - _Color: {r: 1, g: 0, b: 0, a: 1}
+    - _LavaColor: {r: 0.49019623, g: 0, b: 1, a: 1}
     - _LavaDirection: {r: -36.55, g: 0.9, b: 0, a: 1}
     - _SnowColor: {r: 0.6764706, g: 0.6764706, b: 0.6764706, a: 1}
     - _SnowDirection: {r: 0, g: 1, b: 0, a: 1}
-    - _SpecColor: {r: 0.1544118, g: 0.1544118, b: 0.1544118, a: 1}
+    - _SpecColor: {r: 1, g: 0, b: 0, a: 1}
     - _WaterColor: {r: 0.7205882, g: 0.8238844, b: 0.875, a: 1}
     - _WaterDirection: {r: 20, g: 0, b: 0, a: 1}
