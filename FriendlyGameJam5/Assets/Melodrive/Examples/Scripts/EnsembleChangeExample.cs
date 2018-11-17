@@ -35,6 +35,7 @@ public class EnsembleChangeExample : MelodriveObject
         {
             Dropdown.OptionData item = new Dropdown.OptionData();
             string id = md.GetEnsembleID(i);
+            print(id);
             item.text = md.GetEnsembleName(id);
             options.Add(item);
             if (id == currentEnsemble)

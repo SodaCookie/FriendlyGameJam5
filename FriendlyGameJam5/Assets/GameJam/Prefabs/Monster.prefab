@@ -3898,9 +3898,10 @@ GameObject:
   - component: {fileID: 114110149885802994}
   - component: {fileID: 54728514378732340}
   - component: {fileID: 136113855093280762}
+  - component: {fileID: 114919066120480342}
   m_Layer: 0
   m_Name: Monster
-  m_TagString: Untagged
+  m_TagString: Monster
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -18338,6 +18339,25 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   target: {fileID: 0}
+--- !u!114 &114919066120480342
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1407672827187080}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 11b44d8fe07536a409de9c5a6baff643, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sightRange: 20
+  aggroSpeed: 10
+  deaggroCooldownDuration: 3
+  target: {fileID: 0}
+  oculusionMask:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  headBone: {fileID: 4142547662428246}
 --- !u!136 &136113855093280762
 CapsuleCollider:
   m_ObjectHideFlags: 1

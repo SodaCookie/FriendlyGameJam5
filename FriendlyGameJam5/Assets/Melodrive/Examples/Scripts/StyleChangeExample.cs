@@ -19,5 +19,6 @@ public class StyleChangeExample : MelodriveObject
         Dropdown styleChange = GameObject.Find("StyleSelect").GetComponent<Dropdown>();
         string style = styleChange.options[styleChange.value].text.ToLower();
         md.SetStyle(style);
+        md.SetEnsemble(Melodrive.Ensembles.Ensemble.ClassicRock);
     }
 }
