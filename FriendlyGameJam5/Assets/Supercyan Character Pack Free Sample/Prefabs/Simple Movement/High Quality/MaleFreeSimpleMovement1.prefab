@@ -490,7 +490,7 @@ GameObject:
   - component: {fileID: 114018963531894940}
   m_Layer: 0
   m_Name: MaleFreeSimpleMovement1
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -944,7 +944,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1824340380413090}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: -0.17, y: 0.3614292, z: -2.2047338}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4742318452996994}
@@ -1223,12 +1223,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 32ca30c36b506c64aafa127f12f968fa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  m_sprintSpeed: 4
+  m_sprintKey: 304
+  m_sprintMeterMax: 3
   m_moveSpeed: 2
   m_turnSpeed: 200
   m_jumpForce: 4
   m_animator: {fileID: 95665039525092722}
   m_rigidBody: {fileID: 54084939265967506}
-  m_controlMode: 0
+  m_controlMode: 1
 --- !u!136 &136606663363984694
 CapsuleCollider:
   m_ObjectHideFlags: 1

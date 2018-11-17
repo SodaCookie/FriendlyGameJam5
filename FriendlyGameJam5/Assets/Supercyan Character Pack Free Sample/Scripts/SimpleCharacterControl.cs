@@ -1,13 +1,21 @@
 ﻿using UnityEngine;
 using System.Collections.Generic;
 
-public class SimpleCharacterControl : MonoBehaviour {
+public class SimpleCharacterControl : MonoBehaviour
+{
 
     private enum ControlMode
     {
         Tank,
         Direct
     }
+
+    [Header("Running")]
+    [SerializeField] private float m_sprintSpeed = 4;
+    [SerializeField] public KeyCode m_sprintKey = KeyCode.LeftShift;
+    [SerializeField] public float m_sprintMeterMax = 2; // In seconds
+    private float m_sprintMeter; // In seconds
+    private float m_walkSpeed;
 
     [SerializeField] private float m_moveSpeed = 2;
     [SerializeField] private float m_turnSpeed = 200;
@@ -37,11 +45,12 @@ public class SimpleCharacterControl : MonoBehaviour {
     private void OnCollisionEnter(Collision collision)
     {
         ContactPoint[] contactPoints = collision.contacts;
-        for(int i = 0; i < contactPoints.Length; i++)
+        for (int i = 0; i < contactPoints.Length; i++)
         {
             if (Vector3.Dot(contactPoints[i].normal, Vector3.up) > 0.5f)
             {
-                if (!m_collisions.Contains(collision.collider)) {
+                if (!m_collisions.Contains(collision.collider))
+                {
                     m_collisions.Add(collision.collider);
                 }
                 m_isGrounded = true;
@@ -61,14 +70,15 @@ public class SimpleCharacterControl : MonoBehaviour {
             }
         }
 
-        if(validSurfaceNormal)
+        if (validSurfaceNormal)
         {
             m_isGrounded = true;
             if (!m_collisions.Contains(collision.collider))
             {
                 m_collisions.Add(collision.collider);
             }
-        } else
+        }
+        else
         {
             if (m_collisions.Contains(collision.collider))
             {
@@ -80,17 +90,40 @@ public class SimpleCharacterControl : MonoBehaviour {
 
     private void OnCollisionExit(Collision collision)
     {
-        if(m_collisions.Contains(collision.collider))
+        if (m_collisions.Contains(collision.collider))
         {
             m_collisions.Remove(collision.collider);
         }
         if (m_collisions.Count == 0) { m_isGrounded = false; }
     }
 
-	void Update () {
+    private void Start()
+    {
+        m_sprintMeter = m_sprintMeterMax;
+        m_walkSpeed = m_moveSpeed;
+    }
+
+    void Update()
+    {
         m_animator.SetBool("Grounded", m_isGrounded);
 
-        switch(m_controlMode)
+        if (Input.GetKey(m_sprintKey) && m_sprintMeter > 0)
+        {
+            m_sprintMeter -= Time.deltaTime;
+            m_sprintMeter = Mathf.Max(m_sprintMeter, 0);
+            m_moveSpeed = m_sprintSpeed;
+        }
+        else
+        {
+            if (!Input.GetKey(m_sprintKey))
+            {
+                m_sprintMeter += Time.deltaTime;
+            }
+            m_sprintMeter = Mathf.Min(m_sprintMeter, m_sprintMeterMax);
+            m_moveSpeed = m_walkSpeed;
+        }
+
+        switch (m_controlMode)
         {
             case ControlMode.Direct:
                 DirectUpdate();
@@ -113,14 +146,9 @@ public class SimpleCharacterControl : MonoBehaviour {
         float v = Input.GetAxis("Vertical");
         float h = Input.GetAxis("Horizontal");
 
-        bool walk = Input.GetKey(KeyCode.LeftShift);
-
-        if (v < 0) {
-            if (walk) { v *= m_backwardsWalkScale; }
-            else { v *= m_backwardRunScale; }
-        } else if(walk)
+        if (v < 0)
         {
-            v *= m_walkScale;
+            v *= m_backwardRunScale;
         }
 
         m_currentV = Mathf.Lerp(m_currentV, v, Time.deltaTime * m_interpolation);
@@ -141,12 +169,6 @@ public class SimpleCharacterControl : MonoBehaviour {
 
         Transform camera = Camera.main.transform;
 
-        if (Input.GetKey(KeyCode.LeftShift))
-        {
-            v *= m_walkScale;
-            h *= m_walkScale;
-        }
-
         m_currentV = Mathf.Lerp(m_currentV, v, Time.deltaTime * m_interpolation);
         m_currentH = Mathf.Lerp(m_currentH, h, Time.deltaTime * m_interpolation);
 
@@ -156,7 +178,7 @@ public class SimpleCharacterControl : MonoBehaviour {
         direction.y = 0;
         direction = direction.normalized * directionLength;
 
-        if(direction != Vector3.zero)
+        if (direction != Vector3.zero)
         {
             m_currentDirection = Vector3.Slerp(m_currentDirection, direction, Time.deltaTime * m_interpolation);
 
