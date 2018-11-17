@@ -26,7 +26,7 @@ GameObject:
   - component: {fileID: 3309388}
   - component: {fileID: 2303108}
   - component: {fileID: 6524758}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: glass_panel_1 (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -146,7 +146,7 @@ GameObject:
   - component: {fileID: 3351892}
   - component: {fileID: 2382698}
   - component: {fileID: 6541824}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: glass_panel_1
   m_TagString: Untagged
   m_Icon: {fileID: 0}

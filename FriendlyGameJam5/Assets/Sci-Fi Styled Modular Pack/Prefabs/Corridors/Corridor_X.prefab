@@ -8,7 +8,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 494690}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: window_big_corner (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -110,7 +110,7 @@ GameObject:
   - component: {fileID: 490888}
   - component: {fileID: 3396278}
   - component: {fileID: 2321820}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: window_big_corner_LOD1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -145,7 +145,7 @@ GameObject:
   - component: {fileID: 3304416}
   - component: {fileID: 2394424}
   - component: {fileID: 6465770}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: window_big_corner_plug
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -213,7 +213,7 @@ GameObject:
   - component: {fileID: 429518}
   - component: {fileID: 3359586}
   - component: {fileID: 2306296}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: window_big_corner_LOD0
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -230,7 +230,7 @@ GameObject:
   - component: {fileID: 430170}
   - component: {fileID: 3337216}
   - component: {fileID: 2351008}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: window_big_corner_LOD1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -248,7 +248,7 @@ GameObject:
   - component: {fileID: 3325672}
   - component: {fileID: 2390654}
   - component: {fileID: 6452994}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: window_big_corner_plug
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -300,7 +300,7 @@ GameObject:
   - component: {fileID: 3389298}
   - component: {fileID: 2306056}
   - component: {fileID: 6428262}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: window_big_corner_plug
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -347,7 +347,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 466510}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: window_big_corner
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -381,7 +381,7 @@ GameObject:
   - component: {fileID: 420272}
   - component: {fileID: 6479658}
   - component: {fileID: 20556488}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: window_big_corner
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -447,7 +447,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 474308}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: window_big_corner (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -464,7 +464,7 @@ GameObject:
   - component: {fileID: 471472}
   - component: {fileID: 3373782}
   - component: {fileID: 2352652}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: window_big_corner_LOD0
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -498,7 +498,7 @@ GameObject:
   - component: {fileID: 414748}
   - component: {fileID: 3329678}
   - component: {fileID: 2325728}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: window_big_corner_LOD1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -549,7 +549,7 @@ GameObject:
   - component: {fileID: 469566}
   - component: {fileID: 6432248}
   - component: {fileID: 20574030}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: window_big_corner
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -564,7 +564,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 414270}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: window_big_corner (3)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -581,7 +581,7 @@ GameObject:
   - component: {fileID: 456856}
   - component: {fileID: 6483324}
   - component: {fileID: 20586532}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: window_big_corner
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -632,7 +632,7 @@ GameObject:
   - component: {fileID: 430196}
   - component: {fileID: 3354106}
   - component: {fileID: 2307544}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: window_big_corner_LOD0
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -649,7 +649,7 @@ GameObject:
   - component: {fileID: 444438}
   - component: {fileID: 6487102}
   - component: {fileID: 20537696}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: window_big_corner
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -667,7 +667,7 @@ GameObject:
   - component: {fileID: 3325538}
   - component: {fileID: 2381542}
   - component: {fileID: 6446724}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: window_big_corner_plug
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -736,7 +736,7 @@ GameObject:
   - component: {fileID: 479560}
   - component: {fileID: 3323794}
   - component: {fileID: 2309348}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: window_big_corner_LOD0
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -788,7 +788,7 @@ GameObject:
   - component: {fileID: 463116}
   - component: {fileID: 3388950}
   - component: {fileID: 2384282}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: window_big_corner_LOD1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
