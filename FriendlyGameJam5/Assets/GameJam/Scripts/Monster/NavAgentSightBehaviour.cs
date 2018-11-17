@@ -87,4 +87,10 @@ public class NavAgentSightBehaviour : MonoBehaviour {
         aggro = false;
         agent.speed = defaultSpeed;
     }
+
+    private void OnDrawGizmosSelected()
+    {
+        Gizmos.color = Color.red;
+        Gizmos.DrawWireSphere(transform.position, sightRange);
+    }
 }

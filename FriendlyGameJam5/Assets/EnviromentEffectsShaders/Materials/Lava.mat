@@ -19,23 +19,23 @@ Material:
     serializedVersion: 3
     m_TexEnvs:
     - _BumpMap:
-        m_Texture: {fileID: 2800000, guid: 0992b8333041549839cf76241eca6755, type: 3}
+        m_Texture: {fileID: 2800000, guid: a2439a5526984d64c804eae4d1d65b8a, type: 3}
         m_Scale: {x: 5, y: 5}
         m_Offset: {x: 0, y: 0}
     - _LavaBump:
-        m_Texture: {fileID: 0}
+        m_Texture: {fileID: 2800000, guid: a2439a5526984d64c804eae4d1d65b8a, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _LavaMap:
-        m_Texture: {fileID: 2800000, guid: 75e23b73171844454880d0162aa10a93, type: 3}
+        m_Texture: {fileID: 2800000, guid: a2439a5526984d64c804eae4d1d65b8a, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _LavaTex:
-        m_Texture: {fileID: 2800000, guid: 3bd506aaf42994a1bac4a32e840f9f16, type: 3}
+        m_Texture: {fileID: 2800000, guid: 298751e2d47c6fc4dabd5e865463c5f5, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _MainTex:
-        m_Texture: {fileID: 2800000, guid: c0966fb4efbcbba4a8bd4b4b04f36a2c, type: 3}
+        m_Texture: {fileID: 2800000, guid: 298751e2d47c6fc4dabd5e865463c5f5, type: 3}
         m_Scale: {x: 5, y: 5}
         m_Offset: {x: 0, y: 0}
     - _SnowMap:
@@ -67,7 +67,7 @@ Material:
     - _WaterAmount: 1
     m_Colors:
     - _Color: {r: 1, g: 0, b: 0, a: 1}
-    - _LavaColor: {r: 0.49019623, g: 0, b: 1, a: 1}
+    - _LavaColor: {r: 1, g: 0, b: 0.059340954, a: 1}
     - _LavaDirection: {r: -36.55, g: 0.9, b: 0, a: 1}
     - _SnowColor: {r: 0.6764706, g: 0.6764706, b: 0.6764706, a: 1}
     - _SnowDirection: {r: 0, g: 1, b: 0, a: 1}

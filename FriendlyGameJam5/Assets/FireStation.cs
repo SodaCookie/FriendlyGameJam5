@@ -9,11 +9,6 @@ public class FireStation : MonoBehaviour {
 
     public bool OnFire { get; private set; }
 
-    private void Awake()
-    {
-        SetOnFire();
-    }
-
     public void SetOnFire()
     {
         OnFire = true;
