@@ -1,0 +1,40 @@
+<?xml version="1.0" standalone="no" ?>
+<!DOCTYPE project PUBLIC "-//audacityproject-1.3.0//DTD//EN" "http://audacity.sourceforge.net/xml/audacityproject-1.3.0.dtd" >
+<project xmlns="http://audacity.sourceforge.net/xml/" projname="Wind_Low_02_final_data" version="1.3.0" audacityversion="2.1.3" sel0="0.0000000000" sel1="9.9613605442" vpos="0" h="3.2624036281" zoom="86.1328125000" rate="44100.0" snapto="off" selectionformat="hh:mm:ss + milliseconds" frequencyformat="Hz" bandwidthformat="octaves">
+	<tags/>
+	<wavetrack name="Audio Track" channel="2" linked="0" mute="0" solo="0" height="150" minimized="0" isSelected="1" rate="44100" gain="1.0" pan="0.0">
+		<waveclip offset="10.02827664">
+			<sequence maxsamples="262144" sampleformat="262159" numsamples="1408">
+				<waveblock start="0">
+					<simpleblockfile filename="e0000c4c.au" len="1408" min="-0.001604" max="0.002044" rms="0.000626"/>
+				</waveblock>
+			</sequence>
+			<envelope numpoints="1">
+				<controlpoint t="0.000000000000" val="1.000000000000"/>
+			</envelope>
+		</waveclip>
+		<waveclip offset="0.00000000">
+			<sequence maxsamples="262144" sampleformat="262159" numsamples="439296">
+				<waveblock start="0">
+					<simpleblockfile filename="e00006c4.au" len="262144" min="-0.085923" max="0.080163" rms="0.013137"/>
+				</waveblock>
+				<waveblock start="262144">
+					<simpleblockfile filename="e0000957.au" len="177152" min="-0.025433" max="0.023728" rms="0.006175"/>
+				</waveblock>
+			</sequence>
+			<envelope numpoints="1">
+				<controlpoint t="9.961337868481" val="1.000000000000"/>
+			</envelope>
+		</waveclip>
+		<waveclip offset="9.96136054">
+			<sequence maxsamples="262144" sampleformat="262159" numsamples="2951">
+				<waveblock start="0">
+					<simpleblockfile filename="e0000d23.au" len="2951" min="-0.000026" max="0.000987" rms="0.000131"/>
+				</waveblock>
+			</sequence>
+			<envelope numpoints="1">
+				<controlpoint t="0.000000000000" val="1.000000000000"/>
+			</envelope>
+		</waveclip>
+	</wavetrack>
+</project>
