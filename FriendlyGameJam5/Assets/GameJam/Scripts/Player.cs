@@ -4,11 +4,18 @@ using UnityEngine;
 
 public class Player : MonoBehaviour
 {
-
     public SkinnedMeshRenderer MonsterMirror;
     public ParticleSystem Particles;
 
     public Coroutine xRayCoroutine;
+
+    private void Awake()
+    {
+        if (GameManager.Instance != null)
+        {
+            GameManager.Instance.ThePlayer = this;
+        }
+    }
 
     public void StartXRayVision(float duration)
     {

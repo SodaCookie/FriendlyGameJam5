@@ -9,6 +9,15 @@ public class FireStation : MonoBehaviour {
 
     public bool OnFire { get; private set; }
 
+    private void Awake()
+    {
+        if (GameManager.Instance != null)
+        {
+            GameManager.Instance.FireStations.Add(this);
+            GameManager.Instance.MarkFireStationAsSafe(this);
+        }
+    }
+
     public void SetOnFire()
     {
         OnFire = true;
@@ -16,6 +25,10 @@ public class FireStation : MonoBehaviour {
         RecursiveSetLayer(transform, LayerMask.NameToLayer("Fire"));
         ControllingButton.SetToWarningMode();
         Fire.Play();
+        if (GameManager.Instance != null)
+        {
+            GameManager.Instance.MarkFireStationAsOnFire(this);
+        }
     }
 
     public void PutOutFire()
@@ -25,6 +38,10 @@ public class FireStation : MonoBehaviour {
         ControllingButton.SetToNormalMode();
         RecursiveSetLayer(transform, LayerMask.NameToLayer("Default"));
         Fire.Stop();
+        if (GameManager.Instance != null)
+        {
+            GameManager.Instance.MarkFireStationAsSafe(this);
+        }
     }
 
     private void RecursiveSetLayer(Transform trans, int layer)

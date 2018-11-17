@@ -1,0 +1,359 @@
+warning: LF will be replaced by CRLF in FriendlyGameJam5/Assets/GameJam/Prefabs/Monster.prefab.
+The file will have its original line endings in your working directory.
+[1mdiff --git a/FriendlyGameJam5/Assets/FireStation.cs b/FriendlyGameJam5/Assets/FireStation.cs[m
+[1mindex 7fce679..85a6694 100644[m
+[1m--- a/FriendlyGameJam5/Assets/FireStation.cs[m
+[1m+++ b/FriendlyGameJam5/Assets/FireStation.cs[m
+[36m@@ -9,6 +9,14 @@[m [mpublic class FireStation : MonoBehaviour {[m
+ [m
+     public bool OnFire { get; private set; }[m
+ [m
+[32m+[m[32m    private void Awake()[m
+[32m+[m[32m    {[m
+[32m+[m[32m        if (GameManager.Instance != null)[m
+[32m+[m[32m        {[m
+[32m+[m[32m            GameManager.Instance.FireStations.Add(this);[m
+[32m+[m[32m        }[m
+[32m+[m[32m    }[m
+[32m+[m
+     public void SetOnFire()[m
+     {[m
+         OnFire = true;[m
+[1mdiff --git a/FriendlyGameJam5/Assets/GameJam/Prefabs/Monster.prefab b/FriendlyGameJam5/Assets/GameJam/Prefabs/Monster.prefab[m
+[1mindex 58c1d94..c112d9b 100644[m
+[1m--- a/FriendlyGameJam5/Assets/GameJam/Prefabs/Monster.prefab[m
+[1m+++ b/FriendlyGameJam5/Assets/GameJam/Prefabs/Monster.prefab[m
+[36m@@ -3894,6 +3894,7 @@[m [mGameObject:[m
+   serializedVersion: 6[m
+   m_Component:[m
+   - component: {fileID: 4757730754646064}[m
+[32m+[m[32m  - component: {fileID: 114264082006376862}[m
+   - component: {fileID: 95753436244867184}[m
+   - component: {fileID: 195552278259284378}[m
+   - component: {fileID: 114917786312313944}[m
+[36m@@ -18340,7 +18341,7 @@[m [mAudioSource:[m
+   OutputAudioMixerGroup: {fileID: 0}[m
+   m_audioClip: {fileID: 0}[m
+   m_PlayOnAwake: 0[m
+[31m-  m_Volume: 0.5[m
+[32m+[m[32m  m_Volume: 0.7[m
+   m_Pitch: 1[m
+   Loop: 0[m
+   Mute: 0[m
+[36m@@ -18435,7 +18436,7 @@[m [mAudioSource:[m
+   OutputAudioMixerGroup: {fileID: 0}[m
+   m_audioClip: {fileID: 0}[m
+   m_PlayOnAwake: 0[m
+[31m-  m_Volume: 0.5[m
+[32m+[m[32m  m_Volume: 0.7[m
+   m_Pitch: 1[m
+   Loop: 0[m
+   Mute: 0[m
+[36m@@ -18568,6 +18569,17 @@[m [mMonoBehaviour:[m
+   m_EditorClassIdentifier: [m
+   MaxAnimationVelocity: 3[m
+   MaxAnimationTurnSpeed: 40[m
+[32m+[m[32m--- !u!114 &114264082006376862[m
+[32m+[m[32mMonoBehaviour:[m
+[32m+[m[32m  m_ObjectHideFlags: 1[m
+[32m+[m[32m  m_CorrespondingSourceObject: {fileID: 0}[m
+[32m+[m[32m  m_PrefabInternal: {fileID: 100100000}[m
+[32m+[m[32m  m_GameObject: {fileID: 1407672827187080}[m
+[32m+[m[32m  m_Enabled: 1[m
+[32m+[m[32m  m_EditorHideFlags: 0[m
+[32m+[m[32m  m_Script: {fileID: 11500000, guid: 10527689658e5fa48988aa2648ad74d0, type: 3}[m
+[32m+[m[32m  m_Name:[m[41m [m
+[32m+[m[32m  m_EditorClassIdentifier:[m[41m [m
+ --- !u!114 &114509929962839810[m
+ MonoBehaviour:[m
+   m_ObjectHideFlags: 1[m
+[1mdiff --git a/FriendlyGameJam5/Assets/GameJam/Scenes/AudioTest.unity b/FriendlyGameJam5/Assets/GameJam/Scenes/AudioTest.unity[m
+[1mindex 1a27f66..2ed433b 100644[m
+[1m--- a/FriendlyGameJam5/Assets/GameJam/Scenes/AudioTest.unity[m
+[1m+++ b/FriendlyGameJam5/Assets/GameJam/Scenes/AudioTest.unity[m
+[36m@@ -21219,6 +21219,52 @@[m [mTransform:[m
+   m_CorrespondingSourceObject: {fileID: 420336, guid: 0f6d27018f3822b4f871d6e402510f77,[m
+     type: 2}[m
+   m_PrefabInternal: {fileID: 605332692}[m
+[32m+[m[32m--- !u!1 &605592313[m
+[32m+[m[32mGameObject:[m
+[32m+[m[32m  m_ObjectHideFlags: 0[m
+[32m+[m[32m  m_CorrespondingSourceObject: {fileID: 0}[m
+[32m+[m[32m  m_PrefabInternal: {fileID: 0}[m
+[32m+[m[32m  serializedVersion: 6[m
+[32m+[m[32m  m_Component:[m
+[32m+[m[32m  - component: {fileID: 605592314}[m
+[32m+[m[32m  - component: {fileID: 605592315}[m
+[32m+[m[32m  m_Layer: 0[m
+[32m+[m[32m  m_Name: GameManager[m
+[32m+[m[32m  m_TagString: Untagged[m
+[32m+[m[32m  m_Icon: {fileID: 0}[m
+[32m+[m[32m  m_NavMeshLayer: 0[m
+[32m+[m[32m  m_StaticEditorFlags: 0[m
+[32m+[m[32m  m_IsActive: 1[m
+[32m+[m[32m--- !u!4 &605592314[m
+[32m+[m[32mTransform:[m
+[32m+[m[32m  m_ObjectHideFlags: 0[m
+[32m+[m[32m  m_CorrespondingSourceObject: {fileID: 0}[m
+[32m+[m[32m  m_PrefabInternal: {fileID: 0}[m
+[32m+[m[32m  m_GameObject: {fileID: 605592313}[m
+[32m+[m[32m  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}[m
+[32m+[m[32m  m_LocalPosition: {x: -0.23443538, y: 3.916969, z: 4.946124}[m
+[32m+[m[32m  m_LocalScale: {x: 1, y: 1, z: 1}[m
+[32m+[m[32m  m_Children: [][m
+[32m+[m[32m  m_Father: {fileID: 0}[m
+[32m+[m[32m  m_RootOrder: 8[m
+[32m+[m[32m  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}[m
+[32m+[m[32m--- !u!114 &605592315[m
+[32m+[m[32mMonoBehaviour:[m
+[32m+[m[32m  m_ObjectHideFlags: 0[m
+[32m+[m[32m  m_CorrespondingSourceObject: {fileID: 0}[m
+[32m+[m[32m  m_PrefabInternal: {fileID: 0}[m
+[32m+[m[32m  m_GameObject: {fileID: 605592313}[m
+[32m+[m[32m  m_Enabled: 1[m
+[32m+[m[32m  m_EditorHideFlags: 0[m
+[32m+[m[32m  m_Script: {fileID: 11500000, guid: 40e87cab7a34b0b4a819c3b580aa89b9, type: 3}[m
+[32m+[m[32m  m_Name:[m[41m [m
+[32m+[m[32m  m_EditorClassIdentifier:[m[41m [m
+[32m+[m[32m  Player: {fileID: 0}[m
+[32m+[m[32m  Monster: {fileID: 0}[m
+[32m+[m[32m  FireStations: [][m
+[32m+[m[32m  minutesUntilVictory: 0[m
+[32m+[m[32m  startFiresPerMinute: 0[m
+[32m+[m[32m  finalFiresPerMInute: 0[m
+ --- !u!1001 &606288092[m
+ Prefab:[m
+   m_ObjectHideFlags: 0[m
+[36m@@ -21939,6 +21985,58 @@[m [mTransform:[m
+   m_CorrespondingSourceObject: {fileID: 469248, guid: 3845c7234a0ed4843ba4e38e2404f54d,[m
+     type: 2}[m
+   m_PrefabInternal: {fileID: 636673174}[m
+[32m+[m[32m--- !u!1001 &637740014[m
+[32m+[m[32mPrefab:[m
+[32m+[m[32m  m_ObjectHideFlags: 0[m
+[32m+[m[32m  serializedVersion: 2[m
+[32m+[m[32m  m_Modification:[m
+[32m+[m[32m    m_TransformParent: {fileID: 0}[m
+[32m+[m[32m    m_Modifications:[m
+[32m+[m[32m    - target: {fileID: 4757730754646064, guid: 57021699a7594074a933a332c151204b, type: 2}[m
+[32m+[m[32m      propertyPath: m_LocalPosition.x[m
+[32m+[m[32m      value: -40.820282[m
+[32m+[m[32m      objectReference: {fileID: 0}[m
+[32m+[m[32m    - target: {fileID: 4757730754646064, guid: 57021699a7594074a933a332c151204b, type: 2}[m
+[32m+[m[32m      propertyPath: m_LocalPosition.y[m
+[32m+[m[32m      value: 3.1583865[m
+[32m+[m[32m      objectReference: {fileID: 0}[m
+[32m+[m[32m    - target: {fileID: 4757730754646064, guid: 57021699a7594074a933a332c151204b, type: 2}[m
+[32m+[m[32m      propertyPath: m_LocalPosition.z[m
+[32m+[m[32m      value: 58.00456[m
+[32m+[m[32m      objectReference: {fileID: 0}[m
+[32m+[m[32m    - target: {fileID: 4757730754646064, guid: 57021699a7594074a933a332c151204b, type: 2}[m
+[32m+[m[32m      propertyPath: m_LocalRotation.x[m
+[32m+[m[32m      value: 0[m
+[32m+[m[32m      objectReference: {fileID: 0}[m
+[32m+[m[32m    - target: {fileID: 4757730754646064, guid: 57021699a7594074a933a332c151204b, type: 2}[m
+[32m+[m[32m      propertyPath: m_LocalRotation.y[m
+[32m+[m[32m      value: 0[m
+[32m+[m[32m      objectReference: {fileID: 0}[m
+[32m+[m[32m    - target: {fileID: 4757730754646064, guid: 57021699a7594074a933a332c151204b, type: 2}[m
+[32m+[m[32m      propertyPath: m_LocalRotation.z[m
+[32m+[m[32m      value: 0[m
+[32m+[m[32m      objectReference: {fileID: 0}[m
+[32m+[m[32m    - target: {fileID: 4757730754646064, guid: 57021699a7594074a933a332c151204b, type: 2}[m
+[32m+[m[32m      propertyPath: m_LocalRotation.w[m
+[32m+[m[32m      value: 1[m
+[32m+[m[32m      objectReference: {fileID: 0}[m
+[32m+[m[32m    - target: {fileID: 4757730754646064, guid: 57021699a7594074a933a332c151204b, type: 2}[m
+[32m+[m[32m      propertyPath: m_RootOrder[m
+[32m+[m[32m      value: 0[m
+[32m+[m[32m      objectReference: {fileID: 0}[m
+[32m+[m[32m    - target: {fileID: 114919066120480342, guid: 57021699a7594074a933a332c151204b,[m
+[32m+[m[32m        type: 2}[m
+[32m+[m[32m      propertyPath: target[m
+[32m+[m[32m      value:[m[41m [m
+[32m+[m[32m      objectReference: {fileID: 1806971831}[m
+[32m+[m[32m    - target: {fileID: 114917786312313944, guid: 57021699a7594074a933a332c151204b,[m
+[32m+[m[32m        type: 2}[m
+[32m+[m[32m      propertyPath: target[m
+[32m+[m[32m      value:[m[41m [m
+[32m+[m[32m      objectReference: {fileID: 1806971831}[m
+[32m+[m[32m    m_RemovedComponents: [][m
+[32m+[m[32m  m_SourcePrefab: {fileID: 100100000, guid: 57021699a7594074a933a332c151204b, type: 2}[m
+[32m+[m[32m  m_IsPrefabAsset: 0[m
+ --- !u!1001 &640153782[m
+ Prefab:[m
+   m_ObjectHideFlags: 0[m
+[36m@@ -34895,73 +34993,11 @@[m [mPrefab:[m
+     m_RemovedComponents: [][m
+   m_SourcePrefab: {fileID: 100100000, guid: a8e5f42a1ada161468f7218a14ebff01, type: 2}[m
+   m_IsPrefabAsset: 0[m
+[31m---- !u!1001 &1122954365[m
+[31m-Prefab:[m
+[31m-  m_ObjectHideFlags: 0[m
+[31m-  serializedVersion: 2[m
+[31m-  m_Modification:[m
+[31m-    m_TransformParent: {fileID: 0}[m
+[31m-    m_Modifications:[m
+[31m-    - target: {fileID: 4757730754646064, guid: 57021699a7594074a933a332c151204b, type: 2}[m
+[31m-      propertyPath: m_LocalPosition.x[m
+[31m-      value: -40.820282[m
+[31m-      objectReference: {fileID: 0}[m
+[31m-    - target: {fileID: 4757730754646064, guid: 57021699a7594074a933a332c151204b, type: 2}[m
+[31m-      propertyPath: m_LocalPosition.y[m
+[31m-      value: 3.1583865[m
+[31m-      objectReference: {fileID: 0}[m
+[31m-    - target: {fileID: 4757730754646064, guid: 57021699a7594074a933a332c151204b, type: 2}[m
+[31m-      propertyPath: m_LocalPosition.z[m
+[31m-      value: 58.00456[m
+[31m-      objectReference: {fileID: 0}[m
+[31m-    - target: {fileID: 4757730754646064, guid: 57021699a7594074a933a332c151204b, type: 2}[m
+[31m-      propertyPath: m_LocalRotation.x[m
+[31m-      value: 0[m
+[31m-      objectReference: {fileID: 0}[m
+[31m-    - target: {fileID: 4757730754646064, guid: 57021699a7594074a933a332c151204b, type: 2}[m
+[31m-      propertyPath: m_LocalRotation.y[m
+[31m-      value: 0[m
+[31m-      objectReference: {fileID: 0}[m
+[31m-    - target: {fileID: 4757730754646064, guid: 57021699a7594074a933a332c151204b, type: 2}[m
+[31m-      propertyPath: m_LocalRotation.z[m
+[31m-      value: 0[m
+[31m-      objectReference: {fileID: 0}[m
+[31m-    - target: {fileID: 4757730754646064, guid: 57021699a7594074a933a332c151204b, type: 2}[m
+[31m-      propertyPath: m_LocalRotation.w[m
+[31m-      value: 1[m
+[31m-      objectReference: {fileID: 0}[m
+[31m-    - target: {fileID: 4757730754646064, guid: 57021699a7594074a933a332c151204b, type: 2}[m
+[31m-      propertyPath: m_RootOrder[m
+[31m-      value: 0[m
+[31m-      objectReference: {fileID: 0}[m
+[31m-    - target: {fileID: 114919066120480342, guid: 57021699a7594074a933a332c151204b,[m
+[31m-        type: 2}[m
+[31m-      propertyPath: target[m
+[31m-      value: [m
+[31m-      objectReference: {fileID: 1806971831}[m
+[31m-    - target: {fileID: 114917786312313944, guid: 57021699a7594074a933a332c151204b,[m
+[31m-        type: 2}[m
+[31m-      propertyPath: target[m
+[31m-      value: [m
+[31m-      objectReference: {fileID: 1806971831}[m
+[31m-    - target: {fileID: 82570062563090500, guid: 57021699a7594074a933a332c151204b,[m
+[31m-        type: 2}[m
+[31m-      propertyPath: m_Volume[m
+[31m-      value: 0.7[m
+[31m-      objectReference: {fileID: 0}[m
+[31m-    - target: {fileID: 82475444026236974, guid: 57021699a7594074a933a332c151204b,[m
+[31m-        type: 2}[m
+[31m-      propertyPath: m_Volume[m
+[31m-      value: 0.7[m
+[31m-      objectReference: {fileID: 0}[m
+[31m-    m_RemovedComponents: [][m
+[31m-  m_SourcePrefab: {fileID: 100100000, guid: 57021699a7594074a933a332c151204b, type: 2}[m
+[31m-  m_IsPrefabAsset: 0[m
+ --- !u!137 &1122954366 stripped[m
+ SkinnedMeshRenderer:[m
+   m_CorrespondingSourceObject: {fileID: 137237202613178330, guid: 57021699a7594074a933a332c151204b,[m
+     type: 2}[m
+[31m-  m_PrefabInternal: {fileID: 1122954365}[m
+[32m+[m[32m  m_PrefabInternal: {fileID: 637740014}[m
+ --- !u!1001 &1124127460[m
+ Prefab:[m
+   m_ObjectHideFlags: 0[m
+[1mdiff --git a/FriendlyGameJam5/Assets/GameJam/Scripts/Player.cs b/FriendlyGameJam5/Assets/GameJam/Scripts/Player.cs[m
+[1mindex c56ed07..7388f1c 100644[m
+[1m--- a/FriendlyGameJam5/Assets/GameJam/Scripts/Player.cs[m
+[1m+++ b/FriendlyGameJam5/Assets/GameJam/Scripts/Player.cs[m
+[36m@@ -4,12 +4,19 @@[m [musing UnityEngine;[m
+ [m
+ public class Player : MonoBehaviour[m
+ {[m
+[31m-[m
+     public SkinnedMeshRenderer MonsterMirror;[m
+     public ParticleSystem Particles;[m
+ [m
+     public Coroutine xRayCoroutine;[m
+ [m
+[32m+[m[32m    private void Awake()[m
+[32m+[m[32m    {[m
+[32m+[m[32m        if (GameManager.Instance != null)[m
+[32m+[m[32m        {[m
+[32m+[m[32m            GameManager.Instance.ThePlayer = this;[m
+[32m+[m[32m        }[m
+[32m+[m[32m    }[m
+[32m+[m
+     public void StartXRayVision(float duration)[m
+     {[m
+         if (xRayCoroutine != null)[m
+[1mdiff --git a/FriendlyGameJam5/RawAudio/Monster/BaseAmbientNoise_01_final_data/e00/d00/e0000005.au b/FriendlyGameJam5/RawAudio/Monster/BaseAmbientNoise_01_final_data/e00/d00/e0000005.au[m
+[1mdeleted file mode 100644[m
+[1mindex 604de3a..0000000[m
+Binary files a/FriendlyGameJam5/RawAudio/Monster/BaseAmbientNoise_01_final_data/e00/d00/e0000005.au and /dev/null differ
+[1mdiff --git a/FriendlyGameJam5/RawAudio/Monster/BaseAmbientNoise_01_final_data/e00/d00/e0000295.au b/FriendlyGameJam5/RawAudio/Monster/BaseAmbientNoise_01_final_data/e00/d00/e0000295.au[m
+[1mdeleted file mode 100644[m
+[1mindex 29622d9..0000000[m
+Binary files a/FriendlyGameJam5/RawAudio/Monster/BaseAmbientNoise_01_final_data/e00/d00/e0000295.au and /dev/null differ
+[1mdiff --git a/FriendlyGameJam5/RawAudio/Monster/BaseAmbientNoise_01_final_data/e00/d00/e000035b.au b/FriendlyGameJam5/RawAudio/Monster/BaseAmbientNoise_01_final_data/e00/d00/e000035b.au[m
+[1mdeleted file mode 100644[m
+[1mindex f07c61e..0000000[m
+Binary files a/FriendlyGameJam5/RawAudio/Monster/BaseAmbientNoise_01_final_data/e00/d00/e000035b.au and /dev/null differ
+[1mdiff --git a/FriendlyGameJam5/RawAudio/Monster/BaseAmbientNoise_01_final_data/e00/d00/e000039b.au b/FriendlyGameJam5/RawAudio/Monster/BaseAmbientNoise_01_final_data/e00/d00/e000039b.au[m
+[1mdeleted file mode 100644[m
+[1mindex 2c10c58..0000000[m
+Binary files a/FriendlyGameJam5/RawAudio/Monster/BaseAmbientNoise_01_final_data/e00/d00/e000039b.au and /dev/null differ
+[1mdiff --git a/FriendlyGameJam5/RawAudio/Monster/BaseAmbientNoise_01_final_data/e00/d00/e00006c2.au b/FriendlyGameJam5/RawAudio/Monster/BaseAmbientNoise_01_final_data/e00/d00/e00006c2.au[m
+[1mdeleted file mode 100644[m
+[1mindex 0be175b..0000000[m
+Binary files a/FriendlyGameJam5/RawAudio/Monster/BaseAmbientNoise_01_final_data/e00/d00/e00006c2.au and /dev/null differ
+[1mdiff --git a/FriendlyGameJam5/RawAudio/Monster/BaseAmbientNoise_01_final_data/e00/d00/e00008c0.au b/FriendlyGameJam5/RawAudio/Monster/BaseAmbientNoise_01_final_data/e00/d00/e00008c0.au[m
+[1mdeleted file mode 100644[m
+[1mindex 0891fb1..0000000[m
+Binary files a/FriendlyGameJam5/RawAudio/Monster/BaseAmbientNoise_01_final_data/e00/d00/e00008c0.au and /dev/null differ
+[1mdiff --git a/FriendlyGameJam5/RawAudio/Monster/BaseAmbientNoise_01_final_data/e00/d00/e00008fb.au b/FriendlyGameJam5/RawAudio/Monster/BaseAmbientNoise_01_final_data/e00/d00/e00008fb.au[m
+[1mdeleted file mode 100644[m
+[1mindex 246d7fc..0000000[m
+Binary files a/FriendlyGameJam5/RawAudio/Monster/BaseAmbientNoise_01_final_data/e00/d00/e00008fb.au and /dev/null differ
+[1mdiff --git a/FriendlyGameJam5/RawAudio/Monster/BaseAmbientNoise_01_final_data/e00/d00/e0000956.au b/FriendlyGameJam5/RawAudio/Monster/BaseAmbientNoise_01_final_data/e00/d00/e0000956.au[m
+[1mdeleted file mode 100644[m
+[1mindex 0eaba6b..0000000[m
+Binary files a/FriendlyGameJam5/RawAudio/Monster/BaseAmbientNoise_01_final_data/e00/d00/e0000956.au and /dev/null differ
+[1mdiff --git a/FriendlyGameJam5/RawAudio/Monster/BaseAmbientNoise_01_final_data/e00/d00/e0000957.au b/FriendlyGameJam5/RawAudio/Monster/BaseAmbientNoise_01_final_data/e00/d00/e0000957.au[m
+[1mdeleted file mode 100644[m
+[1mindex c97c7a4..0000000[m
+Binary files a/FriendlyGameJam5/RawAudio/Monster/BaseAmbientNoise_01_final_data/e00/d00/e0000957.au and /dev/null differ
+[1mdiff --git a/FriendlyGameJam5/RawAudio/Monster/BaseAmbientNoise_01_final_data/e00/d00/e0000961.au b/FriendlyGameJam5/RawAudio/Monster/BaseAmbientNoise_01_final_data/e00/d00/e0000961.au[m
+[1mdeleted file mode 100644[m
+[1mindex 93f8a35..0000000[m
+Binary files a/FriendlyGameJam5/RawAudio/Monster/BaseAmbientNoise_01_final_data/e00/d00/e0000961.au and /dev/null differ
+[1mdiff --git a/FriendlyGameJam5/RawAudio/Monster/BaseAmbientNoise_01_final_data/e00/d00/e0000a34.au b/FriendlyGameJam5/RawAudio/Monster/BaseAmbientNoise_01_final_data/e00/d00/e0000a34.au[m
+[1mdeleted file mode 100644[m
+[1mindex 69bd76b..0000000[m
+Binary files a/FriendlyGameJam5/RawAudio/Monster/BaseAmbientNoise_01_final_data/e00/d00/e0000a34.au and /dev/null differ
+[1mdiff --git a/FriendlyGameJam5/RawAudio/Monster/BaseAmbientNoise_01_final_data/e00/d00/e0000b11.au b/FriendlyGameJam5/RawAudio/Monster/BaseAmbientNoise_01_final_data/e00/d00/e0000b11.au[m
+[1mdeleted file mode 100644[m
+[1mindex 3deb133..0000000[m
+Binary files a/FriendlyGameJam5/RawAudio/Monster/BaseAmbientNoise_01_final_data/e00/d00/e0000b11.au and /dev/null differ
+[1mdiff --git a/FriendlyGameJam5/RawAudio/Monster/BaseAmbientNoise_01_final_data/e00/d00/e0000b15.au b/FriendlyGameJam5/RawAudio/Monster/BaseAmbientNoise_01_final_data/e00/d00/e0000b15.au[m
+[1mdeleted file mode 100644[m
+[1mindex 5a1f9e9..0000000[m
+Binary files a/FriendlyGameJam5/RawAudio/Monster/BaseAmbientNoise_01_final_data/e00/d00/e0000b15.au and /dev/null differ
+[1mdiff --git a/FriendlyGameJam5/RawAudio/Monster/BaseAmbientNoise_01_final_data/e00/d00/e0000b59.au b/FriendlyGameJam5/RawAudio/Monster/BaseAmbientNoise_01_final_data/e00/d00/e0000b59.au[m
+[1mdeleted file mode 100644[m
+[1mindex c34b13a..0000000[m
+Binary files a/FriendlyGameJam5/RawAudio/Monster/BaseAmbientNoise_01_final_data/e00/d00/e0000b59.au and /dev/null differ
+[1mdiff --git a/FriendlyGameJam5/RawAudio/Monster/BaseAmbientNoise_01_final_data/e00/d00/e0000c49.au b/FriendlyGameJam5/RawAudio/Monster/BaseAmbientNoise_01_final_data/e00/d00/e0000c49.au[m
+[1mdeleted file mode 100644[m
+[1mindex 0b961aa..0000000[m
+Binary files a/FriendlyGameJam5/RawAudio/Monster/BaseAmbientNoise_01_final_data/e00/d00/e0000c49.au and /dev/null differ
+[1mdiff --git a/FriendlyGameJam5/RawAudio/Monster/BaseAmbientNoise_01_final_data/e00/d00/e0000c85.au b/FriendlyGameJam5/RawAudio/Monster/BaseAmbientNoise_01_final_data/e00/d00/e0000c85.au[m
+[1mdeleted file mode 100644[m
+[1mindex caa94bb..0000000[m
+Binary files a/FriendlyGameJam5/RawAudio/Monster/BaseAmbientNoise_01_final_data/e00/d00/e0000c85.au and /dev/null differ
+[1mdiff --git a/FriendlyGameJam5/RawAudio/Monster/BaseAmbientNoise_01_final_data/e00/d00/e0000d36.au b/FriendlyGameJam5/RawAudio/Monster/BaseAmbientNoise_01_final_data/e00/d00/e0000d36.au[m
+[1mdeleted file mode 100644[m
+[1mindex 6ced910..0000000[m
+Binary files a/FriendlyGameJam5/RawAudio/Monster/BaseAmbientNoise_01_final_data/e00/d00/e0000d36.au and /dev/null differ
+[1mdiff --git a/FriendlyGameJam5/RawAudio/Monster/BaseAmbientNoise_01_final_data/e00/d00/e0000df9.au b/FriendlyGameJam5/RawAudio/Monster/BaseAmbientNoise_01_final_data/e00/d00/e0000df9.au[m
+[1mdeleted file mode 100644[m
+[1mindex 30f550c..0000000[m
+Binary files a/FriendlyGameJam5/RawAudio/Monster/BaseAmbientNoise_01_final_data/e00/d00/e0000df9.au and /dev/null differ
+warning: LF will be replaced by CRLF in FriendlyGameJam5/Assets/GameJam/Scenes/AudioTest.unity.
+The file will have its original line endings in your working directory.
