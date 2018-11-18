@@ -18854,7 +18854,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   sightRange: 25
   aggroSpeed: 4
-  deaggroCooldownDuration: 3
+  deaggroCooldownDuration: 6
   target: {fileID: 0}
   oculusionMask:
     serializedVersion: 2

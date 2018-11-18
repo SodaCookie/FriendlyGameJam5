@@ -106,7 +106,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   renderer: {fileID: 212137604825962064}
   PointLight: {fileID: 108920188550731374}
-  Duration: 10
+  Duration: 20
   FadeTime: 0.25
 --- !u!135 &135890928260711618
 SphereCollider:

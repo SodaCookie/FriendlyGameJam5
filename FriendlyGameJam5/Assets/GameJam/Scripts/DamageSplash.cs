@@ -9,6 +9,7 @@ public class DamageSplash : MonoBehaviour
     UnityEngine.UI.Image image;
     public UnityEngine.UI.Image solidColor;
     public GameObject GameOver;
+    public GameObject Victory;
     private bool dead = false;
     Color defaultColor;
 
@@ -45,6 +46,11 @@ public class DamageSplash : MonoBehaviour
             dead = true;
             GameOver.SetActive(true);
             StartCoroutine(AnimateDeath());
+        }
+
+        if (GameManager.Instance.IsVictory && !dead)
+        {
+            Victory.SetActive(true);
         }
     }
 

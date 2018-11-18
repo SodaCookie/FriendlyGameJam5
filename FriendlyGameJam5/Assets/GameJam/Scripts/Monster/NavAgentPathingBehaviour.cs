@@ -13,9 +13,10 @@ public class NavAgentPathingBehaviour : MonoBehaviour
     private NavAgentSightBehaviour sightBehaviour;
     private Transform curWaypoint;
     private bool pathing = true;
+    private bool checkingLocation = false;
     private Coroutine wayPointWait;
 
-    private void Awake()
+    private void Start()
     {
         curWaypoint = path.GetNextWaypoint();
         agent = GetComponent<NavMeshAgent>();
@@ -62,13 +63,30 @@ public class NavAgentPathingBehaviour : MonoBehaviour
                         {
                             agent.SetDestination(hit.position);
                         }
+                        checkingLocation = true;
                     }
                     else
                     {
                         NavMeshHit hit;
-                        if (NavMesh.SamplePosition(sightBehaviour.lastSeen, out hit, 1, NavMesh.AllAreas))
+                        if (checkingLocation)
                         {
-                            agent.SetDestination(hit.position);
+                            if (NavMesh.SamplePosition(sightBehaviour.lastSeen, out hit, 1, NavMesh.AllAreas))
+                            {
+                                agent.SetDestination(hit.position);
+                            }
+                        }
+                        else
+                        {
+                            if (NavMesh.SamplePosition(target.position, out hit, 1, NavMesh.AllAreas))
+                            {
+                                agent.SetDestination(hit.position);
+                            }
+                        }
+
+
+                        if ((agent.transform.position - sightBehaviour.lastSeen).magnitude < 3f)
+                        {
+                            checkingLocation = false;
                         }
                     }
 

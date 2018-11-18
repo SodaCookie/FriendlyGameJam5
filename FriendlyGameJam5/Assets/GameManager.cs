@@ -2,7 +2,8 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class GameManager : MonoBehaviour {
+public class GameManager : MonoBehaviour
+{
     public static GameManager Instance { get; private set; }
 
     private void Awake()
@@ -17,18 +18,27 @@ public class GameManager : MonoBehaviour {
     [HideInInspector] public Monster TheMonster;
     [HideInInspector] public List<FireStation> FireStations = new List<FireStation>();
 
+    public float MonsterMinDistance = 30f;
+    public AudioSource SpawnSound;
+    public GameObject MonsterPrefab;
+    public NavigationPath MonsterWaypoints;
+
     public float MinutesUntilVictory;
     public float StartFiresPerMinute;
     public float FinalFiresPerMinute;
     public float GraceMinutesBeforeFailure;
 
     public AnimationCurve WarningLightRedPulse;
+
     public bool IsGameOver = false;
+    public bool IsVictory = false;
 
     private List<FireStation> safeFireStations = new List<FireStation>();
     private List<FireStation> onFireStations = new List<FireStation>();
 
     private bool emergencyMode = false; // When failure is iminent
+    private bool monsterSpawned = false;
+    private bool monsterCanSpawn = false;
     private float originalFogRedValue;
 
     private void OnEnable()
@@ -37,17 +47,45 @@ public class GameManager : MonoBehaviour {
         StartCoroutine(PlayerHealthGameloop());
     }
 
+    public void SpawnMonster()
+    {
+        // Find valid location
+        Vector3 location = MonsterWaypoints.GetNextWaypoint().position;
+        StartCoroutine(MonsterSpawnSoundDelay(2f));
+        while ((ThePlayer.transform.position - location).magnitude < MonsterMinDistance)
+        {
+            location = MonsterWaypoints.GetNextWaypoint().position;
+        }
+        GameObject monster = Instantiate(MonsterPrefab, location, Quaternion.identity);
+        monster.GetComponent<NavAgentPathingBehaviour>().target = ThePlayer.transform;
+        monster.GetComponent<NavAgentPathingBehaviour>().path = MonsterWaypoints;
+        monster.GetComponent<NavAgentSightBehaviour>().target = ThePlayer.transform;
+    }
+
+    IEnumerator MonsterSpawnSoundDelay(float duration)
+    {
+        yield return new WaitForSeconds(duration);
+        SpawnSound.Play();
+    }
+
     public void MarkFireStationAsSafe(FireStation station)
     {
         emergencyMode = false;
         onFireStations.Remove(station);
         safeFireStations.Add(station);
+
+        if (!monsterSpawned && monsterCanSpawn)
+        {
+            SpawnMonster();
+        }
     }
 
     public void MarkFireStationAsOnFire(FireStation station)
     {
         onFireStations.Add(station);
         safeFireStations.Remove(station);
+
+        monsterCanSpawn = true;
     }
 
     IEnumerator PlayerHealthGameloop()
@@ -66,7 +104,7 @@ public class GameManager : MonoBehaviour {
         float startTime = Time.time;
         float goalTime = startTime + (60 * MinutesUntilVictory);
         float lastFire = float.MinValue;
-        while(Time.time < goalTime)
+        while (Time.time < goalTime)
         {
             float progress = (Time.time - startTime) / (60 * MinutesUntilVictory);
             float frequency = Mathf.Lerp(StartFiresPerMinute, FinalFiresPerMinute, progress) / 60;
@@ -101,7 +139,8 @@ public class GameManager : MonoBehaviour {
         float failTime = startTime + (60 * GraceMinutesBeforeFailure);
         StartCoroutine(RedWarningLights());
         yield return new WaitUntil(() => { return Time.time >= failTime || !emergencyMode; });
-        if (!emergencyMode) {
+        if (!emergencyMode)
+        {
             yield break;
         }
         GameOver();
@@ -128,6 +167,12 @@ public class GameManager : MonoBehaviour {
 
     private void GameWin()
     {
+        IsVictory = true;
+        var allAudioSources = Object.FindObjectsOfType(typeof(AudioSource)) as AudioSource[];
+        foreach (var audioS in allAudioSources)
+        {
+            audioS.Stop();
+        }
         Debug.Log("You won!");
     }
 
