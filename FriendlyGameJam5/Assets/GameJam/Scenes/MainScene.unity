@@ -51316,6 +51316,11 @@ Prefab:
       propertyPath: m_BackGroundColor.b
       value: 0.1792453
       objectReference: {fileID: 0}
+    - target: {fileID: 114697172568837986, guid: a8e5f42a1ada161468f7218a14ebff01,
+        type: 2}
+      propertyPath: m_LockCursor
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a8e5f42a1ada161468f7218a14ebff01, type: 2}
   m_IsPrefabAsset: 0
@@ -63054,12 +63059,6 @@ Prefab:
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 82415d01eb2e8194f800422a557cf580, type: 2}
   m_IsPrefabAsset: 0
---- !u!114 &1499284941 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 114037225952709566, guid: 82415d01eb2e8194f800422a557cf580,
-    type: 2}
-  m_PrefabInternal: {fileID: 1499284939}
-  m_Script: {fileID: 11500000, guid: 0fc050acf658d234d9b96b4b1c7fee04, type: 3}
 --- !u!1001 &1499862538
 Prefab:
   m_ObjectHideFlags: 0
@@ -85653,7 +85652,7 @@ Prefab:
         type: 2}
       propertyPath: app
       value: 
-      objectReference: {fileID: 1499284941}
+      objectReference: {fileID: 0}
     - target: {fileID: 114550860472239958, guid: 843feda16fd41f7429525ccd63e922a0,
         type: 2}
       propertyPath: duration

@@ -75,9 +75,13 @@ public class GameManager : MonoBehaviour
 
     public void MarkFireStationAsSafe(FireStation station)
     {
-        emergencyMode = false;
         onFireStations.Remove(station);
         safeFireStations.Add(station);
+
+        if (safeFireStations.Count > 1)
+        {
+            emergencyMode = false;
+        }
 
         if (!monsterSpawned && monsterCanSpawn)
         {
@@ -138,7 +142,7 @@ public class GameManager : MonoBehaviour
                 }
             }
 
-            if (safeFireStations.Count == 0)
+            if (safeFireStations.Count <= 1)
             {
                 emergencyMode = true;
                 StartCoroutine(FailureIminent());
