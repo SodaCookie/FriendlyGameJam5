@@ -6,9 +6,16 @@ public class DoorHandler : MonoBehaviour {
 
     public GameObject ClosedCollider;
     public string ClosedStateName = "door_1_closed";
+    public string OpeningStateName = "door_1_open";
+    public string ClosingStateName = "door_1_close";
+    public AudioSource DoorOpenSource;
+    public AudioSource DoorCloseSource;
     private Animator animator;
 
     private int entitiesNearby = 0;
+
+    private bool openSoundPlayed = false;
+    private bool closeSoundPlayed = true;
 
 	// Use this for initialization
 	void Start () {
@@ -44,6 +51,22 @@ public class DoorHandler : MonoBehaviour {
         else
         {
             ClosedCollider.SetActive(false);
+        }
+
+        if (current.shortNameHash == Animator.StringToHash(OpeningStateName) && !openSoundPlayed)
+        {
+            DoorOpenSource.Play();
+            DoorCloseSource.Stop();
+            openSoundPlayed = true;
+            closeSoundPlayed = false;
+        }
+
+        if (current.shortNameHash == Animator.StringToHash(ClosingStateName) && !closeSoundPlayed)
+        {
+            DoorOpenSource.Stop();
+            DoorCloseSource.Play();
+            openSoundPlayed = false;
+            closeSoundPlayed = true;
         }
 	}
 }
