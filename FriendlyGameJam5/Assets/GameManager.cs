@@ -82,6 +82,7 @@ public class GameManager : MonoBehaviour
         if (!monsterSpawned && monsterCanSpawn)
         {
             SpawnMonster();
+            monsterSpawned = true;
         }
     }
 
