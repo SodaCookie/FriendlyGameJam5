@@ -6,6 +6,7 @@ public class FireStation : MonoBehaviour {
     public GameObject EnableWhenOnFire;
     public FireStationButton ControllingButton;
     public ParticleSystem Fire;
+    public PotionSpawn MyPotionSpawn;
 
     public bool OnFire { get; private set; }
 
@@ -40,6 +41,7 @@ public class FireStation : MonoBehaviour {
         ControllingButton.SetToNormalMode();
         RecursiveSetLayer(transform, LayerMask.NameToLayer("Default"));
         Fire.Stop();
+        MyPotionSpawn.Roll();
         if (GameManager.Instance != null)
         {
             GameManager.Instance.MarkFireStationAsSafe(this);

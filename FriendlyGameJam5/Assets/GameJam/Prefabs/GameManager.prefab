@@ -55,7 +55,7 @@ MonoBehaviour:
   TheMonster: {fileID: 0}
   FireStations: []
   MinutesUntilVictory: 10
-  StartFiresPerMinute: 15
+  StartFiresPerMinute: 0.5
   FinalFiresPerMinute: 4
   GraceMinutesBeforeFailure: 0.5
   WarningLightRedPulse:
