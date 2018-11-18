@@ -9,21 +9,26 @@ public class GameManager : MonoBehaviour {
     {
         if (Instance != null) Destroy(this);
         else Instance = this;
+
+        originalFogRedValue = RenderSettings.fogColor.r;
     }
 
     [HideInInspector] public Player ThePlayer;
     [HideInInspector] public Monster TheMonster;
     [HideInInspector] public List<FireStation> FireStations = new List<FireStation>();
 
-    public float minutesUntilVictory;
-    public float startFiresPerMinute;
-    public float finalFiresPerMInute;
-    public float graceMinutesBeforeFailure;
+    public float MinutesUntilVictory;
+    public float StartFiresPerMinute;
+    public float FinalFiresPerMinute;
+    public float GraceMinutesBeforeFailure;
+
+    public AnimationCurve WarningLightRedPulse;
 
     private List<FireStation> safeFireStations = new List<FireStation>();
     private List<FireStation> onFireStations = new List<FireStation>();
 
     private bool emergencyMode = false; // When failure is iminent
+    private float originalFogRedValue;
 
     private void OnEnable()
     {
@@ -45,13 +50,14 @@ public class GameManager : MonoBehaviour {
 
     IEnumerator FireStationGameloop()
     {
+        yield return null;
         float startTime = Time.time;
-        float goalTime = startTime + (60 * minutesUntilVictory);
+        float goalTime = startTime + (60 * MinutesUntilVictory);
         float lastFire = float.MinValue;
         while(Time.time < goalTime)
         {
-            float progress = (Time.time - startTime) / (60 * minutesUntilVictory);
-            float frequency = Mathf.Lerp(startFiresPerMinute, finalFiresPerMInute, progress) / 60;
+            float progress = (Time.time - startTime) / (60 * MinutesUntilVictory);
+            float frequency = Mathf.Lerp(StartFiresPerMinute, FinalFiresPerMinute, progress) / 60;
             float period = 1 / frequency;
             if (Time.time > lastFire + period)
             {
@@ -81,12 +87,26 @@ public class GameManager : MonoBehaviour {
     IEnumerator FailureIminent()
     {
         float startTime = Time.time;
-        float failTime = startTime + (60 * graceMinutesBeforeFailure);
+        float failTime = startTime + (60 * GraceMinutesBeforeFailure);
+        StartCoroutine(RedWarningLights());
         yield return new WaitUntil(() => { return Time.time >= failTime || !emergencyMode; });
         if (!emergencyMode) {
             yield break;
         }
         GameOver();
+    }
+
+    IEnumerator RedWarningLights()
+    {
+        float startTime = Time.time;
+        while (emergencyMode)
+        {
+            float elapsedTime = Time.time - startTime;
+            Color newCol = RenderSettings.fogColor;
+            newCol.r = WarningLightRedPulse.Evaluate(elapsedTime);
+            RenderSettings.fogColor = newCol;
+            yield return null;
+        }
     }
 
     private void GameOver()
