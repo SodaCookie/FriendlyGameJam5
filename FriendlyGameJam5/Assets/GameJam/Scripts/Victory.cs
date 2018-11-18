@@ -21,5 +21,6 @@ public class Victory : MonoBehaviour {
             group.alpha = (Time.time - startTime) / duration;
             yield return null;
         }
+        group.alpha = 1;
     }
 }
