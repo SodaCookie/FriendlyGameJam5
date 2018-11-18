@@ -4,7 +4,9 @@ using UnityEngine;
 
 public class NavigationPath : MonoBehaviour {
     public List<Transform> Waypoints;
-    public float StopTime = 1f;
+    public float StopTime { get { return Random.Range(MinStopTime, MaxStopTime); } }
+    public float MinStopTime = 1;
+    public float MaxStopTime = 1;
 
     private Transform lastWaypoint = null;
 

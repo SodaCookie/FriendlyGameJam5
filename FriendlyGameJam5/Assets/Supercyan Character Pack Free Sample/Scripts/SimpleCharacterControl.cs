@@ -1,21 +1,26 @@
 ﻿using UnityEngine;
 using System.Collections.Generic;
+using System;
 
 public class SimpleCharacterControl : MonoBehaviour
 {
-
     private enum ControlMode
     {
         Tank,
         Direct
     }
 
+    public bool Sprinting { get { return m_moveSpeed == m_sprintSpeed; } }
+    public bool CanSprint { get { return !m_recharing; } }
+
     [Header("Running")]
     [SerializeField] private float m_sprintSpeed = 4;
     [SerializeField] public KeyCode m_sprintKey = KeyCode.LeftShift;
     [SerializeField] public float m_sprintMeterMax = 2; // In seconds
+    [SerializeField] public float m_sprintRechargeMin = 0;
     private float m_sprintMeter; // In seconds
     private float m_walkSpeed;
+    private bool m_recharing = false;
 
     [SerializeField] private float m_moveSpeed = 2;
     [SerializeField] private float m_turnSpeed = 200;
@@ -107,9 +112,10 @@ public class SimpleCharacterControl : MonoBehaviour
     {
         m_animator.SetBool("Grounded", m_isGrounded);
 
-        if (Input.GetKey(m_sprintKey) && m_sprintMeter > 0)
+        if (Input.GetKey(m_sprintKey) && m_sprintMeter > 0 && !m_recharing)
         {
             m_sprintMeter -= Time.deltaTime;
+            if (m_sprintMeter <= 0) m_recharing = true;
             m_sprintMeter = Mathf.Max(m_sprintMeter, 0);
             m_moveSpeed = m_sprintSpeed;
         }
@@ -118,6 +124,10 @@ public class SimpleCharacterControl : MonoBehaviour
             if (!Input.GetKey(m_sprintKey))
             {
                 m_sprintMeter += Time.deltaTime;
+            }
+            if (m_recharing && m_sprintMeter > m_sprintRechargeMin)
+            {
+                m_recharing = false;
             }
             m_sprintMeter = Mathf.Min(m_sprintMeter, m_sprintMeterMax);
             m_moveSpeed = m_walkSpeed;

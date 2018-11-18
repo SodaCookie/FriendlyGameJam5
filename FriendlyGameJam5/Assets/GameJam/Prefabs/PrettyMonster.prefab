@@ -2682,7 +2682,7 @@ GameObject:
   - component: {fileID: 114631683720043450}
   - component: {fileID: 54797489849820354}
   - component: {fileID: 136639803629726322}
-  - component: {fileID: 114529559719232894}
+  - component: {fileID: 114914758338768134}
   m_Layer: 0
   m_Name: PrettyMonster
   m_TagString: Monster
@@ -5996,7 +5996,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!1 &1643092538152352
 GameObject:
   m_ObjectHideFlags: 1
@@ -13242,7 +13242,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1263587937964906}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 16.109999, y: 4.2454467, z: 1.6199989}
+  m_LocalPosition: {x: 18.137, y: 3.11, z: -1.14}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4543289053353086}
@@ -18337,7 +18337,8 @@ AudioSource:
   m_GameObject: {fileID: 1516592750036676}
   m_Enabled: 1
   serializedVersion: 4
-  OutputAudioMixerGroup: {fileID: 0}
+  OutputAudioMixerGroup: {fileID: 243726391391432426, guid: 8a4a00a3869e9ce44be24dd7154db263,
+    type: 2}
   m_audioClip: {fileID: 0}
   m_PlayOnAwake: 0
   m_Volume: 0.7
@@ -18349,9 +18350,9 @@ AudioSource:
   Priority: 128
   DopplerLevel: 1
   MinDistance: 1
-  MaxDistance: 200
+  MaxDistance: 10
   Pan2D: 0
-  rolloffMode: 0
+  rolloffMode: 2
   BypassEffects: 0
   BypassListenerEffects: 0
   BypassReverbZones: 0
@@ -18359,22 +18360,40 @@ AudioSource:
     serializedVersion: 2
     m_Curve:
     - serializedVersion: 3
-      time: 0.002
+      time: 0.1
       value: 1
-      inSlope: -0.078308575
-      outSlope: -0.078308575
+      inSlope: -10.0039835
+      outSlope: -10.0039835
       tangentMode: 0
       weightedMode: 0
       inWeight: 0
-      outWeight: 0.25162825
+      outWeight: 0
+    - serializedVersion: 3
+      time: 0.2
+      value: 0.5
+      inSlope: -2.5009959
+      outSlope: -2.5009959
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    - serializedVersion: 3
+      time: 0.38866273
+      value: 0.20666504
+      inSlope: -0.91452706
+      outSlope: -0.91452706
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.5216361
+      outWeight: 0
     - serializedVersion: 3
       time: 1
       value: 0
-      inSlope: 0
-      outSlope: 0
+      inSlope: -0.10003988
+      outSlope: -0.10003988
       tangentMode: 0
       weightedMode: 0
-      inWeight: 0.19100702
+      inWeight: 0
       outWeight: 0
     m_PreInfinity: 2
     m_PostInfinity: 2
@@ -18432,7 +18451,8 @@ AudioSource:
   m_GameObject: {fileID: 1318920846831838}
   m_Enabled: 1
   serializedVersion: 4
-  OutputAudioMixerGroup: {fileID: 0}
+  OutputAudioMixerGroup: {fileID: 243726391391432426, guid: 8a4a00a3869e9ce44be24dd7154db263,
+    type: 2}
   m_audioClip: {fileID: 0}
   m_PlayOnAwake: 0
   m_Volume: 0.7
@@ -18444,9 +18464,9 @@ AudioSource:
   Priority: 128
   DopplerLevel: 1
   MinDistance: 1
-  MaxDistance: 200
+  MaxDistance: 10
   Pan2D: 0
-  rolloffMode: 0
+  rolloffMode: 2
   BypassEffects: 0
   BypassListenerEffects: 0
   BypassReverbZones: 0
@@ -18454,22 +18474,40 @@ AudioSource:
     serializedVersion: 2
     m_Curve:
     - serializedVersion: 3
-      time: 0.002
+      time: 0.1
       value: 1
-      inSlope: -0.078308575
-      outSlope: -0.078308575
+      inSlope: -10.0039835
+      outSlope: -10.0039835
       tangentMode: 0
       weightedMode: 0
       inWeight: 0
-      outWeight: 0.25162825
+      outWeight: 0
+    - serializedVersion: 3
+      time: 0.2
+      value: 0.5
+      inSlope: -2.5009959
+      outSlope: -2.5009959
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    - serializedVersion: 3
+      time: 0.38866273
+      value: 0.20666504
+      inSlope: -0.91452706
+      outSlope: -0.91452706
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.5216361
+      outWeight: 0
     - serializedVersion: 3
       time: 1
       value: 0
-      inSlope: 0
-      outSlope: 0
+      inSlope: -0.10003988
+      outSlope: -0.10003988
       tangentMode: 0
       weightedMode: 0
-      inWeight: 0.19100702
+      inWeight: 0
       outWeight: 0
     m_PreInfinity: 2
     m_PostInfinity: 2
@@ -18567,25 +18605,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   animator: {fileID: 95687297674796696}
---- !u!114 &114529559719232894
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1263587937964906}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 11b44d8fe07536a409de9c5a6baff643, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  sightRange: 35
-  aggroSpeed: 5
-  deaggroCooldownDuration: 3
-  target: {fileID: 0}
-  oculusionMask:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  headBone: {fileID: 4543658430048708}
 --- !u!114 &114625893581123212
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -18619,8 +18638,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9b9db150bdd85d54cbb7527fcb22f7cb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  MaxAnimationVelocity: 3
-  MaxAnimationTurnSpeed: 100
+  MaxAnimationVelocity: 4
+  MaxAnimationTurnSpeed: 70
 --- !u!114 &114684845228918370
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -18633,6 +18652,29 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   target: {fileID: 0}
+  path: {fileID: 0}
+--- !u!114 &114914758338768134
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1263587937964906}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 11b44d8fe07536a409de9c5a6baff643, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sightRange: 20
+  aggroSpeed: 1
+  deaggroCooldownDuration: 3
+  target: {fileID: 0}
+  oculusionMask:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  headBone: {fileID: 0}
+  aggro: 0
+  targetVisible: 0
+  lastSeen: {x: 0, y: 0, z: 0}
 --- !u!135 &135031712658327212
 SphereCollider:
   m_ObjectHideFlags: 1
@@ -18875,7 +18917,7 @@ NavMeshAgent:
   m_Enabled: 1
   m_AgentTypeID: 0
   m_Radius: 1
-  m_Speed: 2
+  m_Speed: 1
   m_Acceleration: 8
   avoidancePriority: 50
   m_AngularSpeed: 300

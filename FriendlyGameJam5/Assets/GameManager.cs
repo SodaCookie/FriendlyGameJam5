@@ -78,7 +78,6 @@ public class GameManager : MonoBehaviour {
                 {
                     station.SetOnFire();
                     lastFire = Time.time;
-                    Debug.Log(station + " was just set on fire!");
                 }
             }
 

@@ -18371,7 +18371,8 @@ AudioSource:
   m_GameObject: {fileID: 1745722347250316}
   m_Enabled: 1
   serializedVersion: 4
-  OutputAudioMixerGroup: {fileID: 0}
+  OutputAudioMixerGroup: {fileID: 243097652026233986, guid: 8a4a00a3869e9ce44be24dd7154db263,
+    type: 2}
   m_audioClip: {fileID: 0}
   m_PlayOnAwake: 1
   m_Volume: 1
@@ -18383,9 +18384,9 @@ AudioSource:
   Priority: 128
   DopplerLevel: 1
   MinDistance: 1
-  MaxDistance: 200
+  MaxDistance: 15
   Pan2D: 0
-  rolloffMode: 0
+  rolloffMode: 2
   BypassEffects: 0
   BypassListenerEffects: 0
   BypassReverbZones: 0
@@ -18393,23 +18394,41 @@ AudioSource:
     serializedVersion: 2
     m_Curve:
     - serializedVersion: 3
-      time: 0
-      value: 1
-      inSlope: 0
-      outSlope: 0
+      time: 0.075055696
+      value: 0.99998856
+      inSlope: -10.0039835
+      outSlope: -10.0039835
       tangentMode: 0
       weightedMode: 0
-      inWeight: 0.33333334
-      outWeight: 0.33333334
+      inWeight: 0
+      outWeight: 0
+    - serializedVersion: 3
+      time: 0.12516709
+      value: 0.49666214
+      inSlope: -4.1745353
+      outSlope: -4.1745353
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.73300123
+      outWeight: 0
+    - serializedVersion: 3
+      time: 0.30475846
+      value: 0.12001419
+      inSlope: -0.6511547
+      outSlope: -0.6511547
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.5984672
+      outWeight: 0.21029837
     - serializedVersion: 3
       time: 1
       value: 0
-      inSlope: 0
-      outSlope: 0
+      inSlope: -0.10003988
+      outSlope: -0.10003988
       tangentMode: 0
       weightedMode: 0
-      inWeight: 0.33333334
-      outWeight: 0.33333334
+      inWeight: 0
+      outWeight: 0
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
@@ -18466,7 +18485,8 @@ AudioSource:
   m_GameObject: {fileID: 1603518133295866}
   m_Enabled: 1
   serializedVersion: 4
-  OutputAudioMixerGroup: {fileID: 0}
+  OutputAudioMixerGroup: {fileID: 243726391391432426, guid: 8a4a00a3869e9ce44be24dd7154db263,
+    type: 2}
   m_audioClip: {fileID: 0}
   m_PlayOnAwake: 0
   m_Volume: 0.7
@@ -18478,9 +18498,9 @@ AudioSource:
   Priority: 128
   DopplerLevel: 1
   MinDistance: 1
-  MaxDistance: 200
+  MaxDistance: 10
   Pan2D: 0
-  rolloffMode: 0
+  rolloffMode: 1
   BypassEffects: 0
   BypassListenerEffects: 0
   BypassReverbZones: 0
@@ -18488,22 +18508,40 @@ AudioSource:
     serializedVersion: 2
     m_Curve:
     - serializedVersion: 3
-      time: 0.002
+      time: 0.1
       value: 1
-      inSlope: -0.078308575
-      outSlope: -0.078308575
+      inSlope: -10.0039835
+      outSlope: -10.0039835
       tangentMode: 0
       weightedMode: 0
       inWeight: 0
-      outWeight: 0.25162825
+      outWeight: 0
+    - serializedVersion: 3
+      time: 0.2
+      value: 0.5
+      inSlope: -2.5009959
+      outSlope: -2.5009959
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    - serializedVersion: 3
+      time: 0.38866273
+      value: 0.20666504
+      inSlope: -0.91452706
+      outSlope: -0.91452706
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.5216361
+      outWeight: 0
     - serializedVersion: 3
       time: 1
       value: 0
-      inSlope: 0
-      outSlope: 0
+      inSlope: -0.10003988
+      outSlope: -0.10003988
       tangentMode: 0
       weightedMode: 0
-      inWeight: 0.19100702
+      inWeight: 0
       outWeight: 0
     m_PreInfinity: 2
     m_PostInfinity: 2
@@ -18561,7 +18599,8 @@ AudioSource:
   m_GameObject: {fileID: 1350780810105430}
   m_Enabled: 1
   serializedVersion: 4
-  OutputAudioMixerGroup: {fileID: 0}
+  OutputAudioMixerGroup: {fileID: 243726391391432426, guid: 8a4a00a3869e9ce44be24dd7154db263,
+    type: 2}
   m_audioClip: {fileID: 0}
   m_PlayOnAwake: 0
   m_Volume: 0.7
@@ -18573,9 +18612,9 @@ AudioSource:
   Priority: 128
   DopplerLevel: 1
   MinDistance: 1
-  MaxDistance: 200
+  MaxDistance: 10
   Pan2D: 0
-  rolloffMode: 0
+  rolloffMode: 1
   BypassEffects: 0
   BypassListenerEffects: 0
   BypassReverbZones: 0
@@ -18583,22 +18622,40 @@ AudioSource:
     serializedVersion: 2
     m_Curve:
     - serializedVersion: 3
-      time: 0.002
+      time: 0.1
       value: 1
-      inSlope: -0.078308575
-      outSlope: -0.078308575
+      inSlope: -10.0039835
+      outSlope: -10.0039835
       tangentMode: 0
       weightedMode: 0
       inWeight: 0
-      outWeight: 0.25162825
+      outWeight: 0
+    - serializedVersion: 3
+      time: 0.2
+      value: 0.5
+      inSlope: -2.5009959
+      outSlope: -2.5009959
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    - serializedVersion: 3
+      time: 0.38866273
+      value: 0.20666504
+      inSlope: -0.91452706
+      outSlope: -0.91452706
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.5216361
+      outWeight: 0
     - serializedVersion: 3
       time: 1
       value: 0
-      inSlope: 0
-      outSlope: 0
+      inSlope: -0.10003988
+      outSlope: -0.10003988
       tangentMode: 0
       weightedMode: 0
-      inWeight: 0.19100702
+      inWeight: 0
       outWeight: 0
     m_PreInfinity: 2
     m_PostInfinity: 2
@@ -18695,7 +18752,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9b9db150bdd85d54cbb7527fcb22f7cb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  MaxAnimationVelocity: 3
+  MaxAnimationVelocity: 4
   MaxAnimationTurnSpeed: 100
 --- !u!114 &114264082006376862
 MonoBehaviour:
@@ -18783,6 +18840,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   target: {fileID: 0}
+  path: {fileID: 0}
 --- !u!114 &114919066120480342
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -18794,14 +18852,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 11b44d8fe07536a409de9c5a6baff643, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sightRange: 35
-  aggroSpeed: 5
+  sightRange: 25
+  aggroSpeed: 4
   deaggroCooldownDuration: 3
   target: {fileID: 0}
   oculusionMask:
     serializedVersion: 2
     m_Bits: 4294967295
   headBone: {fileID: 4142547662428246}
+  aggro: 0
+  targetVisible: 0
+  lastSeen: {x: 0, y: 0, z: 0}
 --- !u!135 &135447494159042182
 SphereCollider:
   m_ObjectHideFlags: 1
@@ -19057,7 +19118,7 @@ NavMeshAgent:
   m_Enabled: 1
   m_AgentTypeID: 0
   m_Radius: 1
-  m_Speed: 2
+  m_Speed: 1
   m_Acceleration: 8
   avoidancePriority: 50
   m_AngularSpeed: 300
