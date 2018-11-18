@@ -22,6 +22,9 @@ public class GameManager : MonoBehaviour
     public AudioSource SpawnSound;
     public GameObject MonsterPrefab;
     public NavigationPath MonsterWaypoints;
+    public AudioSource IntroAnnouncement;
+    public AudioSource WarningAnnouncement;
+    public AudioSource EvacuationAnnouncement;
 
     public float MinutesUntilVictory;
     public float CrunchTimeMinute;
@@ -31,8 +34,8 @@ public class GameManager : MonoBehaviour
 
     public AnimationCurve WarningLightRedPulse;
 
-    public bool IsGameOver = false;
-    public bool IsVictory = false;
+    [HideInInspector] public bool IsGameOver = false;
+    [HideInInspector] public bool IsVictory = false;
 
     private List<FireStation> safeFireStations = new List<FireStation>();
     private List<FireStation> onFireStations = new List<FireStation>();
@@ -92,6 +95,7 @@ public class GameManager : MonoBehaviour
     IEnumerator MonsterCrunchWait()
     {
         yield return new WaitForSeconds(CrunchTimeMinute * 60);
+        EvacuationAnnouncement.Play();
         if (TheMonster != null)
         {
             TheMonster.GetComponent<UnityEngine.AI.NavMeshAgent>().speed = 2;
@@ -113,6 +117,7 @@ public class GameManager : MonoBehaviour
     IEnumerator FireStationGameloop()
     {
         yield return null;
+        IntroAnnouncement.Play();
         float startTime = Time.time;
         float goalTime = startTime + (60 * MinutesUntilVictory);
         float lastFire = float.MinValue;
@@ -147,6 +152,7 @@ public class GameManager : MonoBehaviour
 
     IEnumerator FailureIminent()
     {
+        WarningAnnouncement.Play();
         float startTime = Time.time;
         float failTime = startTime + (60 * GraceMinutesBeforeFailure);
         StartCoroutine(RedWarningLights());
