@@ -15,7 +15,9 @@ public class NavAgentSightBehaviour : MonoBehaviour {
 
     private NavMeshAgent agent;
     private float defaultSpeed;
-    private bool aggro;
+    public bool aggro;
+    public bool targetVisible;
+    public Vector3 lastSeen;
     private Coroutine cooldownCoroutine;
 
     private void Awake()
@@ -25,7 +27,8 @@ public class NavAgentSightBehaviour : MonoBehaviour {
     }
 
     void LateUpdate () {
-        if (HasLineOfSight())
+        targetVisible = HasLineOfSight();
+        if (targetVisible)
         {
             UpdateLookAtBehaviour();
         }
@@ -46,6 +49,12 @@ public class NavAgentSightBehaviour : MonoBehaviour {
             }
             RaycastHit raycastHit;
             Physics.Raycast(origin, target.position - origin, out raycastHit, sightRange, oculusionMask);
+
+            if (raycastHit.collider != null && raycastHit.collider.gameObject == target.gameObject)
+            {
+                lastSeen = raycastHit.point;
+            }
+
             return raycastHit.collider != null && raycastHit.collider.gameObject == target.gameObject;
         }
         return false;

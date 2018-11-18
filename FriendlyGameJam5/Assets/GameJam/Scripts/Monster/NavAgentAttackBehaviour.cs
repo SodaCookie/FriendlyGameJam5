@@ -2,18 +2,18 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-[RequireComponent(typeof(NavAgentFollowBehaviour), typeof(Animator))]
+[RequireComponent(typeof(NavAgentPathingBehaviour), typeof(Animator))]
 public class NavAgentAttackBehaviour : MonoBehaviour {
 
     public float stunDuration = 3;
 
-    private NavAgentFollowBehaviour followBehaviour;
+    private NavAgentPathingBehaviour pathingBehaviour;
     private bool attacked = false;
     private Animator animator;
 
     private void Awake()
     {
-        followBehaviour = GetComponent<NavAgentFollowBehaviour>();
+        pathingBehaviour = GetComponent<NavAgentPathingBehaviour>();
         animator = GetComponent<Animator>();
     }
 
@@ -22,7 +22,7 @@ public class NavAgentAttackBehaviour : MonoBehaviour {
         if (other.tag == "Player" && !attacked)
         {
             animator.SetBool(Animator.StringToHash("Attack"), true);
-            followBehaviour.StopFollowing();
+            pathingBehaviour.PausePathing();
             other.GetComponent<Player>().DamagePlayer();
             StartCoroutine(DisableFollow());
             attacked = true;
@@ -34,7 +34,7 @@ public class NavAgentAttackBehaviour : MonoBehaviour {
         yield return null;
         animator.SetBool(Animator.StringToHash("Attack"), false);
         yield return new WaitForSeconds(stunDuration);
-        followBehaviour.StartFollowing();
+        pathingBehaviour.ResumePathing();
         attacked = false;
     }
 }
