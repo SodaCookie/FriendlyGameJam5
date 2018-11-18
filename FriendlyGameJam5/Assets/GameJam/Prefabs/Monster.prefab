@@ -18765,6 +18765,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 10527689658e5fa48988aa2648ad74d0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Mirror: {fileID: 137237202613178330}
 --- !u!114 &114509929962839810
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -18910,7 +18911,7 @@ CapsuleCollider:
   m_Material: {fileID: 13400000, guid: c2815a7ab32e42c4bb42f59caacb8ec1, type: 2}
   m_IsTrigger: 0
   m_Enabled: 1
-  m_Radius: 0.5
+  m_Radius: 0.4
   m_Height: 2.5
   m_Direction: 1
   m_Center: {x: 0, y: 1.25, z: 0}

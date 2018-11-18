@@ -67,7 +67,7 @@ public class GameManager : MonoBehaviour
         monster.GetComponent<NavAgentPathingBehaviour>().target = ThePlayer.transform;
         monster.GetComponent<NavAgentPathingBehaviour>().path = MonsterWaypoints;
         monster.GetComponent<NavAgentSightBehaviour>().target = ThePlayer.transform;
-        ThePlayer.GetComponent<Player>().MonsterMirror = GameObject.Find("MirrorMesh").GetComponent<SkinnedMeshRenderer>();
+        ThePlayer.GetComponent<Player>().MonsterMirrors.Add(monster.GetComponent<Monster>().Mirror);
     }
 
     IEnumerator MonsterSpawnSoundDelay(float duration)
@@ -117,6 +117,7 @@ public class GameManager : MonoBehaviour
             TheMonster.GetComponent<NavAgentSightBehaviour>().defaultSpeed = 2;
             TheMonster.GetComponent<NavAgentSightBehaviour>().aggroSpeed = 6;
         }
+        SpawnMonster();
     }
 
     IEnumerator PlayerHealthGameloop()
@@ -134,9 +135,9 @@ public class GameManager : MonoBehaviour
         yield return null;
         introMode = true;
         StartingFireStation.SetOnFire();
-        StartCoroutine(MonsterCrunchWait());
         IntroAnnouncement.Play();
         yield return new WaitUntil(() => { return !introMode; });
+        StartCoroutine(MonsterCrunchWait());
         float startTime = Time.time;
         float goalTime = startTime + (60 * MinutesUntilVictory);
         float lastFire = float.MinValue;

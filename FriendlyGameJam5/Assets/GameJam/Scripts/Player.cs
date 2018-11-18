@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Player : MonoBehaviour
 {
-    public SkinnedMeshRenderer MonsterMirror;
+    public List<SkinnedMeshRenderer> MonsterMirrors = new List<SkinnedMeshRenderer>();
     public ParticleSystem Particles;
 
     public Coroutine xRayCoroutine;
@@ -45,7 +45,10 @@ public class Player : MonoBehaviour
 
     private IEnumerator XRayVisionCoroutine(float duration)
     {
-        MonsterMirror.enabled = true;
+        foreach (var mirror in MonsterMirrors)
+        {
+            mirror.enabled = true;
+        }
         if (!Particles.isPlaying)
         {
             Particles.Play();
@@ -53,6 +56,9 @@ public class Player : MonoBehaviour
 
         yield return new WaitForSeconds(duration);
         xRayCoroutine = null;
-        MonsterMirror.enabled = false;
+        foreach (var mirror in MonsterMirrors)
+        {
+            mirror.enabled = false;
+        }
     }
 }

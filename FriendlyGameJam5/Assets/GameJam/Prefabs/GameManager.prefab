@@ -445,7 +445,7 @@ MonoBehaviour:
   MinutesUntilVictory: 10
   CrunchTimeMinute: 7
   StartFiresPerMinute: 0.5
-  FinalFiresPerMinute: 4
+  FinalFiresPerMinute: 2
   GraceMinutesBeforeFailure: 0.5
   WarningLightRedPulse:
     serializedVersion: 2
