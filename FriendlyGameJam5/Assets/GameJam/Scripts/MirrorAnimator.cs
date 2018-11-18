@@ -13,5 +13,6 @@ public class MirrorAnimator : MonoBehaviour {
         GetComponent<Animator>().SetFloat("JumpLeg", animator.GetFloat("JumpLeg"));
         GetComponent<Animator>().SetFloat("Turn", animator.GetFloat("Turn"));
         GetComponent<Animator>().SetBool("Crouch", animator.GetBool("Crouch"));
+        GetComponent<Animator>().SetBool("Attack", animator.GetBool("Attack"));
     }
 }

@@ -8,13 +8,21 @@ public class Player : MonoBehaviour
     public ParticleSystem Particles;
 
     public Coroutine xRayCoroutine;
-
+    public float HealingTime = 5;
+    public int Health = 2;
+    
     private void Awake()
     {
         if (GameManager.Instance != null)
         {
             GameManager.Instance.ThePlayer = this;
         }
+    }
+
+    public void DamagePlayer()
+    {
+        Health -= 1;
+        StartCoroutine(BeginHealing());
     }
 
     public void StartXRayVision(float duration)
@@ -24,6 +32,12 @@ public class Player : MonoBehaviour
             StopCoroutine(xRayCoroutine);
         }
         xRayCoroutine = StartCoroutine(XRayVisionCoroutine(duration));
+    }
+
+    private IEnumerator BeginHealing()
+    {
+        yield return new WaitForSeconds(HealingTime);
+        Health += 1;
     }
 
     private IEnumerator XRayVisionCoroutine(float duration)
