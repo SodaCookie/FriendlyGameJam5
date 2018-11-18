@@ -1,0 +1,91 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1001 &100100000
+Prefab:
+  m_ObjectHideFlags: 1
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications: []
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 0}
+  m_RootGameObject: {fileID: 1212341467200636}
+  m_IsPrefabAsset: 1
+--- !u!1 &1212341467200636
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 4924906561219388}
+  - component: {fileID: 65215800725916554}
+  - component: {fileID: 114931271156621918}
+  - component: {fileID: 54182326099398276}
+  m_Layer: 0
+  m_Name: FootstepDetector
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4924906561219388
+Transform:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1212341467200636}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!54 &54182326099398276
+Rigidbody:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1212341467200636}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0
+  m_UseGravity: 0
+  m_IsKinematic: 1
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
+--- !u!65 &65215800725916554
+BoxCollider:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1212341467200636}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1, y: 0.3, z: 1}
+  m_Center: {x: 0, y: -0.14, z: 0}
+--- !u!114 &114931271156621918
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1212341467200636}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: af29ccde485f4234492327b1254395a7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  leftFootSource: {fileID: 0}
+  rightFootSource: {fileID: 0}
+  leftFootStepTrigger: {fileID: 0}
+  rightFootStepTrigger: {fileID: 0}
+  footsteps:
+  - {fileID: 8300000, guid: 42e65e088b3f4374e851b8dbd38f3df9, type: 3}
+  - {fileID: 8300000, guid: 8bc94ec6ed537e743b481638bdcd503d, type: 3}
+  - {fileID: 8300000, guid: 5a9383dda6cabc047b7a297602e93eb4, type: 3}
+  - {fileID: 8300000, guid: e9714160ce34f2b4ab63ff8c27bd68e1, type: 3}
