@@ -22,6 +22,9 @@ public class Player : MonoBehaviour
     public void DamagePlayer()
     {
         Health -= 1;
+        GetComponent<SimpleCharacterControl>().m_sprintMeter = GetComponent<SimpleCharacterControl>().m_sprintMeterMax;
+        GetComponent<SimpleCharacterControl>().m_recharging = false;
+
         StartCoroutine(BeginHealing());
     }
 

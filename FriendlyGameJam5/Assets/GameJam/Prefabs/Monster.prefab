@@ -4236,7 +4236,7 @@ GameObject:
   - component: {fileID: 4012109496906198}
   - component: {fileID: 137237202613178330}
   m_Layer: 0
-  m_Name: Plane_001
+  m_Name: MirrorMesh
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -18860,6 +18860,7 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 4294967295
   headBone: {fileID: 4142547662428246}
+  defaultSpeed: 0
   aggro: 0
   targetVisible: 0
   lastSeen: {x: 0, y: 0, z: 0}

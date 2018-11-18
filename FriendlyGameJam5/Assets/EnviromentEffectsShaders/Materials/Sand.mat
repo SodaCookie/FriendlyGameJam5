@@ -23,7 +23,7 @@ Material:
         m_Scale: {x: 5, y: 5}
         m_Offset: {x: 0, y: 0}
     - _MainTex:
-        m_Texture: {fileID: 2800000, guid: ff91cef54bb04124b899f12176bee5d1, type: 3}
+        m_Texture: {fileID: 0}
         m_Scale: {x: 5, y: 5}
         m_Offset: {x: 0, y: 0}
     - _MossBump:
@@ -39,7 +39,7 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _SandBump:
-        m_Texture: {fileID: 2800000, guid: ff91cef54bb04124b899f12176bee5d1, type: 3}
+        m_Texture: {fileID: 2800000, guid: e183aa09c01ee5b49b32b70535924240, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _SandMap:
@@ -47,18 +47,18 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _SandTex:
-        m_Texture: {fileID: 2800000, guid: ff91cef54bb04124b899f12176bee5d1, type: 3}
+        m_Texture: {fileID: 2800000, guid: d4cf42b2ab2c8ca409ac7e286533d61b, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     m_Floats:
     - _MossAmount: 0.75
     - _SandAmount: 1
-    - _SandHeight: 0.4642857
-    - _Shininess: 0.078125
+    - _SandHeight: 0.542
+    - _Shininess: 0.131
     m_Colors:
     - _Color: {r: 1, g: 1, b: 1, a: 1}
     - _MossColor: {r: 1, g: 1, b: 1, a: 1}
     - _MossDirection: {r: 1.58, g: 1, b: 0, a: 1}
-    - _SandColor: {r: 1, g: 0.8389567, b: 0, a: 1}
+    - _SandColor: {r: 1, g: 1, b: 1, a: 1}
     - _SandDirection: {r: 0, g: 1, b: 0, a: 1}
     - _SpecColor: {r: 0, g: 0, b: 0, a: 1}

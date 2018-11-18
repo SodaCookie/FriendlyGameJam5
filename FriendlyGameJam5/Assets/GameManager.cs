@@ -64,6 +64,7 @@ public class GameManager : MonoBehaviour
         monster.GetComponent<NavAgentPathingBehaviour>().target = ThePlayer.transform;
         monster.GetComponent<NavAgentPathingBehaviour>().path = MonsterWaypoints;
         monster.GetComponent<NavAgentSightBehaviour>().target = ThePlayer.transform;
+        ThePlayer.GetComponent<Player>().MonsterMirror = GameObject.Find("MirrorMesh").GetComponent<SkinnedMeshRenderer>();
     }
 
     IEnumerator MonsterSpawnSoundDelay(float duration)
