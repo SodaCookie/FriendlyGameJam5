@@ -44122,6 +44122,12 @@ MeshFilter:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 903981883}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &904742061 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 114099586762795830, guid: 82415d01eb2e8194f800422a557cf580,
+    type: 2}
+  m_PrefabInternal: {fileID: 1499284939}
+  m_Script: {fileID: 11500000, guid: 0fc050acf658d234d9b96b4b1c7fee04, type: 3}
 --- !u!1001 &904771421
 Prefab:
   m_ObjectHideFlags: 0
@@ -46873,6 +46879,12 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 445366, guid: 339299a7e2fdedf47b7788ab1a25c9df,
     type: 2}
   m_PrefabInternal: {fileID: 978282236}
+--- !u!114 &978486300 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 114878230305970134, guid: 023a5b875469ae04b872bea02e868529,
+    type: 2}
+  m_PrefabInternal: {fileID: 1576942253}
+  m_Script: {fileID: 11500000, guid: cd08e9f299f5f954d9a01144561933c5, type: 3}
 --- !u!1001 &980778760
 Prefab:
   m_ObjectHideFlags: 0
@@ -63053,9 +63065,24 @@ Prefab:
       objectReference: {fileID: 170681410}
     - target: {fileID: 114003838954609146, guid: 82415d01eb2e8194f800422a557cf580,
         type: 2}
+      propertyPath: StartingFireStation
+      value: 
+      objectReference: {fileID: 978486300}
+    - target: {fileID: 114003838954609146, guid: 82415d01eb2e8194f800422a557cf580,
+        type: 2}
       propertyPath: MonsterWaypoints
       value: 
       objectReference: {fileID: 1865783040}
+    - target: {fileID: 114003838954609146, guid: 82415d01eb2e8194f800422a557cf580,
+        type: 2}
+      propertyPath: CrunchTimeMinute
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 114003838954609146, guid: 82415d01eb2e8194f800422a557cf580,
+        type: 2}
+      propertyPath: FinalFiresPerMinute
+      value: 2
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 82415d01eb2e8194f800422a557cf580, type: 2}
   m_IsPrefabAsset: 0
@@ -85652,12 +85679,7 @@ Prefab:
         type: 2}
       propertyPath: app
       value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 114550860472239958, guid: 843feda16fd41f7429525ccd63e922a0,
-        type: 2}
-      propertyPath: duration
-      value: 4
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 904742061}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 843feda16fd41f7429525ccd63e922a0, type: 2}
   m_IsPrefabAsset: 0

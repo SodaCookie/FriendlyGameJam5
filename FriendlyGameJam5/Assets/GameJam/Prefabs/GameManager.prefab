@@ -437,6 +437,7 @@ MonoBehaviour:
   SpawnSound: {fileID: 0}
   MonsterPrefab: {fileID: 1407672827187080, guid: 57021699a7594074a933a332c151204b,
     type: 2}
+  StartingFireStation: {fileID: 0}
   MonsterWaypoints: {fileID: 0}
   IntroAnnouncement: {fileID: 82700006023615920}
   WarningAnnouncement: {fileID: 82926463307412548}

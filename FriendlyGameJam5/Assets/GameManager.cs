@@ -21,6 +21,7 @@ public class GameManager : MonoBehaviour
     public float MonsterMinDistance = 30f;
     public AudioSource SpawnSound;
     public GameObject MonsterPrefab;
+    public FireStation StartingFireStation;
     public NavigationPath MonsterWaypoints;
     public AudioSource IntroAnnouncement;
     public AudioSource WarningAnnouncement;
@@ -44,9 +45,11 @@ public class GameManager : MonoBehaviour
     private bool monsterSpawned = false;
     private bool monsterCanSpawn = false;
     private float originalFogRedValue;
+    private bool introMode = true;
 
     private void OnEnable()
     {
+        introMode = true;
         StartCoroutine(FireStationGameloop());
         StartCoroutine(PlayerHealthGameloop());
     }
@@ -83,6 +86,11 @@ public class GameManager : MonoBehaviour
             emergencyMode = false;
         }
 
+        if (introMode)
+        {
+            introMode = false;
+        }
+
         if (!monsterSpawned && monsterCanSpawn)
         {
             SpawnMonster();
@@ -100,6 +108,7 @@ public class GameManager : MonoBehaviour
 
     IEnumerator MonsterCrunchWait()
     {
+        float startTime = Time.time;
         yield return new WaitForSeconds(CrunchTimeMinute * 60);
         EvacuationAnnouncement.Play();
         if (TheMonster != null)
@@ -123,7 +132,11 @@ public class GameManager : MonoBehaviour
     IEnumerator FireStationGameloop()
     {
         yield return null;
+        introMode = true;
+        StartingFireStation.SetOnFire();
+        StartCoroutine(MonsterCrunchWait());
         IntroAnnouncement.Play();
+        yield return new WaitUntil(() => { return !introMode; });
         float startTime = Time.time;
         float goalTime = startTime + (60 * MinutesUntilVictory);
         float lastFire = float.MinValue;
@@ -165,6 +178,9 @@ public class GameManager : MonoBehaviour
         yield return new WaitUntil(() => { return Time.time >= failTime || !emergencyMode; });
         if (!emergencyMode)
         {
+            Color newCol = RenderSettings.fogColor;
+            newCol.r = originalFogRedValue;
+            RenderSettings.fogColor = newCol;
             yield break;
         }
         GameOver();
@@ -185,12 +201,14 @@ public class GameManager : MonoBehaviour
 
     private void GameOver()
     {
+        Cursor.lockState = CursorLockMode.None;
         IsGameOver = true;
         Debug.Log("You lost!");
     }
 
     private void GameWin()
     {
+        Cursor.lockState = CursorLockMode.None;
         IsVictory = true;
         var allAudioSources = Object.FindObjectsOfType(typeof(AudioSource)) as AudioSource[];
         foreach (var audioS in allAudioSources)
