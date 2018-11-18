@@ -23,6 +23,7 @@ public class GameManager : MonoBehaviour {
     public float GraceMinutesBeforeFailure;
 
     public AnimationCurve WarningLightRedPulse;
+    public bool IsGameOver = false;
 
     private List<FireStation> safeFireStations = new List<FireStation>();
     private List<FireStation> onFireStations = new List<FireStation>();
@@ -33,6 +34,7 @@ public class GameManager : MonoBehaviour {
     private void OnEnable()
     {
         StartCoroutine(FireStationGameloop());
+        StartCoroutine(PlayerHealthGameloop());
     }
 
     public void MarkFireStationAsSafe(FireStation station)
@@ -46,6 +48,16 @@ public class GameManager : MonoBehaviour {
     {
         onFireStations.Add(station);
         safeFireStations.Remove(station);
+    }
+
+    IEnumerator PlayerHealthGameloop()
+    {
+        yield return null;
+        while (ThePlayer.Health > 0)
+        {
+            yield return null;
+        }
+        GameOver();
     }
 
     IEnumerator FireStationGameloop()
@@ -111,13 +123,12 @@ public class GameManager : MonoBehaviour {
 
     private void GameOver()
     {
-        Time.timeScale = 0;
+        IsGameOver = true;
         Debug.Log("You lost!");
     }
 
     private void GameWin()
     {
-        Time.timeScale = 0;
         Debug.Log("You won!");
     }
 

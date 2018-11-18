@@ -6,6 +6,9 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
+    path: Assets/GameJam/Scenes/MainMenu.unity
+    guid: 9657f5bbad87c6943aa58ae05d035fff
+  - enabled: 1
     path: Assets/GameJam/Scenes/MainScene.unity
     guid: 6f491cbb806c98f4191d9078da8dc753
   m_configObjects: {}

@@ -7,7 +7,9 @@ public class DamageSplash : MonoBehaviour
 
     int CurrentHealth = 2;
     UnityEngine.UI.Image image;
-    public UnityEngine.UI.Image red;
+    public UnityEngine.UI.Image solidColor;
+    public GameObject GameOver;
+    private bool dead = false;
     Color defaultColor;
 
     private void Awake()
@@ -21,7 +23,7 @@ public class DamageSplash : MonoBehaviour
     {
         if (GameManager.Instance.ThePlayer.Health != CurrentHealth)
         {
-            if (CurrentHealth > GameManager.Instance.ThePlayer.Health)
+            if (CurrentHealth > GameManager.Instance.ThePlayer.Health && !dead)
             {
                 StartCoroutine(AnimateRedSplash());
             }
@@ -36,6 +38,13 @@ public class DamageSplash : MonoBehaviour
             {
                 StartCoroutine(AnimateWarningDamage());
             }
+        }
+
+        if (GameManager.Instance.IsGameOver && !dead)
+        {
+            dead = true;
+            GameOver.SetActive(true);
+            StartCoroutine(AnimateDeath());
         }
     }
 
@@ -58,17 +67,17 @@ public class DamageSplash : MonoBehaviour
 
     IEnumerator AnimateRedSplash()
     {
-        red.enabled = true;
+        solidColor.enabled = true;
         float startTime = Time.time;
         while (Time.time - startTime < 0.4f)
         {
             Color tmpColor = Color.red;
             tmpColor.r = 0.9f;
             tmpColor.a = Mathf.Sqrt(1 - ((Time.time - startTime) / 0.4f)) * 0.8f;
-            red.color = tmpColor;
+            solidColor.color = tmpColor;
             yield return null;
         }
-        red.enabled = false;
+        solidColor.enabled = false;
     }
 
     IEnumerator AnimateHealingDamage()
@@ -84,8 +93,17 @@ public class DamageSplash : MonoBehaviour
         image.enabled = false;
     }
 
-    //IEnumerator AnimateDeath()
-    //{
-
-    //}
+    IEnumerator AnimateDeath()
+    {
+        yield return new WaitForSeconds(0.5f);
+        solidColor.enabled = true;
+        float startTime = Time.time;
+        while (Time.time - startTime < 1.5f)
+        {
+            Color tmpColor = Color.black;
+            tmpColor.a = Mathf.Sqrt((Time.time - startTime) / 1.5f);
+            solidColor.color = tmpColor;
+            yield return null;
+        }
+    }
 }

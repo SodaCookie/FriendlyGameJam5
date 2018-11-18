@@ -13,6 +13,7 @@ public class NavAgentPathingBehaviour : MonoBehaviour
     private NavAgentSightBehaviour sightBehaviour;
     private Transform curWaypoint;
     private bool pathing = true;
+    private Coroutine wayPointWait;
 
     private void Awake()
     {
@@ -36,6 +37,13 @@ public class NavAgentPathingBehaviour : MonoBehaviour
     public void ResumePathing()
     {
         pathing = true;
+    }
+
+    IEnumerator WaitAtWaypoint(float duration)
+    {
+        yield return new WaitForSeconds(duration);
+        curWaypoint = path.GetNextWaypoint();
+        wayPointWait = null;
     }
 
     IEnumerator FollowCoroutine()
@@ -67,9 +75,9 @@ public class NavAgentPathingBehaviour : MonoBehaviour
                 }
                 else
                 {
-                    if ((agent.transform.position - curWaypoint.position).magnitude < 1f)
+                    if ((agent.transform.position - curWaypoint.position).magnitude < 1f && wayPointWait == null)
                     {
-                        curWaypoint = path.GetNextWaypoint();
+                        wayPointWait = StartCoroutine(WaitAtWaypoint(path.StopTime));
                     }
                     agent.SetDestination(curWaypoint.position);
                 }

@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class NavigationPath : MonoBehaviour {
     public List<Transform> Waypoints;
+    public float StopTime = 1f;
 
     private Transform lastWaypoint = null;
 
