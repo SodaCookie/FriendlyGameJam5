@@ -62,6 +62,7 @@ MonoBehaviour:
     type: 2}
   MonsterWaypoints: {fileID: 0}
   MinutesUntilVictory: 10
+  CrunchTimeMinute: 7
   StartFiresPerMinute: 0.5
   FinalFiresPerMinute: 4
   GraceMinutesBeforeFailure: 0.5

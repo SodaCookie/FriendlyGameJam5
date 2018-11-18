@@ -14,7 +14,7 @@ public class NavAgentSightBehaviour : MonoBehaviour {
     public Transform headBone;
 
     private NavMeshAgent agent;
-    private float defaultSpeed;
+    [HideInInspector] public float defaultSpeed;
     public bool aggro;
     public bool targetVisible;
     public Vector3 lastSeen;

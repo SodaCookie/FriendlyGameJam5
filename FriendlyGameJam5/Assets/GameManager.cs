@@ -24,6 +24,7 @@ public class GameManager : MonoBehaviour
     public NavigationPath MonsterWaypoints;
 
     public float MinutesUntilVictory;
+    public float CrunchTimeMinute;
     public float StartFiresPerMinute;
     public float FinalFiresPerMinute;
     public float GraceMinutesBeforeFailure;
@@ -86,6 +87,17 @@ public class GameManager : MonoBehaviour
         safeFireStations.Remove(station);
 
         monsterCanSpawn = true;
+    }
+
+    IEnumerator MonsterCrunchWait()
+    {
+        yield return new WaitForSeconds(CrunchTimeMinute * 60);
+        if (TheMonster != null)
+        {
+            TheMonster.GetComponent<UnityEngine.AI.NavMeshAgent>().speed = 2;
+            TheMonster.GetComponent<NavAgentSightBehaviour>().defaultSpeed = 2;
+            TheMonster.GetComponent<NavAgentSightBehaviour>().aggroSpeed = 6;
+        }
     }
 
     IEnumerator PlayerHealthGameloop()
