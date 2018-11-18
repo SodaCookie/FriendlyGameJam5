@@ -20,6 +20,7 @@ public class FireStation : MonoBehaviour {
 
     public void SetOnFire()
     {
+        if (OnFire) return;
         OnFire = true;
         EnableWhenOnFire.SetActive(true);
         RecursiveSetLayer(transform, LayerMask.NameToLayer("Fire"));
@@ -33,6 +34,7 @@ public class FireStation : MonoBehaviour {
 
     public void PutOutFire()
     {
+        if (!OnFire) return;
         OnFire = false;
         EnableWhenOnFire.SetActive(false);
         ControllingButton.SetToNormalMode();
