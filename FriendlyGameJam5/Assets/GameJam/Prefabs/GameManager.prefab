@@ -54,7 +54,7 @@ MonoBehaviour:
   ThePlayer: {fileID: 0}
   TheMonster: {fileID: 0}
   FireStations: []
-  minutesUntilVictory: 5
-  startFiresPerMinute: 2
-  finalFiresPerMInute: 5
+  minutesUntilVictory: 10
+  startFiresPerMinute: 0.5
+  finalFiresPerMInute: 3
   graceMinutesBeforeFailure: 0.5
