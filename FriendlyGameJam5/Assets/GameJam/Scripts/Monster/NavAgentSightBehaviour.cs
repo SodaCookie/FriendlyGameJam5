@@ -9,6 +9,7 @@ public class NavAgentSightBehaviour : MonoBehaviour {
     public float sightRange = 20;
     public float aggroSpeed = 5;
     public float deaggroCooldownDuration = 3;
+    public float unseenFollowDuration = 3;
     public Transform target;
     public LayerMask oculusionMask;
     public Transform headBone;
@@ -18,12 +19,15 @@ public class NavAgentSightBehaviour : MonoBehaviour {
     public bool aggro;
     public bool targetVisible;
     public Vector3 lastSeen;
+    private bool following;
+    private float followingDuration;
     private Coroutine cooldownCoroutine;
 
     private void Awake()
     {
         agent = GetComponent<NavMeshAgent>();
         defaultSpeed = agent.speed;
+        followingDuration = unseenFollowDuration;
     }
 
     void LateUpdate () {
@@ -90,6 +94,14 @@ public class NavAgentSightBehaviour : MonoBehaviour {
         }
     }
 
+    private IEnumerator TrackingPlayer()
+    {
+        while (true)
+        {
+
+        }
+    }
+
     private IEnumerator StartCooldown(float duration)
     {
         yield return new WaitForSeconds(duration);
@@ -99,7 +111,14 @@ public class NavAgentSightBehaviour : MonoBehaviour {
 
     private void OnDrawGizmosSelected()
     {
-        Gizmos.color = Color.red;
+        if (aggro)
+        {
+            Gizmos.color = Color.red;
+        }
+        else
+        {
+            Gizmos.color = Color.white;
+        }
         Gizmos.DrawWireSphere(transform.position, sightRange);
     }
 }

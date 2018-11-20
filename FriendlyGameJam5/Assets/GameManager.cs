@@ -113,8 +113,8 @@ public class GameManager : MonoBehaviour
         EvacuationAnnouncement.Play();
         if (TheMonster != null)
         {
-            TheMonster.GetComponent<UnityEngine.AI.NavMeshAgent>().speed = 2;
-            TheMonster.GetComponent<NavAgentSightBehaviour>().defaultSpeed = 2;
+            TheMonster.GetComponent<UnityEngine.AI.NavMeshAgent>().speed = 3;
+            TheMonster.GetComponent<NavAgentSightBehaviour>().defaultSpeed = 3;
             TheMonster.GetComponent<NavAgentSightBehaviour>().aggroSpeed = 6;
         }
         SpawnMonster();
@@ -203,6 +203,7 @@ public class GameManager : MonoBehaviour
     private void GameOver()
     {
         Cursor.lockState = CursorLockMode.None;
+        Cursor.visible = true;
         IsGameOver = true;
         Debug.Log("You lost!");
     }
@@ -210,6 +211,7 @@ public class GameManager : MonoBehaviour
     private void GameWin()
     {
         Cursor.lockState = CursorLockMode.None;
+        Cursor.visible = true;
         IsVictory = true;
         var allAudioSources = Object.FindObjectsOfType(typeof(AudioSource)) as AudioSource[];
         foreach (var audioS in allAudioSources)
