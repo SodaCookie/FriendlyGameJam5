@@ -63120,6 +63120,11 @@ Prefab:
       propertyPath: MonsterWaypoints
       value: 
       objectReference: {fileID: 1865783040}
+    - target: {fileID: 114003838954609146, guid: 82415d01eb2e8194f800422a557cf580,
+        type: 2}
+      propertyPath: FinalFiresPerMinute
+      value: 3
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 82415d01eb2e8194f800422a557cf580, type: 2}
   m_IsPrefabAsset: 0

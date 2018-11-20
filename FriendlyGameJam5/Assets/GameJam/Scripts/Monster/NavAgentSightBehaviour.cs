@@ -9,7 +9,6 @@ public class NavAgentSightBehaviour : MonoBehaviour {
     public float sightRange = 20;
     public float aggroSpeed = 5;
     public float deaggroCooldownDuration = 3;
-    public float unseenFollowDuration = 3;
     public Transform target;
     public LayerMask oculusionMask;
     public Transform headBone;
@@ -20,14 +19,12 @@ public class NavAgentSightBehaviour : MonoBehaviour {
     public bool targetVisible;
     public Vector3 lastSeen;
     private bool following;
-    private float followingDuration;
     private Coroutine cooldownCoroutine;
 
     private void Awake()
     {
         agent = GetComponent<NavMeshAgent>();
         defaultSpeed = agent.speed;
-        followingDuration = unseenFollowDuration;
     }
 
     void LateUpdate () {
@@ -91,14 +88,6 @@ public class NavAgentSightBehaviour : MonoBehaviour {
         if (aggro && cooldownCoroutine == null)
         {
             StartCoroutine(StartCooldown(deaggroCooldownDuration));
-        }
-    }
-
-    private IEnumerator TrackingPlayer()
-    {
-        while (true)
-        {
-
         }
     }
 
