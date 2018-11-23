@@ -73498,16 +73498,6 @@ Prefab:
       propertyPath: m_RootOrder
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 114256750289159004, guid: cd19d8f3b8d1bdc4b84d6a6903e127e5,
-        type: 2}
-      propertyPath: MonsterMirror
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 82116139968927676, guid: cd19d8f3b8d1bdc4b84d6a6903e127e5,
-        type: 2}
-      propertyPath: panLevelCustomCurve.m_Curve.Array.data[0].value
-      value: 1
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: cd19d8f3b8d1bdc4b84d6a6903e127e5, type: 2}
   m_IsPrefabAsset: 0

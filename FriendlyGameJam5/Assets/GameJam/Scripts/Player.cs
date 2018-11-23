@@ -5,6 +5,7 @@ using UnityEngine;
 public class Player : MonoBehaviour
 {
     public List<SkinnedMeshRenderer> MonsterMirrors = new List<SkinnedMeshRenderer>();
+    public Transform RaycastPoint;
     public ParticleSystem Particles;
 
     public Coroutine xRayCoroutine;

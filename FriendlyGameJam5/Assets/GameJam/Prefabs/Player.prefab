@@ -2221,6 +2221,8 @@ MonoBehaviour:
   m_sprintKey: 304
   m_sprintMeterMax: 3
   m_sprintRechargeMin: 1
+  m_sprintMeter: 0
+  m_recharging: 0
   m_moveSpeed: 2
   m_turnSpeed: 200
   m_jumpForce: 4
@@ -2238,7 +2240,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fd40a1af4d49bf64cb85a7a451a5907b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  MonsterMirror: {fileID: 0}
+  MonsterMirrors: []
+  RaycastPoint: {fileID: 4954042992169488}
   Particles: {fileID: 198294454096108058}
   HealingTime: 15
   Health: 2

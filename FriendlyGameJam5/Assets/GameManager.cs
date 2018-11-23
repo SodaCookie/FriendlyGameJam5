@@ -66,7 +66,7 @@ public class GameManager : MonoBehaviour
         GameObject monster = Instantiate(MonsterPrefab, location, Quaternion.identity);
         monster.GetComponent<NavAgentPathingBehaviour>().target = ThePlayer.transform;
         monster.GetComponent<NavAgentPathingBehaviour>().path = MonsterWaypoints;
-        monster.GetComponent<NavAgentSightBehaviour>().target = ThePlayer.transform;
+        monster.GetComponent<NavAgentSightBehaviour>().target = ThePlayer.RaycastPoint;
         ThePlayer.GetComponent<Player>().MonsterMirrors.Add(monster.GetComponent<Monster>().Mirror);
     }
 

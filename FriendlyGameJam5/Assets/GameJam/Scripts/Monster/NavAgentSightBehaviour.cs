@@ -48,15 +48,20 @@ public class NavAgentSightBehaviour : MonoBehaviour {
             {
                 origin = headBone.position;
             }
+
             RaycastHit raycastHit;
-            Physics.Raycast(origin, target.position - origin, out raycastHit, sightRange, oculusionMask);
+            Physics.Raycast(origin, target.position - origin, out raycastHit);
 
-            if (raycastHit.collider != null && raycastHit.collider.gameObject == target.gameObject)
+            if (raycastHit.collider != null && raycastHit.collider.tag == "Player")
             {
-                lastSeen = raycastHit.point;
+                Vector3 hitPoint = raycastHit.point;
+                hitPoint.y = target.position.y;
+                if (hitPoint.sqrMagnitude < sightRange * sightRange)
+                {
+                    lastSeen = raycastHit.point;
+                    return true;
+                }
             }
-
-            return raycastHit.collider != null && raycastHit.collider.gameObject == target.gameObject;
         }
         return false;
     }
