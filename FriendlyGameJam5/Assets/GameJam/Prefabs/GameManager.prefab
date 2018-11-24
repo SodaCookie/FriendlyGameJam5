@@ -431,8 +431,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ThePlayer: {fileID: 0}
-  TheMonster: {fileID: 0}
+  Monsters: []
   FireStations: []
+  gameConfiguration: {fileID: 11400000, guid: 167a846d585907b4facde78c31ad73bb, type: 2}
   MonsterMinDistance: 30
   SpawnSound: {fileID: 0}
   MonsterPrefab: {fileID: 1407672827187080, guid: 57021699a7594074a933a332c151204b,
@@ -442,11 +443,6 @@ MonoBehaviour:
   IntroAnnouncement: {fileID: 82700006023615920}
   WarningAnnouncement: {fileID: 82926463307412548}
   EvacuationAnnouncement: {fileID: 82535351444457362}
-  MinutesUntilVictory: 10
-  CrunchTimeMinute: 7
-  StartFiresPerMinute: 1
-  FinalFiresPerMinute: 3.5
-  GraceMinutesBeforeFailure: 0.5
   WarningLightRedPulse:
     serializedVersion: 2
     m_Curve:

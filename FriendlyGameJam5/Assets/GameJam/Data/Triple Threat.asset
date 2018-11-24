@@ -1,0 +1,28 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b0c80d3ab2a0ac941bb238fa1c8dc135, type: 3}
+  m_Name: Triple Threat
+  m_EditorClassIdentifier: 
+  playIntro: 0
+  startFiresPerMinute: 1
+  finalFiresPerMinute: 3
+  crunchTime: 1
+  crunchTimeSpeed: 0.1
+  graceMinutesBeforeFailure: 0.5
+  gameDuration: 2
+  monsterReleaseTimes:
+  - 0
+  - 0
+  - 0
+  monsterWalkSpeed: 1
+  monsterAggroSpeed: 2
+  playerSprintDuration: 4
+  playerHealingTime: 5
