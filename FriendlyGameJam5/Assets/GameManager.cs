@@ -42,16 +42,24 @@ public class GameManager : MonoBehaviour
     private bool emergencyMode = false; // When failure is iminent
     private bool monsterSpawned = false;
     private bool monsterCanSpawn = false;
-    public bool IsCrunchTime { get; private set; }
+
     private float originalFogRedValue;
     private bool introMode = true;
+
+    // Game State
+    public bool IsCrunchTime { get; private set; }
+    public float GameTime { get; private set; }
+    public float StationHealth { get; private set; }
 
     private void OnEnable()
     {
         introMode = true;
         IsCrunchTime = false;
+        StationHealth = gameConfiguration.stationHealth;
+        GameTime = 0;
         StartCoroutine(FireStationGameloop());
         StartCoroutine(PlayerHealthGameloop());
+        StartCoroutine(MonsterSpawnGameloop());
     }
 
     public void SpawnMonster()
@@ -113,9 +121,9 @@ public class GameManager : MonoBehaviour
         List<float> releaseTimes = new List<float>(gameConfiguration.monsterReleaseTimes);
         while (Time.time - startTime < goalTime && releaseTimes.Count > 0)
         {
-            foreach (float spawnTime in releaseTimes)
+            foreach (float spawnTime in gameConfiguration.monsterReleaseTimes)
             {
-                if (spawnTime > Time.time - startTime)
+                if (spawnTime < Time.time - startTime && releaseTimes.Contains(spawnTime))
                 {
                     releaseTimes.Remove(spawnTime);
                     SpawnMonster();
@@ -169,6 +177,8 @@ public class GameManager : MonoBehaviour
         float lastFire = float.MinValue;
         while (Time.time < goalTime)
         {
+            GameTime = Time.time - startTime;
+            StationHealth -= 0.06f * Time.deltaTime * onFireStations.Count;
             float progress = (Time.time - startTime) / (60 * gameConfiguration.gameDuration);
             float frequency = Mathf.Lerp(gameConfiguration.startFiresPerMinute, gameConfiguration.finalFiresPerMinute, progress) / 60;
             float period = 1 / frequency;
@@ -182,7 +192,7 @@ public class GameManager : MonoBehaviour
                 }
             }
 
-            if (safeFireStations.Count <= 1)
+            if (StationHealth / gameConfiguration.stationHealth < 0.1)
             {
                 emergencyMode = true;
                 StartCoroutine(FailureIminent());

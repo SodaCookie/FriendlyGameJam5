@@ -13,6 +13,7 @@ public class GameConfiguration : ScriptableObject
     public float crunchTime = 7f;
     public float crunchTimeSpeed = 0.1f;
     public float graceMinutesBeforeFailure = 0.5f;
+    public float stationHealth = 100f;
     [Range(0, float.PositiveInfinity)] public float gameDuration = 10f;
 
     [Header("Monster Attributes")]
