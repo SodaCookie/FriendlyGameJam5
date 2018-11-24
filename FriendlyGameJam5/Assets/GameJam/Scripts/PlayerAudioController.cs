@@ -33,7 +33,6 @@ public class PlayerAudioController : MonoBehaviour {
         }
         else if (!DamagedBreathing.isPlaying && ! HealingBreathing.isPlaying && !controller.CanSprint)
         {
-            Debug.Log("Sound");
             SprintBreathing.Play();
         }
     }

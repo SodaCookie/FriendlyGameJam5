@@ -54,10 +54,11 @@ public class NavAgentSightBehaviour : MonoBehaviour {
 
             if (raycastHit.collider != null && raycastHit.collider.tag == "Player")
             {
-                Vector3 hitPoint = raycastHit.point;
-                hitPoint.y = target.position.y;
-                if (hitPoint.sqrMagnitude < sightRange * sightRange)
+                Vector3 hitVector = raycastHit.point - origin;
+                hitVector.y = 0;
+                if (hitVector.sqrMagnitude < sightRange * sightRange)
                 {
+                    Debug.DrawLine(origin, target.position, Color.red);
                     lastSeen = raycastHit.point;
                     return true;
                 }

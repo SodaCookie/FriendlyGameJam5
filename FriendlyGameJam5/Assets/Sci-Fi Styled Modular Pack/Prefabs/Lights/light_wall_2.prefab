@@ -27,6 +27,7 @@ GameObject:
   - component: {fileID: 3319534}
   - component: {fileID: 2342128}
   - component: {fileID: 6546754}
+  - component: {fileID: 114991005835001800}
   m_Layer: 0
   m_Name: light_wall_2
   m_TagString: Untagged
@@ -41,7 +42,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 120698}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.28999996, y: 1.76, z: 0.73}
+  m_LocalPosition: {x: 0.021, y: 1.76, z: 1.041}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 468576}
@@ -53,14 +54,14 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 167912}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalRotation: {x: -0, y: -0.38268343, z: -0, w: 0.92387956}
+  m_LocalPosition: {x: 20.353, y: 3.203, z: -3.856}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 406248}
   m_Father: {fileID: 0}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: -45, z: 0}
 --- !u!23 &2342128
 MeshRenderer:
   m_ObjectHideFlags: 1
@@ -77,7 +78,7 @@ MeshRenderer:
   m_RenderingLayerMask: 4294967295
   m_Materials:
   - {fileID: 2100000, guid: 10de6384af0c3b54e8166f9c3f936e88, type: 2}
-  - {fileID: 2100000, guid: 6b6dfd77776c54a4781ec8cab4d87860, type: 2}
+  - {fileID: 2100000, guid: 2bb8a19a596b392428c55515bc794812, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -125,13 +126,13 @@ Light:
   m_Enabled: 1
   serializedVersion: 8
   m_Type: 2
-  m_Color: {r: 0.8897059, g: 0.93154156, b: 1, a: 1}
-  m_Intensity: 1.13
-  m_Range: 8.528391
+  m_Color: {r: 0.9056604, g: 0.16995613, b: 0.09825563, a: 1}
+  m_Intensity: 2
+  m_Range: 25
   m_SpotAngle: 30
   m_CookieSize: 10
   m_Shadows:
-    m_Type: 0
+    m_Type: 2
     m_Resolution: -1
     m_CustomResolution: -1
     m_Strength: 1
@@ -164,3 +165,17 @@ Prefab:
   m_SourcePrefab: {fileID: 0}
   m_RootGameObject: {fileID: 167912}
   m_IsPrefabAsset: 1
+--- !u!114 &114991005835001800
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 167912}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c4b15578e241f8b44b9ecca0025f683a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  light: {fileID: 10886948}
+  flickerChance: 0.92
+  lifetime: Infinity

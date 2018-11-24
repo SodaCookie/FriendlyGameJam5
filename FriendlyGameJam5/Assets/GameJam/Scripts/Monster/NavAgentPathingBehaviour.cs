@@ -47,7 +47,6 @@ public class NavAgentPathingBehaviour : MonoBehaviour
 
     IEnumerator WaitAtWaypoint(float duration)
     {
-        character.Move(Vector3.zero, false, false);
         yield return new WaitForSeconds(duration);
         curWaypoint = path.GetNextWaypoint();
         wayPointWait = null;
@@ -90,23 +89,31 @@ public class NavAgentPathingBehaviour : MonoBehaviour
                         }
 
 
-                        if ((agent.transform.position - sightBehaviour.lastSeen).magnitude < 3f)
+                        if (agent.remainingDistance < agent.stoppingDistance)
                         {
                             checkingLocation = false;
                         }
                     }
-
                 }
                 else
                 {
-                    if ((agent.transform.position - curWaypoint.position).magnitude < 1f && wayPointWait == null)
+                    agent.SetDestination(curWaypoint.position);
+                    if (agent.remainingDistance < agent.stoppingDistance && wayPointWait == null)
                     {
                         wayPointWait = StartCoroutine(WaitAtWaypoint(path.StopTime));
                     }
-                    agent.SetDestination(curWaypoint.position);
                 }
 
-                character.Move(agent.desiredVelocity, false, false);
+                if (agent.remainingDistance < agent.stoppingDistance)
+                {
+                    character.Move(Vector3.zero, false, false);
+                    Debug.Log("Stopping");
+                }
+                else
+                {
+                    Debug.Log("Moving");
+                    character.Move(agent.desiredVelocity, false, false);
+                }
             }
         }
     }

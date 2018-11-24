@@ -292,5 +292,5 @@ MonoBehaviour:
   - {fileID: 4116405712876562}
   - {fileID: 4142607255981122}
   - {fileID: 4043165977367754}
-  MinStopTime: 1
+  MinStopTime: 0
   MaxStopTime: 1
