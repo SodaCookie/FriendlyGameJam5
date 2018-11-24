@@ -9,14 +9,15 @@ public class Player : MonoBehaviour
     public ParticleSystem Particles;
 
     public Coroutine xRayCoroutine;
-    public float HealingTime = 5;
     public int Health = 2;
     
-    private void Awake()
+    private void OnEnable()
     {
         if (GameManager.Instance != null)
         {
             GameManager.Instance.ThePlayer = this;
+            GetComponent<SimpleCharacterControl>().m_sprintMeterMax = GameManager.Instance.gameConfiguration.playerSprintDuration;
+            GetComponent<SimpleCharacterControl>().m_sprintMeter = GameManager.Instance.gameConfiguration.playerSprintDuration;
         }
     }
 
@@ -40,7 +41,7 @@ public class Player : MonoBehaviour
 
     private IEnumerator BeginHealing()
     {
-        yield return new WaitForSeconds(HealingTime);
+        yield return new WaitForSeconds(GameManager.Instance.gameConfiguration.playerHealingTime);
         Health += 1;
     }
 

@@ -15,24 +15,22 @@ public class GameManager : MonoBehaviour
     }
 
     [HideInInspector] public Player ThePlayer;
-    [HideInInspector] public Monster TheMonster;
+    [HideInInspector] public List<Monster> Monsters = new List<Monster>();
     [HideInInspector] public List<FireStation> FireStations = new List<FireStation>();
 
+    public GameConfiguration gameConfiguration;
+
+    [Header("Monster Spawning Parameters")]
     public float MonsterMinDistance = 30f;
     public AudioSource SpawnSound;
     public GameObject MonsterPrefab;
+
+    [Header("References")]
     public FireStation StartingFireStation;
     public NavigationPath MonsterWaypoints;
     public AudioSource IntroAnnouncement;
     public AudioSource WarningAnnouncement;
     public AudioSource EvacuationAnnouncement;
-
-    public float MinutesUntilVictory;
-    public float CrunchTimeMinute;
-    public float StartFiresPerMinute;
-    public float FinalFiresPerMinute;
-    public float GraceMinutesBeforeFailure;
-
     public AnimationCurve WarningLightRedPulse;
 
     [HideInInspector] public bool IsGameOver = false;
@@ -44,12 +42,14 @@ public class GameManager : MonoBehaviour
     private bool emergencyMode = false; // When failure is iminent
     private bool monsterSpawned = false;
     private bool monsterCanSpawn = false;
+    public bool IsCrunchTime { get; private set; }
     private float originalFogRedValue;
     private bool introMode = true;
 
     private void OnEnable()
     {
         introMode = true;
+        IsCrunchTime = false;
         StartCoroutine(FireStationGameloop());
         StartCoroutine(PlayerHealthGameloop());
     }
@@ -106,18 +106,40 @@ public class GameManager : MonoBehaviour
         monsterCanSpawn = true;
     }
 
+    IEnumerator MonsterSpawnGameloop()
+    {
+        float startTime = Time.time;
+        float goalTime = startTime + (60 * gameConfiguration.gameDuration);
+        List<float> releaseTimes = new List<float>(gameConfiguration.monsterReleaseTimes);
+        while (Time.time - startTime < goalTime && releaseTimes.Count > 0)
+        {
+            foreach (float spawnTime in releaseTimes)
+            {
+                if (spawnTime > Time.time - startTime)
+                {
+                    releaseTimes.Remove(spawnTime);
+                    SpawnMonster();
+                }
+            }
+            yield return null;
+        }
+    }
+
     IEnumerator MonsterCrunchWait()
     {
         float startTime = Time.time;
-        yield return new WaitForSeconds(CrunchTimeMinute * 60);
+        yield return new WaitForSeconds(gameConfiguration.crunchTime * 60);
+        IsCrunchTime = true;
         EvacuationAnnouncement.Play();
-        if (TheMonster != null)
+        if (Monsters.Count > 0)
         {
-            TheMonster.GetComponent<UnityEngine.AI.NavMeshAgent>().speed = 3;
-            TheMonster.GetComponent<NavAgentSightBehaviour>().defaultSpeed = 3;
-            TheMonster.GetComponent<NavAgentSightBehaviour>().aggroSpeed = 6;
+            foreach (var monster in Monsters)
+            {
+                monster.GetComponent<UnityEngine.AI.NavMeshAgent>().speed += gameConfiguration.crunchTimeSpeed;
+                monster.GetComponent<NavAgentSightBehaviour>().defaultSpeed += gameConfiguration.crunchTimeSpeed;
+                monster.GetComponent<NavAgentSightBehaviour>().aggroSpeed += gameConfiguration.crunchTimeSpeed;
+            }
         }
-        SpawnMonster();
     }
 
     IEnumerator PlayerHealthGameloop()
@@ -133,18 +155,22 @@ public class GameManager : MonoBehaviour
     IEnumerator FireStationGameloop()
     {
         yield return null;
-        introMode = true;
-        StartingFireStation.SetOnFire();
-        IntroAnnouncement.Play();
-        yield return new WaitUntil(() => { return !introMode; });
+        if (gameConfiguration.playIntro)
+        {
+            introMode = true;
+            StartingFireStation.SetOnFire();
+            IntroAnnouncement.Play();
+            yield return new WaitUntil(() => { return !introMode; });
+        }
+
         StartCoroutine(MonsterCrunchWait());
         float startTime = Time.time;
-        float goalTime = startTime + (60 * MinutesUntilVictory);
+        float goalTime = startTime + (60 * gameConfiguration.gameDuration);
         float lastFire = float.MinValue;
         while (Time.time < goalTime)
         {
-            float progress = (Time.time - startTime) / (60 * MinutesUntilVictory);
-            float frequency = Mathf.Lerp(StartFiresPerMinute, FinalFiresPerMinute, progress) / 60;
+            float progress = (Time.time - startTime) / (60 * gameConfiguration.gameDuration);
+            float frequency = Mathf.Lerp(gameConfiguration.startFiresPerMinute, gameConfiguration.finalFiresPerMinute, progress) / 60;
             float period = 1 / frequency;
             if (Time.time > lastFire + period)
             {
@@ -174,7 +200,7 @@ public class GameManager : MonoBehaviour
     {
         WarningAnnouncement.Play();
         float startTime = Time.time;
-        float failTime = startTime + (60 * GraceMinutesBeforeFailure);
+        float failTime = startTime + (60 * gameConfiguration.graceMinutesBeforeFailure);
         StartCoroutine(RedWarningLights());
         yield return new WaitUntil(() => { return Time.time >= failTime || !emergencyMode; });
         if (!emergencyMode)
