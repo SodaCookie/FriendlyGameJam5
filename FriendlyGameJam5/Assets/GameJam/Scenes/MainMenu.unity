@@ -7605,6 +7605,11 @@ Prefab:
       propertyPath: m_Interactable
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 114091427455838672, guid: 0f2aa44b407cd3d4a9b49fe050ffab3f,
+        type: 2}
+      propertyPath: duration4
+      value: 2
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0f2aa44b407cd3d4a9b49fe050ffab3f, type: 2}
   m_IsPrefabAsset: 0

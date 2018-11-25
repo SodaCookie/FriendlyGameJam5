@@ -14,13 +14,10 @@ MonoBehaviour:
   playIntro: 0
   startFiresPerMinute: 1
   finalFiresPerMinute: 3
-  crunchTime: 7
-  crunchTimeSpeed: 0.1
-  graceMinutesBeforeFailure: 0.5
   stationHealth: 100
   gameDuration: 10
-  monsterReleaseTimes: []
-  monsterWalkSpeed: 0.2
-  monsterAggroSpeed: 0.6
+  gamePhases: []
+  defaultMonsterWalkSpeed: 0.2
+  defaultMonsterAggroSpeed: 0.6
   playerSprintDuration: Infinity
   playerHealingTime: 5

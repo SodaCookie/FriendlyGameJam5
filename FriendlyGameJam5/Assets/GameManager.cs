@@ -47,15 +47,54 @@ public class GameManager : MonoBehaviour
     private bool introMode = true;
 
     // Game State
-    public bool IsCrunchTime { get; private set; }
+
+    private float _CurrentMonsterWalkSpeed;
+    public float CurrentMonsterWalkSpeed
+    {
+        get
+        {
+            //logic here 
+            return _CurrentMonsterWalkSpeed;
+        }
+        set
+        {
+            //logic here
+            foreach (var monster in Monsters)
+            {
+                monster.GetComponent<UnityEngine.AI.NavMeshAgent>().speed = value;
+                monster.GetComponent<NavAgentSightBehaviour>().defaultSpeed = value;
+            }
+            _CurrentMonsterWalkSpeed = value;
+        }
+    }
+
+    private float _CurrentMonsterAggroSpeed;
+    public float CurrentMonsterAggroSpeed
+    {
+        get
+        {
+            //logic here 
+            return _CurrentMonsterAggroSpeed;
+        }
+        set
+        {
+            //logic here
+            foreach (var monster in Monsters)
+            {
+                monster.GetComponent<NavAgentSightBehaviour>().aggroSpeed = value;
+            }
+            _CurrentMonsterAggroSpeed = value;
+        }
+    }
     public float GameTime { get; private set; }
     public float StationHealth { get; private set; }
 
     private void OnEnable()
     {
         introMode = true;
-        IsCrunchTime = false;
         gameConfiguration = GameModeLoader.Instance.gameConfiguration;
+        CurrentMonsterWalkSpeed = gameConfiguration.defaultMonsterWalkSpeed;
+        CurrentMonsterAggroSpeed = gameConfiguration.defaultMonsterAggroSpeed;
         StationHealth = gameConfiguration.stationHealth;
         GameTime = 0;
         StartCoroutine(FireStationGameloop());
@@ -64,7 +103,6 @@ public class GameManager : MonoBehaviour
 
     public void SpawnMonster()
     {
-        print(1);
         // Find valid location
         Vector3 location = MonsterWaypoints.GetNextWaypoint().position;
         StartCoroutine(MonsterSpawnSoundDelay(2f));
@@ -120,38 +158,29 @@ public class GameManager : MonoBehaviour
         monsterCanSpawn = true;
     }
 
-    IEnumerator MonsterSpawnGameloop()
+    IEnumerator GamePhaseHandler()
     {
         float startTime = Time.time;
         float goalTime = startTime + (60 * gameConfiguration.gameDuration);
-        List<float> releaseTimes = new List<float>(gameConfiguration.monsterReleaseTimes);
-        while (Time.time - startTime < goalTime && releaseTimes.Count > 0)
+        List<GamePhase> gamePhases = new List<GamePhase>(gameConfiguration.gamePhases);
+        while (Time.time - startTime < goalTime && gamePhases.Count > 0)
         {
-            foreach (float spawnTime in gameConfiguration.monsterReleaseTimes)
+            foreach (GamePhase gamePhase in gameConfiguration.gamePhases)
             {
-                if (spawnTime < Time.time - startTime && releaseTimes.Contains(spawnTime))
+                // If the game phase is started
+                if (gamePhase.gameTime * 60f < GameTime && gamePhases.Contains(gamePhase))
                 {
-                    releaseTimes.Remove(spawnTime);
-                    SpawnMonster();
+                    gamePhases.Remove(gamePhase);
+                    CurrentMonsterWalkSpeed = gamePhase.newMonsterWalkSpeed;
+                    CurrentMonsterAggroSpeed = gamePhase.newMonsterAggroSpeed;
+                    for (int i = 0; i < gamePhase.additionalMonsters; i++)
+                    {
+                        SpawnMonster();
+                    }
+
                 }
             }
             yield return null;
-        }
-    }
-
-    IEnumerator MonsterCrunchWait()
-    {
-        float startTime = Time.time;
-        yield return new WaitForSeconds(gameConfiguration.crunchTime * 60);
-        IsCrunchTime = true;
-        if (Monsters.Count > 0)
-        {
-            foreach (var monster in Monsters)
-            {
-                monster.GetComponent<UnityEngine.AI.NavMeshAgent>().speed += gameConfiguration.crunchTimeSpeed;
-                monster.GetComponent<NavAgentSightBehaviour>().defaultSpeed += gameConfiguration.crunchTimeSpeed;
-                monster.GetComponent<NavAgentSightBehaviour>().aggroSpeed += gameConfiguration.crunchTimeSpeed;
-            }
         }
     }
 
@@ -181,8 +210,7 @@ public class GameManager : MonoBehaviour
         {
             StartCoroutine(EvacuationAnnouncementSoundDelay((gameConfiguration.gameDuration - 3) * 60));
         }
-        StartCoroutine(MonsterCrunchWait());
-        StartCoroutine(MonsterSpawnGameloop());
+        StartCoroutine(GamePhaseHandler());
 
         float startTime = Time.time;
         float goalTime = startTime + (60 * gameConfiguration.gameDuration);
@@ -222,7 +250,6 @@ public class GameManager : MonoBehaviour
     {
         WarningAnnouncement.Play();
         float startTime = Time.time;
-        float failTime = startTime + (60 * gameConfiguration.graceMinutesBeforeFailure);
         StartCoroutine(RedWarningLights());
         yield return new WaitUntil(() => { return StationHealth <= 0 || !emergencyMode; });
         if (!emergencyMode)
