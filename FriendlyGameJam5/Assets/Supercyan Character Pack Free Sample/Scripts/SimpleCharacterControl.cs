@@ -1,6 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections.Generic;
 using System;
+using UnityStandardAssets.CrossPlatformInput;
 
 public class SimpleCharacterControl : MonoBehaviour
 {
@@ -15,7 +16,6 @@ public class SimpleCharacterControl : MonoBehaviour
 
     [Header("Running")]
     [SerializeField] private float m_sprintSpeed = 4;
-    [SerializeField] public KeyCode m_sprintKey = KeyCode.LeftShift;
     [SerializeField] public float m_sprintMeterMax = 2; // In seconds
     [SerializeField] public float m_sprintRechargeMin = 0;
     [HideInInspector] public float m_sprintMeter; // In seconds
@@ -112,7 +112,7 @@ public class SimpleCharacterControl : MonoBehaviour
     {
         m_animator.SetBool("Grounded", m_isGrounded);
 
-        if (Input.GetKey(m_sprintKey) && m_sprintMeter > 0 && !m_recharging)
+        if (CrossPlatformInputManager.GetButton("Sprint") && m_sprintMeter > 0 && !m_recharging)
         {
             m_animator.speed = 1.3f;
             m_sprintMeter -= Time.deltaTime;
@@ -123,7 +123,7 @@ public class SimpleCharacterControl : MonoBehaviour
         else
         {
             m_animator.speed = 1;
-            if (!Input.GetKey(m_sprintKey))
+            if (!CrossPlatformInputManager.GetButton("Sprint"))
             {
                 m_sprintMeter += Time.deltaTime * 0.8f;
             }
@@ -155,8 +155,8 @@ public class SimpleCharacterControl : MonoBehaviour
 
     private void TankUpdate()
     {
-        float v = Input.GetAxis("Vertical");
-        float h = Input.GetAxis("Horizontal");
+        float v = CrossPlatformInputManager.GetAxis("Vertical");
+        float h = CrossPlatformInputManager.GetAxis("Horizontal");
 
         if (v < 0)
         {
@@ -176,8 +176,8 @@ public class SimpleCharacterControl : MonoBehaviour
 
     private void DirectUpdate()
     {
-        float v = Input.GetAxis("Vertical");
-        float h = Input.GetAxis("Horizontal");
+        float v = CrossPlatformInputManager.GetAxis("Vertical");
+        float h = CrossPlatformInputManager.GetAxis("Horizontal");
 
         Transform camera = Camera.main.transform;
 
@@ -207,7 +207,7 @@ public class SimpleCharacterControl : MonoBehaviour
     {
         bool jumpCooldownOver = (Time.time - m_jumpTimeStamp) >= m_minJumpInterval;
 
-        if (jumpCooldownOver && m_isGrounded && Input.GetKey(KeyCode.Space))
+        if (jumpCooldownOver && m_isGrounded && CrossPlatformInputManager.GetButton("Jump"))
         {
             m_jumpTimeStamp = Time.time;
             m_rigidBody.AddForce(Vector3.up * m_jumpForce, ForceMode.Impulse);

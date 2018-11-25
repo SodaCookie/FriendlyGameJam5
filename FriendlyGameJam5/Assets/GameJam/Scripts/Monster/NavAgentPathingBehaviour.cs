@@ -107,11 +107,9 @@ public class NavAgentPathingBehaviour : MonoBehaviour
                 if (agent.remainingDistance < agent.stoppingDistance)
                 {
                     character.Move(Vector3.zero, false, false);
-                    Debug.Log("Stopping");
                 }
                 else
                 {
-                    Debug.Log("Moving");
                     character.Move(agent.desiredVelocity, false, false);
                 }
             }

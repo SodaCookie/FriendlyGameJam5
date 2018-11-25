@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityStandardAssets.CrossPlatformInput;
 
 public class FireStationButton : MonoBehaviour {
     public enum Mode { Normal, Warning }
@@ -19,7 +20,7 @@ public class FireStationButton : MonoBehaviour {
     {
         if (other.gameObject.tag == "Player")
         {
-            if (Input.GetKeyDown(KeyCode.F))
+            if (CrossPlatformInputManager.GetButtonDown("Interact"))
             {
                 ActivateSprinklers();
             }

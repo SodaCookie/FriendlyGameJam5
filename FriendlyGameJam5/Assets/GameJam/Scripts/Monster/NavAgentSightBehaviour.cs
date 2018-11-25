@@ -63,6 +63,7 @@ public class NavAgentSightBehaviour : MonoBehaviour {
                     return true;
                 }
             }
+            Debug.DrawLine(origin, target.position, Color.green);
         }
         return false;
     }
