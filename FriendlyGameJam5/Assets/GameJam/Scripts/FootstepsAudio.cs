@@ -15,11 +15,15 @@ public class FootstepsAudio : MonoBehaviour {
     {
         if (other == leftFootStepTrigger)
         {
+            if (transform.parent.gameObject.name == "Monster(Clone)")
+                Debug.Log("Left Foot");
             int index = Mathf.RoundToInt(Random.Range(0, footsteps.Count - 1));
             leftFootSource.PlayOneShot(footsteps[index]);
         }
         if (other == rightFootStepTrigger)
         {
+            if (transform.parent.gameObject.name == "Monster(Clone)")
+                Debug.Log("Right Foot");
             int index = Mathf.RoundToInt(Random.Range(0, footsteps.Count - 1));
             rightFootSource.PlayOneShot(footsteps[index]);
         }

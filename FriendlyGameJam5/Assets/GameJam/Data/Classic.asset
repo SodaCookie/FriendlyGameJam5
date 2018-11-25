@@ -12,14 +12,20 @@ MonoBehaviour:
   m_Name: Classic
   m_EditorClassIdentifier: 
   playIntro: 1
-  startingFireRate: 1
-  endingFireRate: 3
-  crunchTime: 7
+  startFiresPerMinute: 0.5
+  finalFiresPerMinute: 2.5
+  stationHealth: 100
   gameDuration: 10
-  monsterReleaseTimes:
-  - 0
-  - 7
-  monsterWalkSpeed: 0.2
-  monsterAggroSpeed: 0.6
-  playerMaxRunDuration: 2
-  playerHealingRate: 5
+  gamePhases:
+  - gameTime: 0
+    additionalMonsters: 1
+    newMonsterWalkSpeed: 0.2
+    newMonsterAggroSpeed: 1
+  - gameTime: 7
+    additionalMonsters: 1
+    newMonsterWalkSpeed: 0.3
+    newMonsterAggroSpeed: 1.2
+  defaultMonsterWalkSpeed: 0.2
+  defaultMonsterAggroSpeed: 1
+  playerSprintDuration: 4
+  playerHealingTime: 5

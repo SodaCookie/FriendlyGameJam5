@@ -14,5 +14,7 @@ public class GameModeLoader : MonoBehaviour {
         else Instance = this;
 
         DontDestroyOnLoad(this.gameObject);
+
+        Screen.sleepTimeout = SleepTimeout.NeverSleep;
     }
 }

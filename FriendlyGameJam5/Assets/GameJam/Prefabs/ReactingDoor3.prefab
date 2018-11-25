@@ -24,7 +24,7 @@ GameObject:
   - component: {fileID: 95225540011372718}
   - component: {fileID: 114380435682316976}
   - component: {fileID: 65699108314638856}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: ReactingDoor3
   m_TagString: Untagged
   m_Icon: {fileID: 0}

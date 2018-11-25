@@ -109,7 +109,7 @@ GameObject:
   - component: {fileID: 95450031227002930}
   - component: {fileID: 65874198753858242}
   - component: {fileID: 114508054904014332}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: ReactingDoor1
   m_TagString: Untagged
   m_Icon: {fileID: 0}

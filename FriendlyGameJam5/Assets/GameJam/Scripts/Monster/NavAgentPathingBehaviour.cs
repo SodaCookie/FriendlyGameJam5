@@ -30,7 +30,6 @@ public class NavAgentPathingBehaviour : MonoBehaviour
 
     private void OnEnable()
     {
-        curWaypoint = path.GetNextWaypoint();
         StartCoroutine(FollowCoroutine());
     }
 
@@ -54,6 +53,8 @@ public class NavAgentPathingBehaviour : MonoBehaviour
 
     IEnumerator FollowCoroutine()
     {
+        yield return null;
+        curWaypoint = path.GetNextWaypoint();
         while (true)
         {
             yield return null;

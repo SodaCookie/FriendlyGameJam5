@@ -24,7 +24,7 @@ GameObject:
   - component: {fileID: 135890928260711618}
   - component: {fileID: 114434439080756478}
   - component: {fileID: 108920188550731374}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: VisionPotion
   m_TagString: Untagged
   m_Icon: {fileID: 0}

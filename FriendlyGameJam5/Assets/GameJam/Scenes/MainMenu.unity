@@ -22382,6 +22382,10 @@ Prefab:
       propertyPath: m_AngularSpeed
       value: 360
       objectReference: {fileID: 0}
+    - target: {fileID: 1263587937964906, guid: 26c4a10a523fea34e8682a7a91eaee64, type: 2}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 26c4a10a523fea34e8682a7a91eaee64, type: 2}
   m_IsPrefabAsset: 0
