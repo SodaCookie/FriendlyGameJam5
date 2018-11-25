@@ -47,7 +47,6 @@ public class NavAgentPathingBehaviour : MonoBehaviour
 
     IEnumerator WaitAtWaypoint(float duration)
     {
-        Debug.Log("HI IM A COROUTINE");
         yield return new WaitForSeconds(duration);
         curWaypoint = path.GetNextWaypoint();
         wayPointWait = null;
