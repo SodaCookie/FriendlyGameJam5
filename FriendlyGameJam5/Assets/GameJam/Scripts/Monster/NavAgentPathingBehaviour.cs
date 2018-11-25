@@ -21,7 +21,6 @@ public class NavAgentPathingBehaviour : MonoBehaviour
 
     private void Start()
     {
-        curWaypoint = path.GetNextWaypoint();
         agent = GetComponent<NavMeshAgent>();
         sightBehaviour = GetComponent<NavAgentSightBehaviour>();
         character = GetComponent<ThirdPersonCharacter>();
@@ -31,6 +30,7 @@ public class NavAgentPathingBehaviour : MonoBehaviour
 
     private void OnEnable()
     {
+        curWaypoint = path.GetNextWaypoint();
         StartCoroutine(FollowCoroutine());
     }
 
@@ -47,6 +47,7 @@ public class NavAgentPathingBehaviour : MonoBehaviour
 
     IEnumerator WaitAtWaypoint(float duration)
     {
+        Debug.Log("HI IM A COROUTINE");
         yield return new WaitForSeconds(duration);
         curWaypoint = path.GetNextWaypoint();
         wayPointWait = null;
