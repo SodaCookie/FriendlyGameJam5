@@ -18,7 +18,6 @@ public class GameManager : MonoBehaviour
     [HideInInspector] public List<Monster> Monsters = new List<Monster>();
     [HideInInspector] public List<FireStation> FireStations = new List<FireStation>();
 
-    public GameConfiguration gameConfiguration;
 
     [Header("Monster Spawning Parameters")]
     public float MonsterMinDistance = 30f;
@@ -35,6 +34,7 @@ public class GameManager : MonoBehaviour
 
     [HideInInspector] public bool IsGameOver = false;
     [HideInInspector] public bool IsVictory = false;
+    [HideInInspector] public GameConfiguration gameConfiguration;
 
     private List<FireStation> safeFireStations = new List<FireStation>();
     private List<FireStation> onFireStations = new List<FireStation>();
@@ -55,15 +55,16 @@ public class GameManager : MonoBehaviour
     {
         introMode = true;
         IsCrunchTime = false;
+        gameConfiguration = GameModeLoader.Instance.gameConfiguration;
         StationHealth = gameConfiguration.stationHealth;
         GameTime = 0;
         StartCoroutine(FireStationGameloop());
         StartCoroutine(PlayerHealthGameloop());
-        StartCoroutine(MonsterSpawnGameloop());
     }
 
     public void SpawnMonster()
     {
+        print(1);
         // Find valid location
         Vector3 location = MonsterWaypoints.GetNextWaypoint().position;
         StartCoroutine(MonsterSpawnSoundDelay(2f));
@@ -84,6 +85,12 @@ public class GameManager : MonoBehaviour
         SpawnSound.Play();
     }
 
+    IEnumerator EvacuationAnnouncementSoundDelay(float duration)
+    {
+        yield return new WaitForSeconds(duration);
+        EvacuationAnnouncement.Play();
+    }
+
     public void MarkFireStationAsSafe(FireStation station)
     {
         onFireStations.Remove(station);
@@ -101,7 +108,6 @@ public class GameManager : MonoBehaviour
 
         if (!monsterSpawned && monsterCanSpawn)
         {
-            SpawnMonster();
             monsterSpawned = true;
         }
     }
@@ -138,7 +144,6 @@ public class GameManager : MonoBehaviour
         float startTime = Time.time;
         yield return new WaitForSeconds(gameConfiguration.crunchTime * 60);
         IsCrunchTime = true;
-        EvacuationAnnouncement.Play();
         if (Monsters.Count > 0)
         {
             foreach (var monster in Monsters)
@@ -171,7 +176,14 @@ public class GameManager : MonoBehaviour
             yield return new WaitUntil(() => { return !introMode; });
         }
 
+        // Start announcer for time remaining
+        if (gameConfiguration.gameDuration > 3)
+        {
+            StartCoroutine(EvacuationAnnouncementSoundDelay((gameConfiguration.gameDuration - 3) * 60));
+        }
         StartCoroutine(MonsterCrunchWait());
+        StartCoroutine(MonsterSpawnGameloop());
+
         float startTime = Time.time;
         float goalTime = startTime + (60 * gameConfiguration.gameDuration);
         float lastFire = float.MinValue;
@@ -212,7 +224,7 @@ public class GameManager : MonoBehaviour
         float startTime = Time.time;
         float failTime = startTime + (60 * gameConfiguration.graceMinutesBeforeFailure);
         StartCoroutine(RedWarningLights());
-        yield return new WaitUntil(() => { return Time.time >= failTime || !emergencyMode; });
+        yield return new WaitUntil(() => { return StationHealth <= 0 || !emergencyMode; });
         if (!emergencyMode)
         {
             Color newCol = RenderSettings.fogColor;

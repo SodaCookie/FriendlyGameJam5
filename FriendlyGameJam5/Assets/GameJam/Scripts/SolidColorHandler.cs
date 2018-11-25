@@ -57,6 +57,6 @@ public class SolidColorHandler : MonoBehaviour {
             image.color = Color.Lerp(Color.clear, Color.black, (Time.time - startTime) / duration);
             yield return null;
         }
-        app.StartGame();
+        app.StartGame(GameModeLoader.Instance.gameConfiguration);
     }
 }
